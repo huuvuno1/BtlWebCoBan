@@ -52,7 +52,7 @@ namespace BtlWebForm.Views.Common
                     if (user.Password.Equals(password))
                     {
                         Session.Add("user-login", user);
-                        string redirect = user.Role == 1 ? "/admin" : "/";
+                        string redirect = user.Role == Constant.ROLE_ADMIN ? "/admin" : "/";
                         Response.Redirect(redirect);
                     }
                 }

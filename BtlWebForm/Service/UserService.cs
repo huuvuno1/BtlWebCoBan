@@ -13,6 +13,7 @@ namespace BtlWebForm.Service
 
         public UserEntity FindUserByUsername(string username)
         {
+            
             List<UserEntity> users = userRepository.FindAllUser();
             foreach (UserEntity user in users)
             {
