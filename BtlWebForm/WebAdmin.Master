@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebAdmin.master.cs" Inherits="BtlWebForm.WebAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1>Day la page master</h1>
+    <asp:ContentPlaceHolder ID="AdminBody" runat="server">
+
+    </asp:ContentPlaceHolder>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebCommon.master.cs" Inherits="BtlWebForm.WebCommon" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    Day la trang common
+    <asp:ContentPlaceHolder ID="CommonBody" runat="server">
+
+    </asp:ContentPlaceHolder>
+</body>
+</html>
