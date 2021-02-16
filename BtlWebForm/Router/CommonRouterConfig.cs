@@ -12,5 +12,6 @@ public class CommonRouterConfig
         routes.MapPageRoute("home-common", "", "~/Views/Common/home.aspx");
         routes.MapPageRoute("page-login", "login", "~/Views/Common/login.aspx");
         routes.MapPageRoute("action", "action", "~/Views/Common/action.aspx");
+        routes.MapPageRoute("search", "search", "~/Views/Common/search.aspx");
     }
 }

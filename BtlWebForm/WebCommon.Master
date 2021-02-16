@@ -4,7 +4,11 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm</title>
+    <link rel="stylesheet" href="/static/css/style_vu.css">
+    <link rel="stylesheet" href="/static/css/style_vu_reposive.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -15,5 +19,6 @@
     <asp:ContentPlaceHolder ID="CommonBody" runat="server">
 
     </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="/static/js/vu.js"></script>
 </body>
 </html>

@@ -2,17 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
-    Day la body
-
-   
-
     
-    
+    <form action="/search">
+        <input placeholder="Nhap san pham can tim" name="q"/>
+        <button>Tim kiem</button>
+    </form>
 
-    <script>
-        function dangxuat() {
-            
-            
-        }
-    </script>
 </asp:Content>
