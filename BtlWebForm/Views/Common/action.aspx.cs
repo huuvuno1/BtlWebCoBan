@@ -18,14 +18,19 @@ namespace BtlWebForm.Views.Common
             if (Session.Contents["user-login"] == null)
             {
                 string action = Request.Form.Get("action");
-                if (action.Equals("login"))
+                if ("login".Equals(action))
                 {
                     CheckLogin();
                 } 
-                else if (action.Equals("register"))
+                else if ("register".Equals(action))
                 {
                     Register();
                 }
+            }
+            else
+            {
+                Session.Abandon();
+                Response.Redirect("/login");
             }
         }
 
@@ -47,7 +52,7 @@ namespace BtlWebForm.Views.Common
                     if (user.Password.Equals(password))
                     {
                         Session.Add("user-login", user);
-                        string redirect = user.Role == 1 ? "/admin" : "";
+                        string redirect = user.Role == 1 ? "/admin" : "/";
                         Response.Redirect(redirect);
                     }
                 }

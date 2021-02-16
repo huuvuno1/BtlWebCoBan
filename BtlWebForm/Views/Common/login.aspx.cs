@@ -11,11 +11,13 @@ namespace BtlWebForm.Views.Common
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-                - Làm đẹp url nếu user cố tình vào bằng domain.com/Views/Common/login.aspx
-                - Tránh vào url trên dẫn tới action trong form bị sai
-            */
-            //Response.Redirect("/login");
+            // Nếu đã login thì không được vào trang này nữa
+            if (Session.Contents["user-login"] != null)
+                Response.Redirect("/");
+
+            // Làm đẹp url nếu user cố tình vào trang domain.com/Views/Common/login.aspx
+            if (!Request.Url.AbsolutePath.Equals("/login"))
+                Response.Redirect("/login");
         }
     }
 }

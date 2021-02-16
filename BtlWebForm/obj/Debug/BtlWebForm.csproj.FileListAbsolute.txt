@@ -59,10 +59,6 @@ C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\obj\Debug\BtlWebForm.dll
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\obj\Debug\BtlWebForm.pdb
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\Newtonsoft.Json.dll
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\Newtonsoft.Json.xml
-C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\grpc_csharp_ext.x86.dll
-C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\grpc_csharp_ext.x64.dll
-C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\libgrpc_csharp_ext.x64.so
-C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\libgrpc_csharp_ext.x64.dylib
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\System.Buffers.dll
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\System.Memory.dll
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\System.Numerics.Vectors.dll

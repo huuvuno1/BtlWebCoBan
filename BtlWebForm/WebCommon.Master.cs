@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BtlWebForm.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace BtlWebForm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UserEntity user = (UserEntity)Session.Contents["user-login"];
+            if (user != null)
+                fullname.InnerText = user.Fullname;
         }
     }
 }

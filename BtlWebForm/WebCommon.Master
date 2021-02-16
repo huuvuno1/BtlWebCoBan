@@ -9,7 +9,9 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    Day la trang common
+    Day la trang common<br />
+    <p id="fullname" runat="server"></p> <br />
+    <a href="/action">Logout</a>
     <asp:ContentPlaceHolder ID="CommonBody" runat="server">
 
     </asp:ContentPlaceHolder>

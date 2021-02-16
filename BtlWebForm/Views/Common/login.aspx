@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form action="action" runat="server">
+    <form action="/action" runat="server">
         <input placeholder="Nhap username" name="username" /><br />
         <input placeholder="Nhap password" name="password" /><br />
         <input name="action" value="login" hidden="hidden"/><br />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BtlWebForm.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,8 +13,10 @@ namespace BtlWebForm.Views.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
            
+                
             // làm đẹp url
-            Response.Redirect("/admin");
+            if (!Request.Url.AbsolutePath.Equals("/admin"))
+                Response.Redirect("/admin");
         }
     }
 }

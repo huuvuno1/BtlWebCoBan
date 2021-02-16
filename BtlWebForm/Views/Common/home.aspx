@@ -3,4 +3,16 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
     Day la body
+
+   
+
+    
+    
+
+    <script>
+        function dangxuat() {
+            
+            
+        }
+    </script>
 </asp:Content>
