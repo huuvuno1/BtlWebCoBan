@@ -103,6 +103,7 @@
     <Content Include="static\img\product\vr3.jpg" />
     <Content Include="static\js\vu.js" />
     <Content Include="Views\Admin\home.aspx" />
+    <Content Include="Views\Common\access-denied.aspx" />
     <Content Include="Views\Common\action.aspx" />
     <Content Include="Views\Common\search.aspx" />
     <Content Include="Views\Common\phanloai.aspx" />
@@ -120,9 +121,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Repository\UserRepository.cs" />
-    <Compile Include="Router\AdminRouterConfig.cs" />
-    <Compile Include="Router\CommonRouterConfig.cs" />
-    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Router\RouterConfig.cs" />
     <Compile Include="Utils\Constant.cs" />
     <Compile Include="Views\Admin\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -130,6 +129,13 @@
     </Compile>
     <Compile Include="Views\Admin\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\access-denied.aspx.cs">
+      <DependentUpon>access-denied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Common\access-denied.aspx.designer.cs">
+      <DependentUpon>access-denied.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\action.aspx.cs">
       <DependentUpon>action.aspx</DependentUpon>
@@ -182,6 +188,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\product.json" />
     <None Include="packages.config" />
     <Content Include="Database\user.json" />
     <None Include="Web.Debug.config">

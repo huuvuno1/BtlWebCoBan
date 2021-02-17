@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BtlWebForm.Router;
+using System;
 using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
 
 namespace BtlWebForm
 {
@@ -13,9 +9,9 @@ namespace BtlWebForm
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            AdminRouterConfig.AddRouter(RouteTable.Routes);
+            RouterConfig.AddConfigRouteAdmin(RouteTable.Routes);
 
-            CommonRouterConfig.AddRouter(RouteTable.Routes);
+            RouterConfig.AddConfigRouteCommon(RouteTable.Routes);
         }
 
         protected void Session_Start(object sender, EventArgs e)

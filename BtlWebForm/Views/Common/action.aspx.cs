@@ -1,20 +1,16 @@
 ﻿using BtlWebForm.Entity;
-using BtlWebForm.Service;
+using BtlWebForm.Repository;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace BtlWebForm.Views.Common
 {
     public partial class action : System.Web.UI.Page
     {
-        UserService userService = new UserService();
+        UserRepository userRepository = new UserRepository();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Session.Contents["user-login"] == null)
             {
                 string action = Request.Form.Get("action");
@@ -29,6 +25,7 @@ namespace BtlWebForm.Views.Common
             }
             else
             {
+                // them xu ly tham só = logout thì mới được logout, đây đang làm vội
                 Session.Abandon();
                 Response.Redirect("/login");
             }
@@ -41,12 +38,11 @@ namespace BtlWebForm.Views.Common
 
         private void CheckLogin()
         {
-            Server.MapPath("");
             string username = Request.Form.Get("username");
             string password = Request.Form.Get("password");
             if (username != null && password != null)
             {
-                UserEntity user = userService.FindUserByUsername(username);
+                UserEntity user = userRepository.FindUserByUsername(username);
                 if (user != null)
                 {
                     if (user.Password.Equals(password))

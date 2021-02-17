@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "LapApple Macbook 12 MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)",
+    "price": "30000000",
+    "image": "/static/img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg"
+    ;
+  },
+  {
+    "id": 1,
+    "name": "Lap top vjp pro (2017)",
+    "price": "30000000",
+    "image": "/static/img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg"
+    ";",
+  },
+  {
+    "id": 1,
+    "name": "ok (2017)",
+    "price": "30000000",
+    "image": "/static/img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg"
+    ";",
+  }
+]
