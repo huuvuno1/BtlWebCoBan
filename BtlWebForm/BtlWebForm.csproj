@@ -103,6 +103,7 @@
     <Content Include="static\img\product\vr3.jpg" />
     <Content Include="static\js\vu.js" />
     <Content Include="Views\Admin\home.aspx" />
+    <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
     <Content Include="Views\Common\access-denied.aspx" />
     <Content Include="Views\Common\action.aspx" />
     <Content Include="Views\Common\search.aspx" />
@@ -112,23 +113,33 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\ProductEntity.cs" />
     <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\FileIO.cs">
+    <Compile Include="Utils\FileIO.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Router\RouterConfig.cs" />
     <Compile Include="Utils\Constant.cs" />
+    <Compile Include="Utils\ProductUtil.cs" />
     <Compile Include="Views\Admin\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Admin\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajax\ShowDetailProduct.aspx.cs">
+      <DependentUpon>ShowDetailProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ajax\ShowDetailProduct.aspx.designer.cs">
+      <DependentUpon>ShowDetailProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\access-denied.aspx.cs">
       <DependentUpon>access-denied.aspx</DependentUpon>
@@ -188,9 +199,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\product.json" />
+    <Content Include="Database\products.json" />
     <None Include="packages.config" />
-    <Content Include="Database\user.json" />
+    <Content Include="Database\users.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

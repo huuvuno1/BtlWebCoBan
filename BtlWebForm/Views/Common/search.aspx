@@ -14,7 +14,7 @@
     <section class="content">
         <div class="container">
             <div class="message margin-bottom-20">
-                <h1>Có 30 kết quả tìm kiếm phù hợp</h1>
+                <h1 id="CountResult" runat="server"></h1>
             </div>
             <div class="products" id="ListProduct" runat="server">
                 
@@ -26,79 +26,9 @@
     </section>
     <div class="clear"></div>
     <div class="show-form">
-        <div class="form-quick-view frame">
-            <a href="javascript:;" class="btn-close" onclick="btnClose(1)">x</a>
-            <div class="flex-layout">
-                <div class="left-frame">
-                    <div id="big-img">
-                        <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="" id="bigImg">
-                    </div>
-                    <div class="list-img">
-                        <div class="chuyen" onclick="backImg()" style="display: none;">
-                            <img src="img/icon/click-left.png" alt="">
-                        </div>
-                        <!-- cứ cho chay for hết list ảnh ra, js sẽ cho hiển thị 3 cái đầu -->
-                        <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="0">
-                        <img src="img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="1">
-                        <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="2">
-                        <img src="img/product/thiet-bi-deo-thuc-te-ao-sm-r323.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="3">
-                        <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="4">
-                        <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="5">
-                        <img src="img/product/vr3.jpg" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="4">
-                        <img src="img/product/huawei-mediapad-m3-115-400x460.png" alt="Ảnh lỗi" class="small-img" onclick="showImage(this)" num="5">
-
-                        <div class="chuyen" onclick="nextImg()">
-                            <img src="img/icon/click-right.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="right-frame">
-                    <h3 id="name-product-current">
-                        <a href="">Apple Macbook 12" MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)</a>
-                    </h3>
-                    <div class="thongtin">
-                        <span>Thương hiệu: </span>
-                        <span>Apple</span>
-                        <span> | </span>
-                        <span>Tình trạng: </span>
-                        <span class="status">Còn hàng</span>
-                    </div>
-                    <hr class="line">
-                    <div class="product-price" style="text-align: center;">
-
-                        <span class="product-price-new">
-                            28.000.000₫
-                        </span>
-
-                        <span class="product-price-old">
-                            30.000.000₫
-                        </span>
-                    </div>
-                    <hr class="line">
-                    <div class="description">
-                        <div class="text-2-line">
-                            Màn Hình : 13.3 inchs QHD IPS
-                            CPU : Intel Core i7-8550U
-                            RAM : 8 GB DDR4 2133 MHz
-                            VGA : Intel HD Graphics 620
-                            HĐH : Windows 10
-                            Nặng : 1.3 Kg...
-                        </div>
-                        <a href="#">Xem chi tiết</a>
-                    </div>
-
-                    <div class="muahang">
-                        <div class="quantity cha">
-                                <span class="con minus" onclick="minusQuantity(this)">–</span>
-                                <input type="text" value="1" onchange="checkInput(this)">
-                                <span class="con add" onclick="addQuantity(this)">+</span>
-                        </div>
-                        <div class="btn-add-to-cart">
-                            <button id="btn-add-to-cart" onclick="addToCart()">Cho vào Thêm vào giỏ hàng</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="form-quick-view frame" id="result-ajax">
+            
+            
 
         </div>
         <div class="fade" onclick="btnClose(1)">
@@ -142,7 +72,7 @@
                             </div>
                         </div>
                         <div class="view-product-price">
-                            <span class="red line37">7.000.000 ₫</span>
+                            <span class="red line37">7,000,000 ₫</span>
                         </div>
                         <div class="view-product-quantity">
                             <div class="cha">
@@ -153,7 +83,7 @@
                             
                         </div>
                         <div class="view-product-total-money">
-                            <span class="red line37">7.000.000 ₫</span>
+                            <span class="red line37">7,000,000 ₫</span>
                         </div>
                     </div>
 
@@ -172,7 +102,7 @@
                             </div>
                         </div>
                         <div class="view-product-price">
-                            <span class="red line37">9.000.000 ₫</span>
+                            <span class="red line37">9,000,000 ₫</span>
                         </div>
                         <div class="view-product-quantity">
                             <div class="cha">
@@ -182,7 +112,7 @@
                             </div>
                         </div>
                         <div class="view-product-total-money">
-                            <span class="red line37">9.000.000</span>
+                            <span class="red line37">9,000,000</span>
                         </div>
                     </div>
 

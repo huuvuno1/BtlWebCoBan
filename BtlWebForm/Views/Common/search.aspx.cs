@@ -1,57 +1,32 @@
-﻿using System;
-
+﻿using BtlWebForm.Entity;
+using BtlWebForm.Repository;
+using BtlWebForm.Utils;
+using System;
+using System.Collections.Generic;
 namespace BtlWebForm.Views.Common
 {
     public partial class search : System.Web.UI.Page
     {
+        ProductRepository productRepository = new ProductRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string html = 
-                @"<div class='product'>
-                    <div class='product-box'>
-                        <div class='product-thumnail'>
-                            <span class='sale-count'>
-                                - 8%
-                            </span>
-                            <a href = '' title='LapApple Macbook 12 MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)'>
-                                <img src = '/static/img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg' alt=''
-                                    class='img-thumnail'>
-                            </a>
-                            <div class='show-option-selection'>
-                                <div class='view-details' onclick='btnShowForm(1)' title='Xem nhanh'>
-                                    <img src = '/static/img/icon/kinhlup.png' alt='' class='icon'>
-                                </div>
-                                <div class='add-to-cart' onclick='btnShowForm(2)' title='Thêm vào Thêm vào giỏ hàng'>
-                                    <img src = '/static/img/icon/cart.png' alt='' class='icon'>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='product-box khungduoi'>
-                        <div class='product-info'>
-                            <span class='product-vendor'>
-                                Apple
-                            </span>
 
-                            <h4 class='product-name'>
-                                <a href = '' class='text-2-line'>
-                                    Lap tốp vjp pro (2017)
-                                </a>
-                            </h4>
+            string html = "";
+            string q = Request.QueryString.Get("q");
+            List<ProductEntity> products = productRepository.FindProductsLikeName(q);
+            if (products == null)
+                CountResult.InnerText = "Không có sản phẩm nào được tìm thấy !";
+            else
+            {
+                CountResult.InnerText = "Có " + products.Count + " kết quả được tìm thấy";
 
-                            <div class='product-price'>
-                                <span class='product-price-old'>
-                                    300.000.000₫
-                                </span>
-                                <span class='product-price-new'>
-                                    28.000.000₫
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>";
-           
-            ListProduct.InnerHtml = html;
+                foreach (ProductEntity product in products)
+                    html += ProductUtil.MatchHtmlWithData(product);
+
+                ListProduct.InnerHtml = html;
+            }    
+                
+
         }
     }
 }

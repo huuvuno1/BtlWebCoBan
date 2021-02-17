@@ -7,6 +7,8 @@ namespace BtlWebForm.Views.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             UserEntity user = (UserEntity)Session.Contents["user-login"];
+
+            // Phân quyền
             if (user != null && user.Role == Constant.ROLE_ADMIN)
             {
                 // làm đẹp url

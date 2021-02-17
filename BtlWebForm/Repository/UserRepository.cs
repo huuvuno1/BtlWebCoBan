@@ -9,7 +9,7 @@ namespace BtlWebForm.Repository
         FileIO fileIO = new FileIO();
         public List<UserEntity> FindAllUser()
         {
-            string listUseJson = fileIO.ReadFileJson(Constant.DATA_USER);
+            string listUseJson = fileIO.ReadFileJson(Constant.DATA_USERS);
             if (listUseJson != null)
             {
                 List<UserEntity> users = JsonConvert.DeserializeObject<List<UserEntity>>(listUseJson);

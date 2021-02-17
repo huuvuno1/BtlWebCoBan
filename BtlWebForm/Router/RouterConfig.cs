@@ -17,5 +17,12 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("search", "search", "~/Views/Common/search.aspx");
             routes.MapPageRoute("access-denied", "access-denied", "~/Views/Common/access-denied.aspx");
         }
+
+        public static void AddConfigRouteAjax(RouteCollection routes)
+        {
+            routes.MapPageRoute("api-product", "api/product/{ID}", "~/Views/Ajax/ShowDetailProduct.aspx");
+            //routes.MapPageRoute("api-product-no-param", "api/product", "~/Views/Ajax/ShowDetailProduct.aspx");
+            
+        }
     }
 }
