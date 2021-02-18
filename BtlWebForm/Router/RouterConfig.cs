@@ -21,7 +21,9 @@ namespace BtlWebForm.Router
         public static void AddConfigRouteAjax(RouteCollection routes)
         {
             routes.MapPageRoute("api-product", "api/product/{ID}", "~/Views/Ajax/ShowDetailProduct.aspx");
-            //routes.MapPageRoute("api-product-no-param", "api/product", "~/Views/Ajax/ShowDetailProduct.aspx");
+            routes.MapPageRoute("api-form-add", "api/form", "~/Views/Ajax/FormAddOrEditProduct.aspx");
+            routes.MapPageRoute("api-form-edit", "api/form/{ID}", "~/Views/Ajax/FormAddOrEditProduct.aspx");
+            routes.MapPageRoute("api-row-product", "api/product", "~/Views/Ajax/RowProducts.aspx");
             
         }
     }

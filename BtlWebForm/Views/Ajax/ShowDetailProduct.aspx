@@ -5,18 +5,8 @@
                 <div id="big-img">
                     <asp:Image ID="bigImg" ImageUrl="/static/img/vr3.jpg" runat="server"></asp:Image>
                 </div>
-                <div class="list-img">
-                    <div class="chuyen" onclick="backImg()" style="display: none;">
-                        <img src="/static/img/icon/click-left.png" alt="">
-                    </div>
+                <div class="list-img" id="PIC" runat="server">
 
-                    <div id="PIC" runat="server">
-
-                    </div>
-
-                    <div class="chuyen" onclick="nextImg()">
-                        <img src="/static/img/icon/click-right.png" alt="">
-                    </div>
                 </div>
             </div>
             <div class="right-frame">
@@ -43,13 +33,8 @@
                 </div>
                 <hr class="line">
                 <div class="description">
-                    <div class="text-2-line">
-                        Màn Hình : 13.3 inchs QHD IPS
-                        CPU : Intel Core i7-8550U
-                        RAM : 8 GB DDR4 2133 MHz
-                        VGA : Intel HD Graphics 620
-                        HĐH : Windows 10
-                        Nặng : 1.3 Kg...
+                    <div class="text-2-line" id="INFO" runat="server">
+                        
                     </div>
                     <a href="#">Xem chi tiết</a>
                 </div>

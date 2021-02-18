@@ -86,6 +86,8 @@
     <Content Include="Global.asax" />
     <Content Include="static\css\style_vu.css" />
     <Content Include="static\css\style_vu_reposive.css" />
+    <Content Include="static\img\icon\admin.png" />
+    <Content Include="static\img\icon\avatar.jpg" />
     <Content Include="static\img\icon\cart.png" />
     <Content Include="static\img\icon\click-left-gray.png" />
     <Content Include="static\img\icon\click-left.png" />
@@ -101,9 +103,12 @@
     <Content Include="static\img\product\huawei-mediapad-m3-115-400x460.png" />
     <Content Include="static\img\product\thiet-bi-deo-thuc-te-ao-sm-r323.jpg" />
     <Content Include="static\img\product\vr3.jpg" />
+    <Content Include="static\js\admin_vu.js" />
     <Content Include="static\js\vu.js" />
     <Content Include="Views\Admin\home.aspx" />
+    <Content Include="Views\Ajax\FormAddOrEditProduct.aspx" />
     <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
+    <Content Include="Views\Ajax\RowProducts.aspx" />
     <Content Include="Views\Common\access-denied.aspx" />
     <Content Include="Views\Common\action.aspx" />
     <Content Include="Views\Common\search.aspx" />
@@ -134,12 +139,26 @@
     <Compile Include="Views\Admin\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Ajax\FormAddOrEditProduct.aspx.cs">
+      <DependentUpon>FormAddOrEditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ajax\FormAddOrEditProduct.aspx.designer.cs">
+      <DependentUpon>FormAddOrEditProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ajax\ShowDetailProduct.aspx.cs">
       <DependentUpon>ShowDetailProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Ajax\ShowDetailProduct.aspx.designer.cs">
       <DependentUpon>ShowDetailProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajax\RowProducts.aspx.cs">
+      <DependentUpon>RowProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ajax\RowProducts.aspx.designer.cs">
+      <DependentUpon>RowProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\access-denied.aspx.cs">
       <DependentUpon>access-denied.aspx</DependentUpon>

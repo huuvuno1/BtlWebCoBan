@@ -4,14 +4,48 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/static/css/style_vu.css">
+    <link rel="stylesheet" href="/static/css/style_vu_reposive.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <h1>Day la page master</h1>
+    <section class="navbar-admin">
+        <div class="left-nav">
+            <img src="/static/img/icon/admin.png" alt="">
+            <h1>SHOP ADMIN</h1>
+        </div>
+
+        <div class="right-nav">
+            <div class="user">
+                <img src="/static/img/icon/avatar.jpg" alt="" class="avatar">
+                <ul class="ul-boss">
+                    <li id="name_admin" runat="server"></li>
+                    <li>
+                        <ul class="option-x">
+                            <a href="">
+                                <li>Profile</li>
+                            </a>
+                            <a href="">
+                                <li>Đăng xuất</li>
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <asp:ContentPlaceHolder ID="AdminBody" runat="server">
 
     </asp:ContentPlaceHolder>
+
+    
+    <script src="/static/js/admin_vu.js"></script>
+    <script src="/static/js/vu.js"></script>
 </body>
 </html>

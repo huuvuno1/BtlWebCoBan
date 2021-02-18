@@ -9,14 +9,17 @@ namespace BtlWebForm.Views.Admin
             UserEntity user = (UserEntity)Session.Contents["user-login"];
 
             // Phân quyền
-            if (user != null && user.Role == Constant.ROLE_ADMIN)
+            if (user != null)
             {
-                // làm đẹp url
+                // làm đẹp url nếu người dùng truy cập vào /Views/Admin/home.aspx
                 if (!Request.Url.AbsolutePath.Equals("/admin"))
                     Response.Redirect("/admin");
+
+                if (user.Role == Constant.ROLE_USER)
+                    Response.Redirect("/access-denied");
             }
             else
-                Response.Redirect("/access-denied");
+                Response.Redirect("/login");
                
         }
     }

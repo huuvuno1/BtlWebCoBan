@@ -8,8 +8,9 @@
     "ListImage": [
       "/static/img/product/vr3.jpg"
     ],
-    "Info": "Màn Hình : 13.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
-    "Quantity": 10
+    "Info": "Màn Hình : 15.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
+    "Quantity": 10,
+    "Url" : "laptop-macbook-12-MNYK2SA"
   },
   {
     "ID": 2,
@@ -23,8 +24,9 @@
       "/static/img/product/apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg",
       "/static/img/product/vr3.jpg"
     ],
-    "Info": "Màn Hình : 13.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
-    "Quantity": 3
+    "Info": "Màn Hình : 19.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
+    "Quantity": 3,
+    "Url": "laptop-macbook-12-MNYK2SA"
   },
   {
     "ID": 3,
@@ -38,7 +40,8 @@
       "/static/img/product/thiet-bi-deo-thuc-te-ao-sm-r323.jpg",
       "/static/img/product/huawei-mediapad-m3-115-400x460.png"
     ],
-    "Info": "Màn Hình : 13.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
-    "Quantity": 0
+    "Info": "Màn Hình : 19.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
+    "Quantity": 0,
+    "Url": "laptop-macbook-12-MNYK2SA"
   }
 ]

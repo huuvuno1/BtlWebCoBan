@@ -11,79 +11,88 @@ namespace BtlWebForm.Views.Ajax
 {
 
 
-    public partial class ShowDetailProduct
+    public partial class FormAddOrEditProduct
     {
 
         /// <summary>
-        /// bigImg control.
+        /// type_form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image bigImg;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_form;
 
         /// <summary>
-        /// PIC control.
+        /// name_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PIC;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText name_pro;
 
         /// <summary>
-        /// NAME control.
+        /// price_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor NAME;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText price_pro;
 
         /// <summary>
-        /// TRADEMARK control.
+        /// quantity_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TRADEMARK;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText quantity_pro;
 
         /// <summary>
-        /// QUANTITY_X control.
+        /// image_sss control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl QUANTITY_X;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell image_sss;
 
         /// <summary>
-        /// GIA_MOI control.
+        /// list_img_product control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl GIA_MOI;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl list_img_product;
 
         /// <summary>
-        /// GIA_CU control.
+        /// sale_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl GIA_CU;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText sale_pro;
 
         /// <summary>
-        /// INFO control.
+        /// info_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl INFO;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea info_pro;
+
+        /// <summary>
+        /// url_pro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText url_pro;
     }
 }

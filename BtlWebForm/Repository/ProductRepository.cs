@@ -34,7 +34,7 @@ namespace BtlWebForm.Repository
                 List<ProductEntity> results = new List<ProductEntity>();
                 foreach (ProductEntity product in products)
                 {
-                    if (product.Name.Contains(name))
+                    if (product.Name.ToLower().Contains(name.ToLower()))
                         results.Add(product);
                 }
                 return results;
