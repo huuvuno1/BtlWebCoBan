@@ -242,7 +242,7 @@ function addProductSS(ID) {
             // lat xu li thong bao da them vao gio hang
         }
     };
-    xhttp.open("GET", "/api/cart/" + ID, true);
+    xhttp.open("GET", "/api/cart/" + ID, false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 } 
@@ -252,7 +252,6 @@ function addProductSS(ID) {
 
 function getProductToSession() {
     var load = document.getElementById("img_loading");
-    load.style.display = "inline";
     
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -263,7 +262,7 @@ function getProductToSession() {
             // lat xu li thong bao da them vao gio hang
         }
     };
-    xhttp.open("GET", "/api/cart", true);
+    xhttp.open("GET", "/api/cart", false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 }
@@ -271,7 +270,24 @@ function getProductToSession() {
 
 // show form add
 function showFormCartSession(ID, typeForm) {
+    btnShowForm(typeForm);
+    
+    var load = document.getElementById("img_loading");
+    load.style.display = "inline";
     addProductSS(ID);  
     getProductToSession();
-    btnShowForm(typeForm);
+    tongTienGioHang();
+}
+
+// gom ham tang so luong
+function addChangeQuantity(x, ID){
+    addQuantity(x);
+    sumOfMoney(x.parentNode.children[1]);
+    addProductSS(ID);
+}
+
+function minusChangeQuantity(x, ID) {
+    minusQuantity(x);
+    sumOfMoney(x.parentNode.children[1]);
+    addProductSS(ID);
 }

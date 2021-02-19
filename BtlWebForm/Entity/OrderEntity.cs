@@ -1,0 +1,25 @@
+﻿using BtlWebForm.Database;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace BtlWebForm.Entity
+{
+    public class OrderEntity
+    {
+        public OrderEntity() { }
+        public int IDOrder { get; set; }
+        public List<ProductEntity> ListProduct { get; set; }
+        public int IDUser { get; set; }
+        public OrderEntity(int IDCart, int IDProduct, int Quantity)
+        {
+            this.IDOrder = IDCart;
+            ProductEntity product = new ProductEntity();
+            product.ID = IDProduct;
+            product.Quantity = Quantity;
+            ListProduct = new List<ProductEntity>();
+            ListProduct.Add(product);
+        }
+    }
+}

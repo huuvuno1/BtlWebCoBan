@@ -119,18 +119,18 @@
     <Content Include="Views\Common\phanloai.aspx" />
     <Content Include="Views\Common\home.aspx" />
     <Content Include="Views\Common\login.aspx" />
-    <Content Include="Views\test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DetailCart.cs" />
-    <Compile Include="Entity\CartEntity.cs" />
+    <Compile Include="Entity\OrderEntity.cs" />
     <Compile Include="Entity\ProductEntity.cs" />
     <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CartRepository.cs" />
     <Compile Include="Utils\FileIO.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -216,13 +216,6 @@
     <Compile Include="Views\Common\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebAdmin.Master.cs">
       <DependentUpon>WebAdmin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -240,7 +233,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\products.json" />
-    <Content Include="Database\cart.json" />
+    <Content Include="Database\Order.json" />
     <None Include="packages.config" />
     <Content Include="Database\users.json" />
     <None Include="Web.Debug.config">

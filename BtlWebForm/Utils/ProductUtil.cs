@@ -63,8 +63,9 @@ namespace BtlWebForm.Utils
             return html;
         }
 
-        public static string MatchHtmlWithProductSession(ProductEntity product)
+        public static string MatchHtmlWithProductSession(ProductEntity product, int Quantity)
         {
+            float price = product.Price * (100 - product.Sale) / 100;
             string html = @"<div class='view-row-product'>
                             <div class='view-product-info'>
                             <div class='view-img'>
@@ -84,17 +85,17 @@ namespace BtlWebForm.Utils
                             </div>
                         </div>
                         <div class='view-product-price'>
-                            <span class='red line37'>" + String.Format("{0:0,0}", product.Price) + @"₫</span>
+                            <span class='red line37'>" + String.Format("{0:0,0}", price) + @"₫</span>
                         </div>
                         <div class='view-product-quantity'>
                             <div class='cha'>
-                                <span class='con minus' onclick='minusQuantity(this); sumOfMoney(this.parentNode.children[1]);'>–</span>
-                                <input type = 'text' value='1' onchange='sumOfMoney(this)'>
-                                <span class='con add' onclick='addQuantity(this); sumOfMoney(this.parentNode.children[1]);'>+</span>
+                                <span class='con minus' onclick='minusChangeQuantity(this, " + product.ID + @")'>–</span>
+                                <input type = 'text' value='" + Quantity + @"' onchange='sumOfMoney(this)'>
+                                <span class='con add' onclick='addChangeQuantity(this, " + product.ID + @")'>+</span>
                             </div>
                         </div>
                         <div class='view-product-total-money'>
-                            <span class=red line37'>" + String.Format("{0:0,0}", product.Price) + @"₫</span>
+                            <span class=red line37'>" + String.Format("{0:0,0}", price * Quantity) + @"₫</span>
                         </div>
                     </div>";
             return html;

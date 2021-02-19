@@ -16,82 +16,77 @@ namespace BtlWebForm.Views.Ajax
         ProductRepository productRepository = new ProductRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Xử lý trường hợp ấn run ngay tại trang này, điều hướng đến trang home
+            // Xử lý trường hợp ấn run ngay tại trang này, sẽ điều hướng đến trang home
             if (!Request.Url.AbsolutePath.Contains("api/cart"))
                 Response.Redirect("/");
 
             // url /api/cart/{id} -> add product to cart
-            // save cart with format: "ID1|Quantity1-ID2|Quantity2..."
             string ID = (string) RouteData.Values["ID"];
             if (ID != null)
             {
-                SaveIDProductToSession(ID, Session);
+                SaveProductToSession(Int32.Parse(ID), Session);
             }
             // urel /api/cart -> get full product from session
             else
             {
-                string cart = (string)Session.Contents["cart"];
-                if (cart != null && !("".Equals(cart)))
+                OrderEntity order = (OrderEntity)Session.Contents["order"];
+                if (order != null)
                 {
-                    List<int> ids = GetListIDFromSession(cart);
+                    List<int> ids = GetListIDFromSession(order);
                     List<ProductEntity> products = productRepository.FindProductByListID(ids);
                     if (products == null)
                         return;
                     string html = "";
+                    // edit part 2
+                    int i = 0;
                     foreach (ProductEntity product in products)
                     {
-                        html += ProductUtil.MatchHtmlWithProductSession(product);
+                        html += ProductUtil.MatchHtmlWithProductSession(product, order.ListProduct[i].Quantity);
+                        i++;
                     }
                     Response.Write(html);
                 }
             }
+            OrderEntity ordertest = (OrderEntity)Session.Contents["order"];
         }
 
-        private List<int> GetListIDFromSession(string cart)
+        private List<int> GetListIDFromSession(OrderEntity order)
         {
             List<int> ids = new List<int>();
-            string[] productAndQuantity = cart.Split('-');
-            foreach (string loop in productAndQuantity)
+            foreach (ProductEntity product in order.ListProduct)
             {
-                string id = loop.Split('|')[0];
-                ids.Add(Int32.Parse(id));
+                int id = product.ID;
+                ids.Add(id);
             }
             return ids;
         }
 
-        private void SaveIDProductToSession(string ID, HttpSessionState session)
+        private void SaveProductToSession(int ID, HttpSessionState session)
         {
-            string cart = (string)Session.Contents["cart"];
-            if (cart == null || "".Equals(cart))
-                Session.Add("cart", ID + "|1");
+            OrderEntity order = (OrderEntity)Session.Contents["order"];
+            if (order == null)
+            {
+                order = new OrderEntity(1, ID, 1);
+                Session.Add("order", order);
+            }    
             else
             {
-                // cắt cart từ session ra mảng: {"ID1|Quantity1", "ID2|Quantity2", ...}
-                string[] productAndQuantity = cart.Split('-');
-
-                string cartChange = "";
                 bool isExist = false;
-                // loop để kiểm tra sản phẩm này đã có trong session chưa, nếu có thì tăng số lượng lên
-                foreach (string loop in productAndQuantity)
+                for (int i = 0; i < order.ListProduct.Count; i++)
                 {
-                    string[] temp = loop.Split('|');
-                    if (temp[0].Equals(ID)) // temp[0] = ID
+                    if (ID == order.ListProduct[i].ID)
                     {
-                        temp[1] = (Int32.Parse(temp[1]) + 1).ToString();
+                        order.ListProduct[i].Quantity++;
                         isExist = true;
                     }
-                    cartChange += temp[0] + "|" + temp[1] + "-";
                 }
-
                 if (isExist)
-                {
-                    cartChange = cartChange.Remove(cartChange.Length - 1);
-                    Session.Add("cart", cartChange);
-                }
+                    Session.Add("order", order);
                 else
                 {
-                    cart += "-" + ID + "|1";
-                    Session.Add("cart", cart);
+                    ProductEntity product = new ProductEntity(ID, 1);
+                    order.ListProduct.Add(product);
+                    Session.Add("oder", order);
                 }
             }
         }
