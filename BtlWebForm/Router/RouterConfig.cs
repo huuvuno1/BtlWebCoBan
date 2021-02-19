@@ -26,6 +26,7 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("api-row-product", "api/product", "~/Views/Ajax/RowProducts.aspx");
             routes.MapPageRoute("api-get-product-session", "api/cart", "~/Views/Ajax/Cart.aspx");
             routes.MapPageRoute("api-add-product-session", "api/cart/{ID}", "~/Views/Ajax/Cart.aspx");
+            routes.MapPageRoute("api-add-quantity-product-session", "api/cart/{ID}/{Type}/{Quantity}", "~/Views/Ajax/Cart.aspx");
             
         }
     }

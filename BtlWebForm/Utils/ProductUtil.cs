@@ -22,14 +22,14 @@ namespace BtlWebForm.Utils
                                     - " + product.Sale + @"%
                               </span>";
 
-                    html += @"<a href = '' title='" + product.Name + @"'>
+                    html += @"<a href = '" + product.Url + @"' title='" + product.Name + @"' class='title_name_product'>
                                     <img src = '" + product.ListImage[0] + @"' alt='' class='img-thumnail'>
                             </a>
                             <div class='show-option-selection'>
                                 <div class='view-details' onclick='btnShowForm(1, " + product.ID + @")' title='Xem nhanh'>
                                     <img src = '/static/img/icon/kinhlup.png' alt='' class='icon'>
                                 </div>
-                                <div class='add-to-cart' onclick='showFormCartSession(" + product.ID + @", 2);' title='Thêm vào giỏ hàng'>
+                                <div class='add-to-cart' onclick='showNameProClick(this),showFormCartSession(" + product.ID + @", 2);' title='Thêm vào giỏ hàng'>
                                     <img src = '/static/img/icon/cart.png' alt='' class='icon'>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ namespace BtlWebForm.Utils
                             </span>
 
                             <h4 class='product-name'>
-                                <a href = '' class='text-2-line'>
+                                <a href = '" + product.Url + @"' class='text-2-line'>
                                     " + product.Name + @"
                                 </a>
                             </h4>
@@ -65,6 +65,7 @@ namespace BtlWebForm.Utils
 
         public static string MatchHtmlWithProductSession(ProductEntity product, int Quantity)
         {
+
             float price = product.Price * (100 - product.Sale) / 100;
             string html = @"<div class='view-row-product'>
                             <div class='view-product-info'>
@@ -73,13 +74,13 @@ namespace BtlWebForm.Utils
 
             html += product.ListImage != null ? product.ListImage[0] : "";
 
-            html +=  @"'>
+            html += @"'>
                             </div>
                             <div class='view-info'>
                                 <div class='view-info-name text-2-line'>"
                                     + product.Name + @"
                                 </div>
-                                <span class='click-remove' onclick='removeProduct(this)'>
+                                <span class='click-remove' onclick='removeProduct(this)' num='"+ product.ID + @"'>
                                     〤 Xóa
                                 </span>
                             </div>
@@ -89,8 +90,8 @@ namespace BtlWebForm.Utils
                         </div>
                         <div class='view-product-quantity'>
                             <div class='cha'>
-                                <span class='con minus' onclick='minusChangeQuantity(this, " + product.ID + @")'>–</span>
-                                <input type = 'text' value='" + Quantity + @"' onchange='sumOfMoney(this)'>
+                                <span class='con minus' onclick='minusChangeQuantity(this, " + product.ID + @" , 1)'>–</span>
+                                <input type = 'text' value='" + Quantity + @"' onchange='sumOfMoney(this); onchangeAddSession( "+ product.ID + @",this);' oninput='sumOfMoney(this)'>
                                 <span class='con add' onclick='addChangeQuantity(this, " + product.ID + @")'>+</span>
                             </div>
                         </div>

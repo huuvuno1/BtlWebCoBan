@@ -207,6 +207,9 @@ function removeProduct(x)
     var row = x.parentNode.parentNode.parentNode;
     row.parentNode.removeChild(row);
     tongTienGioHang();
+    var ID = x.getAttribute('num');
+    changeProductSS(ID, "remove", 0);
+
 }
 
 function tongTienGioHang()
@@ -243,6 +246,20 @@ function addProductSS(ID) {
         }
     };
     xhttp.open("GET", "/api/cart/" + ID, false);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+} 
+
+function changeProductSS(ID, type, quantity) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var dom = document.getElementById("result-ajax");
+            dom.innerHTML = this.responseText;
+            // lat xu li thong bao da them vao gio hang
+        }
+    };
+    xhttp.open("GET", "/api/cart/" + ID + "/" + type + "/" + quantity, false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 } 
@@ -286,8 +303,37 @@ function addChangeQuantity(x, ID){
     addProductSS(ID);
 }
 
-function minusChangeQuantity(x, ID) {
+function minusChangeQuantity(x, ID, quantity) {
     minusQuantity(x);
     sumOfMoney(x.parentNode.children[1]);
-    addProductSS(ID);
+    changeProductSS(ID, "minus", 1);
+}
+
+// Lưu onchange vào session
+function onchangeAddSession(ID,x) {
+    checkInput(x);
+    var quantity = x.value;
+    changeProductSS(ID, "add", quantity);
+}
+
+function showNameProClick(x) {
+    var parent = x.parentNode.parentNode;
+    var nodeA = parent.getElementsByClassName('title_name_product')[0];
+    var nameProduct = nodeA.getAttribute("title");
+    var urlProduct = nodeA.getAttribute("href");
+
+    var html = "Bạn đã thêm <a href=" + urlProduct + " id='name_pro_click'>" + nameProduct + "</a> vào giỏ hàng";
+
+    document.getElementById("title_cart").innerHTML = html;
+
+}
+
+// xu li click icon cart
+function showCart() {
+    btnShowForm(2);
+    var load = document.getElementById("img_loading");
+    load.style.display = "inline";
+    document.getElementById("title_cart").innerHTML = "<b>Giỏ hàng của bạn</b>";
+    getProductToSession();
+    tongTienGioHang();
 }

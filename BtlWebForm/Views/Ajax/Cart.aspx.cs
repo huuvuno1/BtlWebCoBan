@@ -24,7 +24,18 @@ namespace BtlWebForm.Views.Ajax
             string ID = (string) RouteData.Values["ID"];
             if (ID != null)
             {
-                SaveProductToSession(Int32.Parse(ID), Session);
+                // url /api/cart/{id}/{type}/{quantity} -> type là tăng, giảm
+                string type = (string)RouteData.Values["type"];
+                string quantity = (string)RouteData.Values["quantity"];
+                int qtt = 0;
+                if (quantity == null)
+                    qtt = 1;
+                else
+                    qtt = Int32.Parse(quantity);
+
+                // sau 1 hồi sửa =))
+                SaveProductToSession(Session, Int32.Parse(ID), type, qtt);
+                
             }
             // urel /api/cart -> get full product from session
             else
@@ -50,6 +61,57 @@ namespace BtlWebForm.Views.Ajax
             OrderEntity ordertest = (OrderEntity)Session.Contents["order"];
         }
 
+        private void SaveProductToSession(HttpSessionState session, int ID, string type, int Quantity)
+        {
+            OrderEntity order = (OrderEntity)Session.Contents["order"];
+            if (order == null)
+            {
+                order = new OrderEntity(1, ID, 1);
+                Session.Add("order", order);
+            }
+            else
+            {
+                bool isExist = false;
+                for (int i = 0; i < order.ListProduct.Count; i++)
+                {
+                    if (ID == order.ListProduct[i].ID)
+                    {
+                        isExist = true;
+                        if ("minus".Equals(type)) // xử lý click giảm
+                        {
+                            order.ListProduct[i].Quantity -= Quantity;
+                            if (order.ListProduct[i].Quantity < 1)
+                                order.ListProduct[i].Quantity = 1; // mặc định luôn = 1
+                        }
+                        else if (type == null)
+                        {
+                            order.ListProduct[i].Quantity++;  
+                        }
+                        else if ("remove".Equals(type)) // sự kiện remove
+                        {
+                            order.ListProduct.RemoveAt(i);
+                          
+                            break;
+                        }
+                        else // còn lại là sự kiện onchange
+                        {
+                            order.ListProduct[i].Quantity = Quantity;
+                        }
+                        
+                    }
+                }
+                if (isExist)
+                    Session.Add("order", order);
+                else
+                {
+                    ProductEntity product = new ProductEntity(ID, Quantity);
+                    order.ListProduct.Add(product);
+                    Session.Add("oder", order);
+                }
+            }
+
+        }
+
         private List<int> GetListIDFromSession(OrderEntity order)
         {
             List<int> ids = new List<int>();
@@ -61,35 +123,35 @@ namespace BtlWebForm.Views.Ajax
             return ids;
         }
 
-        private void SaveProductToSession(int ID, HttpSessionState session)
-        {
-            OrderEntity order = (OrderEntity)Session.Contents["order"];
-            if (order == null)
-            {
-                order = new OrderEntity(1, ID, 1);
-                Session.Add("order", order);
-            }    
-            else
-            {
-                bool isExist = false;
-                for (int i = 0; i < order.ListProduct.Count; i++)
-                {
-                    if (ID == order.ListProduct[i].ID)
-                    {
-                        order.ListProduct[i].Quantity++;
-                        isExist = true;
-                    }
-                }
-                if (isExist)
-                    Session.Add("order", order);
-                else
-                {
-                    ProductEntity product = new ProductEntity(ID, 1);
-                    order.ListProduct.Add(product);
-                    Session.Add("oder", order);
-                }
-            }
-        }
+        //private void SaveProductToSession(int ID, HttpSessionState session)
+        //{
+        //    OrderEntity order = (OrderEntity)Session.Contents["order"];
+        //    if (order == null)
+        //    {
+        //        order = new OrderEntity(1, ID, 1);
+        //        Session.Add("order", order);
+        //    }    
+        //    else
+        //    {
+        //        bool isExist = false;
+        //        for (int i = 0; i < order.ListProduct.Count; i++)
+        //        {
+        //            if (ID == order.ListProduct[i].ID)
+        //            {
+        //                order.ListProduct[i].Quantity++;
+        //                isExist = true;
+        //            }
+        //        }
+        //        if (isExist)
+        //            Session.Add("order", order);
+        //        else
+        //        {
+        //            ProductEntity product = new ProductEntity(ID, 1);
+        //            order.ListProduct.Add(product);
+        //            Session.Add("oder", order);
+        //        }
+        //    }
+        //}
 
     }
 }

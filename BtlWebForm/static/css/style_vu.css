@@ -112,7 +112,9 @@ header .search {
     border-radius: 4px;
     width: 75%;
 }
-
+.icon-cart{
+    cursor:pointer;
+}
 #btn-search {
     height: 42px;
     position: relative;
@@ -590,16 +592,19 @@ header .cart span {
     border-radius: 5px;
     /* height: 550px; */
 }
-
+#name_pro_click {
+    color: #1400ff;
+    font-weight: bold;
+}
 .product-name-just-added {
     border-radius: 5px;
-    height: 40px;
+    min-height: 40px;
     line-height: 40px;
-    background-color: #f8f8f8;
+    background-color: lawngreen;
 }
 
     .product-name-just-added span {
-        margin: 0 0 0 30px;
+        padding-left: 30px;
     }
 
 .content-cart {

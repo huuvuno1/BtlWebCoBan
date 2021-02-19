@@ -51,8 +51,8 @@
                 <a href="/action" ><i><span id="logout" runat="server"></span></i></a>
             </div>
             <div class="cart">
-                <span>4</span>
-                <img src="/static/img/icon/bag.png" alt="">
+                <span class="icon-cart" onclick="showCart()">4</span> 
+                <img class="icon-cart" src="/static/img/icon/bag.png" alt="" onclick="showCart()">
             </div>
         </div>
     </header>
@@ -72,7 +72,7 @@
         <div class="form-cart frame">
             <a href="javascript:;" class="btn-close" onclick="btnClose(2)">〤</a>
             <div class="product-name-just-added">
-                <span>Bạn đã thêm <a href="#">Acer Nitro 5 AN515 51 739L i7 7700HQ/8GB/1TB/2GB</a> vào giỏ hàng </span>
+                <span id="title_cart"></span>
             </div>
             <div class="content-cart">
                 <div class="title-cart">

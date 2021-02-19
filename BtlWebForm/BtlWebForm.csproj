@@ -122,7 +122,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\DetailCart.cs" />
     <Compile Include="Entity\OrderEntity.cs" />
     <Compile Include="Entity\ProductEntity.cs" />
     <Compile Include="Entity\UserEntity.cs" />

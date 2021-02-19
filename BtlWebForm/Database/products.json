@@ -10,7 +10,7 @@
     ],
     "Info": "Màn Hình : 15.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 10,
-    "Url" : "laptop-macbook-12-MNYK2SA"
+    "Url" : "/laptop-macbook-12-MNYK2SA"
   },
   {
     "ID": 2,
@@ -26,7 +26,7 @@
     ],
     "Info": "Màn Hình : 19.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 3,
-    "Url": "laptop-macbook-12-MNYK2SA"
+    "Url": "/laptop-macbook-12-MNYK2SA"
   },
   {
     "ID": 3,
@@ -42,6 +42,6 @@
     ],
     "Info": "Màn Hình : 19.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 0,
-    "Url": "laptop-macbook-12-MNYK2SA"
+    "Url": "/laptop-macbook-12-MNYK2SA"
   }
 ]
