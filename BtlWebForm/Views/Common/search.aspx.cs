@@ -10,8 +10,6 @@ namespace BtlWebForm.Views.Common
         ProductRepository productRepository = new ProductRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            string html = "";
             string q = Request.QueryString.Get("q");
             List<ProductEntity> products = productRepository.FindProductsLikeName(q);
             if (products == null)
@@ -19,14 +17,11 @@ namespace BtlWebForm.Views.Common
             else
             {
                 CountResult.InnerText = "Có " + products.Count + " kết quả được tìm thấy";
-
+                string html = "";
                 foreach (ProductEntity product in products)
                     html += ProductUtil.MatchHtmlWithData(product);
-
                 ListProduct.InnerHtml = html;
             }    
-                
-
         }
     }
 }

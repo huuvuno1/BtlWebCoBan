@@ -88,6 +88,7 @@
     <Content Include="static\css\style_vu_reposive.css" />
     <Content Include="static\img\icon\admin.png" />
     <Content Include="static\img\icon\avatar.jpg" />
+    <Content Include="static\img\icon\bag.png" />
     <Content Include="static\img\icon\cart.png" />
     <Content Include="static\img\icon\click-left-gray.png" />
     <Content Include="static\img\icon\click-left.png" />
@@ -97,8 +98,10 @@
     <Content Include="static\img\icon\images.png" />
     <Content Include="static\img\icon\java-developer-roadmap.png" />
     <Content Include="static\img\icon\kinhlup.png" />
+    <Content Include="static\img\icon\le.png" />
     <Content Include="static\img\icon\loading.gif" />
     <Content Include="static\img\icon\logo.png" />
+    <Content Include="static\img\icon\user.png" />
     <Content Include="static\img\product\apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" />
     <Content Include="static\img\product\huawei-mediapad-m3-115-400x460.png" />
     <Content Include="static\img\product\thiet-bi-deo-thuc-te-ao-sm-r323.jpg" />
@@ -106,6 +109,7 @@
     <Content Include="static\js\admin_vu.js" />
     <Content Include="static\js\vu.js" />
     <Content Include="Views\Admin\home.aspx" />
+    <Content Include="Views\Ajax\Cart.aspx" />
     <Content Include="Views\Ajax\FormAddOrEditProduct.aspx" />
     <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
     <Content Include="Views\Ajax\RowProducts.aspx" />
@@ -115,9 +119,12 @@
     <Content Include="Views\Common\phanloai.aspx" />
     <Content Include="Views\Common\home.aspx" />
     <Content Include="Views\Common\login.aspx" />
+    <Content Include="Views\test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DetailCart.cs" />
+    <Compile Include="Entity\CartEntity.cs" />
     <Compile Include="Entity\ProductEntity.cs" />
     <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="Global.asax.cs">
@@ -138,6 +145,13 @@
     </Compile>
     <Compile Include="Views\Admin\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajax\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ajax\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Ajax\FormAddOrEditProduct.aspx.cs">
       <DependentUpon>FormAddOrEditProduct.aspx</DependentUpon>
@@ -202,6 +216,13 @@
     <Compile Include="Views\Common\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebAdmin.Master.cs">
       <DependentUpon>WebAdmin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\products.json" />
+    <Content Include="Database\cart.json" />
     <None Include="packages.config" />
     <Content Include="Database\users.json" />
     <None Include="Web.Debug.config">

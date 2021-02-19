@@ -54,5 +54,24 @@ namespace BtlWebForm.Repository
             }
             return null;
         }
+
+        // Dùng hàm này để tránh mở file nhiều lần
+        public List<ProductEntity> FindProductByListID(List<int> ID)
+        {
+            List<ProductEntity> products = FindAllProducts();
+            List<ProductEntity> result = new List<ProductEntity>();
+
+            foreach (int id in ID)
+            {
+                foreach (ProductEntity product in products)
+                    if (product.ID == id)
+                    {
+                        result.Add(product);
+                        break;
+                    } 
+            }
+
+            return result;
+        }
     }
 }

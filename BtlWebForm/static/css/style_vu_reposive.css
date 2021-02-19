@@ -1,64 +1,77 @@
-@media screen and (min-width: 1260px){
+@media screen and (min-width: 1260px) {
     /* reposive cho trang danh muc */
-
-    .left-container .product{
+    .left-container .product {
         padding: 10px !important;
         width: 219px !important;
     }
 
-    .left-container .product-thumnail{
+    .left-container .product-thumnail {
         height: 120px;
     }
 
-    .left-container .khungduoi{
+    .left-container .khungduoi {
         height: 160px !important;
     }
-    .left-container .text-2-line{
+
+    .left-container .text-2-line {
         height: 80px;
     }
 
-    .left-container .khungduoi{
+    .left-container .khungduoi {
         height: 160px;
     }
-    .left-container .view-details{
-        width: 40px;
-    }
-    .left-container .add-to-cart
-    {
+
+    .left-container .view-details {
         width: 40px;
     }
 
+    .left-container .add-to-cart {
+        width: 40px;
+    }
 }
+
 @media screen and (max-width: 1260px) and (min-width: 1100px) {
     /* body{
         background-color: red;
     } */
-    .container{
+
+    /* header */
+    header .category {
+        width: 25%;
+    }
+
+
+    /* end header */
+    .container {
         width: 1000px;
     }
-    .product{
+
+    .product {
         padding: 15px;
         width: 250px;
     }
 
-    .product-thumnail{
+    .product-thumnail {
         height: 150px;
     }
-    .text-2-line{
+
+    .text-2-line {
         height: 36px;
     }
-    .khungduoi{
+
+    .khungduoi {
         height: 136px;
     }
 
-    .view-details{
+    .view-details {
         width: 50px;
     }
-    .add-to-cart
-    {
+
+    .add-to-cart {
         width: 50px;
     }
-    .show-option-selection{
+
+    .show-option-selection {
         height: 30px;
         line-height: 35px;
     }
@@ -67,150 +80,276 @@
         background-color: #a59e9e !important;
         line-height: 28px !important;
     }
-    
-    .add-to-cart:hover{
+
+    .add-to-cart:hover {
         background-color: #a59e9e !important;
         line-height: 28px !important;
     }
 
     /* reposive cho trang */
-    .left-container .product{
+    .left-container .product {
         padding: 10px !important;
         width: 240px !important;
     }
 
-    .left-container .product-thumnail{
+    .left-container .product-thumnail {
         height: 120px;
     }
 
-    .left-container .khungduoi{
+    .left-container .khungduoi {
         height: 160px !important;
     }
-    .left-container .text-2-line{
+
+    .left-container .text-2-line {
         height: 80px;
     }
 
-    .left-container .khungduoi{
+    .left-container .khungduoi {
         height: 160px;
     }
-    .left-container .view-details{
+
+    .left-container .view-details {
         width: 40px;
     }
-    .left-container .add-to-cart
-    {
+
+    .left-container .add-to-cart {
         width: 40px;
     }
 }
+
 @media screen and (max-width: 1100px) and (min-width: 768px) {
     /* body{
         background-color: green;
     } */
-    .container{
+
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        width: 40%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    #btn-search {
+        width: 35%;
+    }
+
+    .container {
         width: 675px;
     }
-    .product{
+
+    .product {
         padding: 15px;
         width: 225px;
     }
 
-    .product-thumnail{
+    .product-thumnail {
         height: 120px;
     }
-    .text-2-line{
+
+    .text-2-line {
         height: 80px;
     }
-    .khungduoi{
+
+    .khungduoi {
         height: 160px;
     }
-    .view-details{
+
+    .view-details {
         width: 40px;
     }
-    .add-to-cart
-    {
+
+    .add-to-cart {
         width: 40px;
     }
-    .show-option-selection, .show-form{
+
+    .show-option-selection, .show-form {
         display: none !important;
     }
-    .right-title-container{
+
+    .right-title-container {
         background-color: #f8f8f8;
     }
-    
+
+    .footer-contact {
+        height: auto;
+    }
+
+        .footer-contact .container {
+            display: block;
+            height: auto;
+        }
+
+        .footer-contact p {
+            margin: 0;
+        }
 }
+
 @media screen and (max-width: 768px) and (min-width: 450px) {
     /* body{
         
     } */
-    .container{
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        display: none;
+    }
+
+    header .search {
+        width: 70%;
+    }
+
+    #btn-search {
+        width: 35%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    .logo img {
+        margin-top: 30px;
+    }
+
+    .container {
         width: 400px;
     }
-    .product{
+
+    .product {
         padding: 10px;
         width: 200px;
     }
-    .product-thumnail{
+
+    .product-thumnail {
         height: 100px;
     }
-    .text-2-line{
+
+    .text-2-line {
         -webkit-line-clamp: 5;
         height: 90px;
     }
-    .khungduoi{
+
+    .khungduoi {
         height: 200px;
     }
-    .view-details{
+
+    .view-details {
         width: 30px;
     }
-    .add-to-cart
-    {
+
+    .add-to-cart {
         width: 30px;
     }
-    .show-option-selection, .show-form{
+
+    .show-option-selection, .show-form {
         display: none !important;
     }
-    .right-container{
+
+    .right-container {
         display: none;
     }
-    .left-container{
+
+    .left-container {
         width: 400px !important;
         padding-right: 0 !important;
     }
+
+    .footer-contact {
+        height: auto;
+    }
+
+        .footer-contact .container {
+            display: block;
+            height: auto;
+        }
+
+        .footer-contact p {
+            margin: 0;
+        }
 }
 
 @media screen and (max-width: 450px) {
     /* body{
         background-color: lightcoral;
     } */
-    .container{
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        display: none;
+    }
+
+    header .search {
+        width: 70%;
+    }
+
+    #btn-search {
+        width: 35%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    .logo img {
+        margin-top: 30px;
+    }
+
+    .container {
         width: 350px;
     }
-    .product{
+
+    .product {
         padding: 10px;
         width: 175px;
     }
-    .product-thumnail{
+
+    .product-thumnail {
         height: 100px;
     }
 
-    .text-2-line{
+    .text-2-line {
         -webkit-line-clamp: 5;
         height: 115px;
     }
-    .khungduoi{
+
+    .khungduoi {
         height: 200px;
     }
 
-    .product-name{
+    .product-name {
         margin: 10px 0;
     }
-    .view-details{
+
+    .view-details {
         width: 30px;
     }
-    .add-to-cart
-    {
+
+    .add-to-cart {
         width: 30px;
     }
-    .show-option-selection, .show-form{
+
+    .show-option-selection, .show-form {
         display: none !important;
     }
+
+    .footer-contact {
+        height: auto;
+    }
+
+        .footer-contact .container {
+            display: block;
+            height: auto;
+        }
+
+        .footer-contact p {
+            margin: 0;
+        }
 }

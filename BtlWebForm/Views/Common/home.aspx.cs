@@ -10,12 +10,7 @@ namespace BtlWebForm.Views.Common
         {
             
             if (!Request.Url.AbsolutePath.Equals("/"))
-                Response.Redirect("/");
-
-            foreach (ProductEntity product in productRepository.FindAllProducts())
-            {
-                Response.Write(product.Name + " --- " + product.ListImage.Count + "<br />");
-            }    
+                Response.Redirect("/");  
         }
     }
 }

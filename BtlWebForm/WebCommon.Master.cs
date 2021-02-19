@@ -9,7 +9,10 @@ namespace BtlWebForm
         {
             UserEntity user = (UserEntity)Session.Contents["user-login"];
             if (user != null)
+            {
                 fullname.InnerText = user.Fullname;
+                logout.InnerText = "Logout";
+            }
         }
     }
 }

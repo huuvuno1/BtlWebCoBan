@@ -33,6 +33,15 @@ namespace BtlWebForm
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl fullname;
 
         /// <summary>
+        /// logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logout;
+
+        /// <summary>
         /// CommonBody control.
         /// </summary>
         /// <remarks>

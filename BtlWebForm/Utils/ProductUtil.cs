@@ -4,7 +4,8 @@ using BtlWebForm.Entity;
 namespace BtlWebForm.Utils
 {
     public class ProductUtil
-    {
+    {   
+        // Hàm ghép html + data, đây là 1 khung html chứa 1 sản phẩm 
         public static string MatchHtmlWithData(ProductEntity product)
         {
             if (product == null)
@@ -16,20 +17,19 @@ namespace BtlWebForm.Utils
                 @"<div class='product'>
                     <div class='product-box'>
                         <div class='product-thumnail'> ";
-            if (product.Sale != 0f)
-                html += @"<span class='sale-count'>
-                                - " + product.Sale + @"%
-                            </span>";
+                if (product.Sale != 0f)
+                    html += @"<span class='sale-count'>
+                                    - " + product.Sale + @"%
+                              </span>";
 
-            html += @"<a href = '' title='" + product.Name + @"'>
-                                <img src = '" + product.ListImage[0] + @"' alt=''
-                                    class='img-thumnail'>
+                    html += @"<a href = '' title='" + product.Name + @"'>
+                                    <img src = '" + product.ListImage[0] + @"' alt='' class='img-thumnail'>
                             </a>
                             <div class='show-option-selection'>
                                 <div class='view-details' onclick='btnShowForm(1, " + product.ID + @")' title='Xem nhanh'>
                                     <img src = '/static/img/icon/kinhlup.png' alt='' class='icon'>
                                 </div>
-                                <div class='add-to-cart' onclick='btnShowForm(2)' title='Thêm vào Thêm vào giỏ hàng'>
+                                <div class='add-to-cart' onclick='showFormCartSession(" + product.ID + @", 2);' title='Thêm vào giỏ hàng'>
                                     <img src = '/static/img/icon/cart.png' alt='' class='icon'>
                                 </div>
                             </div>
@@ -60,6 +60,43 @@ namespace BtlWebForm.Utils
                         </div>
                     </div>
                 </div>";
+            return html;
+        }
+
+        public static string MatchHtmlWithProductSession(ProductEntity product)
+        {
+            string html = @"<div class='view-row-product'>
+                            <div class='view-product-info'>
+                            <div class='view-img'>
+                                <img src = '";
+
+            html += product.ListImage != null ? product.ListImage[0] : "";
+
+            html +=  @"'>
+                            </div>
+                            <div class='view-info'>
+                                <div class='view-info-name text-2-line'>"
+                                    + product.Name + @"
+                                </div>
+                                <span class='click-remove' onclick='removeProduct(this)'>
+                                    〤 Xóa
+                                </span>
+                            </div>
+                        </div>
+                        <div class='view-product-price'>
+                            <span class='red line37'>" + String.Format("{0:0,0}", product.Price) + @"₫</span>
+                        </div>
+                        <div class='view-product-quantity'>
+                            <div class='cha'>
+                                <span class='con minus' onclick='minusQuantity(this); sumOfMoney(this.parentNode.children[1]);'>–</span>
+                                <input type = 'text' value='1' onchange='sumOfMoney(this)'>
+                                <span class='con add' onclick='addQuantity(this); sumOfMoney(this.parentNode.children[1]);'>+</span>
+                            </div>
+                        </div>
+                        <div class='view-product-total-money'>
+                            <span class=red line37'>" + String.Format("{0:0,0}", product.Price) + @"₫</span>
+                        </div>
+                    </div>";
             return html;
         }
     }

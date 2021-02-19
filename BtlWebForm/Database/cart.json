@@ -1,0 +1,32 @@
+[
+  {
+    "IDCart": 1,
+    "ListProduct": [
+      {
+        "ID": 15,
+        "Quantity": 3
+      },
+      {
+        "ID": 2,
+        "Quantity": 2
+      }
+
+    ],
+    "IDUser": 1
+  },
+  {
+    "IDCart": 2,
+    "ListProduct": [
+      {
+        "ID": 18,
+        "Quantity": 3
+      },
+      {
+        "ID": 2,
+        "Quantity": 2
+      }
+
+    ],
+    "IDUser": 1
+  }
+]

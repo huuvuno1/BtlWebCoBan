@@ -1,3 +1,19 @@
+var showmenu = 0;
+function showMenu() {
+
+    var x = document.getElementById('lmenu');
+    if (showmenu == 0) {
+        x.style.height = "205px";
+        showmenu = 1;
+    }
+    else {
+        x.style.height = "0px";
+        showmenu = 0;
+    }
+
+}
+
+// end header
 
 function btnClose(form) {
     var x = document.getElementsByClassName("show-form")[0];
@@ -213,4 +229,49 @@ function showSort()
 {
     var x = document.getElementsByClassName('sort-type')[0];
     x.style.display = (x.style.display == 'block') ? 'none' : 'block';
+}
+
+
+// custom
+function addProductSS(ID) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var dom = document.getElementById("result-ajax");
+            dom.innerHTML = this.responseText;
+            // lat xu li thong bao da them vao gio hang
+        }
+    };
+    xhttp.open("GET", "/api/cart/" + ID, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+} 
+
+
+// query date from session
+
+function getProductToSession() {
+    var load = document.getElementById("img_loading");
+    load.style.display = "inline";
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var dom = document.getElementById("data_session");
+            load.style.display = "none";
+            dom.innerHTML = this.responseText;
+            // lat xu li thong bao da them vao gio hang
+        }
+    };
+    xhttp.open("GET", "/api/cart", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+}
+
+
+// show form add
+function showFormCartSession(ID, typeForm) {
+    addProductSS(ID);  
+    getProductToSession();
+    btnShowForm(typeForm);
 }
