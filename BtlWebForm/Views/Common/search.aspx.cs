@@ -13,7 +13,10 @@ namespace BtlWebForm.Views.Common
             string q = Request.QueryString.Get("q");
             List<ProductEntity> products = productRepository.FindProductsLikeName(q);
             if (products == null)
+            {
                 CountResult.InnerText = "Không có sản phẩm nào được tìm thấy !";
+                ListProduct.InnerHtml = @"<div style='height: 200px'></div>";
+            }    
             else
             {
                 CountResult.InnerText = "Có " + products.Count + " kết quả được tìm thấy";

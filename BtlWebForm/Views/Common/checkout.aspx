@@ -30,7 +30,7 @@
                     <p><input type="password" placeholder="Mật khẩu" name="password" id="_password" runat="server"></p>
                     <p><input type="text" placeholder="Số điện thoại" name="phonenumber" id="_phonenumber" runat="server"></p>
                     <p><input type="text" placeholder="Địa chỉ" name="address" id="_address" runat="server"></p>
-                    <p><textarea placeholder="Ghi chú cho đơn hàng này" name="_note" runat="server"></textarea></p>
+                    <p><textarea placeholder="Ghi chú cho đơn hàng này" name="_note"></textarea></p>
                 </div>
                 <div class="transport_pay">
                     <div class="transport">
@@ -85,7 +85,7 @@
                     </p>
                 </div>
                 <div class="_right">
-                    <h4 id="_total"></h4>
+                    <h4 id="_total" runat="server"></h4>
                     <input value="ĐẶT HÀNG" type="submit" id="btnOrder">
                 </div>
             </div>

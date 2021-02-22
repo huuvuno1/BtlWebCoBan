@@ -45,7 +45,7 @@ namespace BtlWebForm.Views.Common
                 }
                 else // nếu đã đăng nhập
                 {
-                    user.changeUserEntity(fullname, 0, address, phonenumber);
+                    user.changeUserEntity(fullname, user.Role, address, phonenumber);
                     userRepository.ChangeInfoUser(user);
                 }
 
@@ -53,10 +53,16 @@ namespace BtlWebForm.Views.Common
                 orderCurrent.IDUser = user.ID;
                 int idOrder = orderRepository.FindAllOrder() == null ? 1 : orderRepository.FindAllOrder().Count + 1;
                 orderCurrent.IDOrder = idOrder;
+                orderCurrent.TimeToAdd = DateTime.Now;
+                orderCurrent.Note = note;
                 orderRepository.SaveOrder(orderCurrent);
 
-                // giải phóng cart
+                // giải phóng cart session
                 Session.Remove(Constant.ORDER_SESSION);
+
+                // Đăng nhập cho user và quay lại trang cart
+                Session.Add(Constant.USER_SESSION, user);
+                Response.Redirect("/cart?msg=success");
             }
             else // xử lí khi get
             {
@@ -73,6 +79,7 @@ namespace BtlWebForm.Views.Common
 
                 // show list người dùng mua
                 string HTML = "";
+                float sum = 0;
                 foreach (ProductEntity product in orderCurrent.ListProduct)
                 {
                     ProductEntity detail = productRepository.FindProductByID(product.ID);
@@ -89,10 +96,11 @@ namespace BtlWebForm.Views.Common
                                         </div>
                                     </div>";
                     HTML += html;
+                    sum += detail.Price * (100 - detail.Sale) / 100 * product.Quantity;
                 }
                 list_server.InnerHtml = HTML;
 
-
+                _total.InnerText = String.Format("{0:0,0}", sum) + "₫";
 
             }    
 

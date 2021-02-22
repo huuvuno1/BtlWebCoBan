@@ -6,14 +6,14 @@
     <section class="vitritrang">
         <div class="container">
             <ul>
-                <li class="tenvitri"><a href=""> Trang chủ</a></li>
+                <li class="tenvitri"><a href="/"> Trang chủ</a></li>
                 <li class="tenvitri"><a href="">></a></li>
                 <li class="tenvitri"><a href=""><span> Tìm kiếm</span></a></li>
             </ul>
         </div>
     </section>
     <section class="content">
-        <div class="container">
+        <div class="container" >
             <div class="message margin-bottom-20">
                 <h1 id="CountResult" runat="server"></h1>
             </div>
@@ -30,8 +30,6 @@
     <div class="pagination">
         <a href=""><span class="arrow-left"></span></a>
         <a href=""><span>1</span></a>
-        <a href=""><span>2</span></a>
-        <a href=""><span>3</span></a>
         <a href=""><span class="arrow-right"></span></a>
     </div>
 

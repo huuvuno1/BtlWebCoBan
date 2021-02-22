@@ -1,13 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/WebAdmin.Master" CodeBehind="home.aspx.cs" Inherits="BtlWebForm.Views.Admin.home" %>
 <asp:Content ContentPlaceHolderID="AdminBody" runat="server">
         
-
-
     <div class="main-container">
         <div class="left-admin-container">
             <ul class="menu-admin">
-                <li style="font-weight: bold;">Quản lý sản phẩm</li>
-                <li>Quản lý người dùng</li>
+                <li class='__select' onclick="loadForm(1)" style="font-weight: bold;">Quản lý sản phẩm</li>
+                <li class='__select' onclick="loadForm(2)">Quản lý người dùng</li>
+                <li class='__select' onclick="loadForm(3)">Quản lý đơn hàng</li>
             </ul>
         </div>
 
@@ -30,6 +29,50 @@
                     </tr>
                 </thead>
                 <tbody id="list_pro">
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- form user -->
+        <div class="right-admin-container" style="display: none;">
+            <h3>Danh sách nguời dùng trong hệ thống</h3>
+            <table id="table-user" border="1">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td >Tên đăng nhập</td>
+                        <td >Họ tên</td>
+                        <td >Số điện thoai</td>
+                        <td >Địa chỉ</td>
+                        <td >Quyền</td>
+                    </tr>
+                </thead>
+                <tbody id="list_user">
+                    
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- form order -->
+        <div class="right-admin-container" style="display: none;">
+            <h3>Danh sách đơn hàng</h3>
+            <table id="table-order" border="1">
+                <thead>
+                    <tr>
+                        <td >Mã đơn</td>
+                        <td >Mã khách hàng</td>
+                        <td >Sản phẩm mua</td>
+                        <td >Tổng tiền sản phẩm</td>
+                        <td >Số tiền được giảm</td>
+                        <td >Tổng tiền đơn hàng</td>
+                        <td>Ngày đặt</td>
+                        <td >Ghi chú</td>
+                    </tr>
+                </thead>
+                <tbody id="list_order">
+                    
                 </tbody>
             </table>
         </div>

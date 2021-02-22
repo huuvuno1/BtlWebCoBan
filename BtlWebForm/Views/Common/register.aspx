@@ -32,7 +32,7 @@
             </p>
             <p><input type="submit" value="Đăng ký" class="btn"></p>
         </form>
-        <p><span>Đã có tài khoản ? Đăng nhập </span><a href="/login" id="a_register">tại đây</a></p>
+        <p><span style="display:inline">Đã có tài khoản ? Đăng nhập </span><a href="/login" id="a_register">tại đây</a></p>
         <div class="login-3rd">
             <h3>Đăng nhập bằng Facebook hoặc Google</h3>
             <div class="fb-gg">
@@ -41,4 +41,5 @@
             </div>
         </div>
     </div>
+    
 </asp:Content>

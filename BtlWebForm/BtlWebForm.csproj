@@ -88,9 +88,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="static\css\style_vu.css" />
     <Content Include="static\css\style_vu_reposive.css" />
+    <Content Include="static\img\banner\banner_bot_slide_img_1.jpg" />
+    <Content Include="static\img\banner\banner_bot_slide_img_2.jpg" />
+    <Content Include="static\img\banner\banner_bot_slide_img_3.jpg" />
+    <Content Include="static\img\banner\banner_full_width.png" />
+    <Content Include="static\img\banner\banner_slide_img_1.jpg" />
+    <Content Include="static\img\banner\banner_slide_img_2.jpg" />
+    <Content Include="static\img\banner\banner_two_1.jpg" />
+    <Content Include="static\img\banner\banner_two_22.jpg" />
+    <Content Include="static\img\banner\collection_module_2_banner.png" />
+    <Content Include="static\img\banner\collection_module_3_banner.png" />
+    <Content Include="static\img\banner\slide_img_1.jpg" />
     <Content Include="static\img\icon\admin.png" />
     <Content Include="static\img\icon\avatar.jpg" />
     <Content Include="static\img\icon\bag.png" />
@@ -117,11 +129,14 @@
     <Content Include="static\img\product\thiet-bi-deo-thuc-te-ao-sm-r323.jpg" />
     <Content Include="static\img\product\vr3.jpg" />
     <Content Include="static\js\admin_vu.js" />
+    <Content Include="static\js\cart.js" />
     <Content Include="static\js\checkout.js" />
     <Content Include="static\js\vu.js" />
     <Content Include="Views\Admin\home.aspx" />
     <Content Include="Views\Ajax\Cart.aspx" />
     <Content Include="Views\Ajax\FormAddOrEditProduct.aspx" />
+    <Content Include="Views\Ajax\RowOrder.aspx" />
+    <Content Include="Views\Ajax\RowUser.aspx" />
     <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
     <Content Include="Views\Ajax\RowProducts.aspx" />
     <Content Include="Views\Common\access-denied.aspx" />
@@ -174,6 +189,20 @@
     </Compile>
     <Compile Include="Views\Ajax\FormAddOrEditProduct.aspx.designer.cs">
       <DependentUpon>FormAddOrEditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajax\RowOrder.aspx.cs">
+      <DependentUpon>RowOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ajax\RowOrder.aspx.designer.cs">
+      <DependentUpon>RowOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajax\RowUser.aspx.cs">
+      <DependentUpon>RowUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ajax\RowUser.aspx.designer.cs">
+      <DependentUpon>RowUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Ajax\ShowDetailProduct.aspx.cs">
       <DependentUpon>ShowDetailProduct.aspx</DependentUpon>

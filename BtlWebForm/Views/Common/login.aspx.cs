@@ -10,7 +10,7 @@ namespace BtlWebForm.Views.Common
         protected void Page_Load(object sender, EventArgs e)
         {
             // Làm đẹp url nếu user cố tình vào trang domain.com/Views/Common/login.aspx
-            if (!Request.Url.AbsolutePath.Equals("/login"))
+            if (Request.Url.AbsolutePath.Contains("login.aspx"))
                 Response.Redirect("/login");
 
             // Nếu đã login thì không được vào trang này nữa
@@ -31,20 +31,21 @@ namespace BtlWebForm.Views.Common
         {
             string username = Request.Form.Get("username");
             string password = Request.Form.Get("password");
-            if (username != null && password != null)
+            if (!"".Equals(username) && !"".Equals(password))
             {
                 UserEntity user = userRepository.FindUserByUsername(username);
                 if (user != null)
                 {
                     if (user.Password.Equals(password))
                     {
+                        Session["a"] = "";
                         Session.Add(Constant.USER_SESSION, user);
                         string redirect = user.Role == Constant.ROLE_ADMIN ? "/admin" : "/";
                         Response.Redirect(redirect);
                     }
                 }
-                Response.Redirect("/login");
             }
+            Response.Redirect("/login?msg=false");
         }
     }
 }

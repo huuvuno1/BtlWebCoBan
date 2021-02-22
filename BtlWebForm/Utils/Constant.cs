@@ -7,6 +7,6 @@
     public const string DATA_ORDER = @"/Database/Order.json";
     public const string USER_SESSION = "user-login";
     public const string ORDER_SESSION = "order";
-    public const string MAY_TINH = "hang-hoa";
+    public const string MAY_TINH = "may-tinh";
     public const string PHU_KIEN = "phu-kien";
 }

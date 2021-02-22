@@ -21,7 +21,7 @@
                 <td>Số Lượng</td>
                 <td><input type="text" id="quantity_pro"  runat="server" class="input-add"></td>
             </tr>
-            <!--<tr>
+            <tr>
                 <td>Hình Ảnh</td>
                 <td id="image_sss" runat="server">
                     <button onclick="addFileImage()" type="button"
@@ -38,7 +38,7 @@
                     </div>
                     
                 </td>
-            </tr>-->
+            </tr>
             <tr>
                 <td>Mức Giảm Giá</td>
                 <td><input type="text" id="sale_pro" runat="server" class="input-add"></td>

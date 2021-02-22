@@ -37,6 +37,8 @@ namespace BtlWebForm.Repository
                     if (product.Name.ToLower().Contains(name.ToLower()))
                         results.Add(product);
                 }
+                if (results.Count == 0)
+                    return null;
                 return results;
             }
             return null;

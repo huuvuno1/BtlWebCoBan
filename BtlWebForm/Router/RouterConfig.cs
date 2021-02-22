@@ -30,6 +30,8 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("api-form-add", "api/form", "~/Views/Ajax/FormAddOrEditProduct.aspx");
             routes.MapPageRoute("api-form-edit", "api/form/{ID}", "~/Views/Ajax/FormAddOrEditProduct.aspx");
             routes.MapPageRoute("api-row-product", "api/product", "~/Views/Ajax/RowProducts.aspx");
+            routes.MapPageRoute("api-row-user", "api/user", "~/Views/Ajax/RowUser.aspx");
+            routes.MapPageRoute("api-row-order", "api/order", "~/Views/Ajax/RowOrder.aspx");
             routes.MapPageRoute("api-get-product-session", "api/cart", "~/Views/Ajax/Cart.aspx");
             routes.MapPageRoute("api-add-product-session", "api/cart/{ID}", "~/Views/Ajax/Cart.aspx");
             routes.MapPageRoute("api-add-quantity-product-session", "api/cart/{ID}/{Type}/{Quantity}", "~/Views/Ajax/Cart.aspx");

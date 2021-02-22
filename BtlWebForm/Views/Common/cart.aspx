@@ -38,4 +38,5 @@
             </div>
         </div>
     </div>
+    <script src="/static/js/cart.js"></script>
 </asp:Content>

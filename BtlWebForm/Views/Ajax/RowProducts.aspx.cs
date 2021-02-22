@@ -26,7 +26,7 @@ namespace BtlWebForm.Views.Ajax
                                     <td>" + product.Quantity + @"</td>
                                     <td><img src='" + (product.ListImage.Count != 0 ? product.ListImage[0] : "") + @"'></td>
                                     <td class='red'>" + product.Sale + @" %</td>
-                                    <td><a href = '/" + product.Category + "/"+ product.Slug + @"' > Xem chi tiết</a></td>
+                                    <td><a target='_blank' href='/" + product.Category + "/"+ product.Slug + @"' > Xem chi tiết</a></td>
                                     <td>
                                         <button class='btn-change' type='button' onclick='editProduct(this)'>Sửa</button>
                                         <button class='btn-delete' type='button'>Xóa</button>

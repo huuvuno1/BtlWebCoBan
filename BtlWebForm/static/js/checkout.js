@@ -1,6 +1,6 @@
 window.onload = function(){
     document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
-    sumMoney();
+    
 }
 
 function sumMoney(){

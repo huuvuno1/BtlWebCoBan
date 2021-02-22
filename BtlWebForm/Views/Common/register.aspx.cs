@@ -51,13 +51,14 @@ namespace BtlWebForm.Views.Common
                     user.Password = password; // phạm vi bài đơn giản nên không mã hóa password
                     user.Fullname = fullname;
                     user.PhoneNumber = phonenumber;
+                    user.Role = Constant.ROLE_USER;
 
                 
                     // tam save mai lam
-                        if (userRepository.SaveUser(user))
-                        {
-                            Response.Redirect("/login");
-                        }
+                    if (userRepository.SaveUser(user))
+                    {
+                        Response.Redirect("/login?msg=register-success");
+                    }
 
                 
                 }

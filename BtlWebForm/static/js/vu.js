@@ -367,3 +367,5 @@ function showCart() {
 function checkout() {
     window.location = "/checkout";
 }
+
+// alert page cart
