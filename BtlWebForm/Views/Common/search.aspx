@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebCommon.Master" AutoEventWireup="true" CodeBehind="search.aspx.cs" Inherits="BtlWebForm.Views.Common.search" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Tìm kiếm</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
     <section class="vitritrang">

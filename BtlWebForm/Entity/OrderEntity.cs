@@ -6,10 +6,10 @@ namespace BtlWebForm.Entity
 {
     public class OrderEntity
     {
-        public OrderEntity() { }
         public int IDOrder { get; set; }
         public List<ProductEntity> ListProduct { get; set; }
         public int IDUser { get; set; }
+        public OrderEntity() { }
         public OrderEntity(int IDCart, int IDProduct, int Quantity)
         {
             this.IDOrder = IDCart;

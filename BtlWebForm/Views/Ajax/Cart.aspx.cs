@@ -37,17 +37,17 @@ namespace BtlWebForm.Views.Ajax
                 SaveProductToSession(Session, Int32.Parse(ID), type, qtt);
                 
             }
-            // urel /api/cart -> get full product from session
+            // url /api/cart -> get full product from session
             else
             {
-                OrderEntity order = (OrderEntity)Session.Contents["order"];
+                OrderEntity order = (OrderEntity)Session.Contents[Constant.ORDER_SESSION];
                 if (order != null)
                 {
                     List<int> ids = GetListIDFromSession(order);
                     List<ProductEntity> products = productRepository.FindProductByListID(ids);
                     if (products == null)
                         return;
-                    string html = "";
+                    string html = "" + ids.Count + "|"; // trả về số lượng hiện tại luôn
                     // edit part 2
                     int i = 0;
                     foreach (ProductEntity product in products)
@@ -58,16 +58,16 @@ namespace BtlWebForm.Views.Ajax
                     Response.Write(html);
                 }
             }
-            OrderEntity ordertest = (OrderEntity)Session.Contents["order"];
+            OrderEntity ordertest = (OrderEntity)Session.Contents[Constant.ORDER_SESSION];
         }
 
         private void SaveProductToSession(HttpSessionState session, int ID, string type, int Quantity)
         {
-            OrderEntity order = (OrderEntity)Session.Contents["order"];
+            OrderEntity order = (OrderEntity)Session.Contents[Constant.ORDER_SESSION];
             if (order == null)
             {
                 order = new OrderEntity(1, ID, 1);
-                Session.Add("order", order);
+                Session.Add(Constant.ORDER_SESSION, order);
             }
             else
             {
@@ -101,12 +101,12 @@ namespace BtlWebForm.Views.Ajax
                     }
                 }
                 if (isExist)
-                    Session.Add("order", order);
+                    Session.Add(Constant.ORDER_SESSION, order);
                 else
                 {
                     ProductEntity product = new ProductEntity(ID, Quantity);
                     order.ListProduct.Add(product);
-                    Session.Add("oder", order);
+                    Session.Add(Constant.ORDER_SESSION, order);
                 }
             }
 
@@ -125,11 +125,11 @@ namespace BtlWebForm.Views.Ajax
 
         //private void SaveProductToSession(int ID, HttpSessionState session)
         //{
-        //    OrderEntity order = (OrderEntity)Session.Contents["order"];
+        //    OrderEntity order = (OrderEntity)Session.Contents[Constant.ORDER_SESSION];
         //    if (order == null)
         //    {
         //        order = new OrderEntity(1, ID, 1);
-        //        Session.Add("order", order);
+        //        Session.Add(Constant.ORDER_SESSION, order);
         //    }    
         //    else
         //    {
@@ -143,12 +143,12 @@ namespace BtlWebForm.Views.Ajax
         //            }
         //        }
         //        if (isExist)
-        //            Session.Add("order", order);
+        //            Session.Add(Constant.ORDER_SESSION, order);
         //        else
         //        {
         //            ProductEntity product = new ProductEntity(ID, 1);
         //            order.ListProduct.Add(product);
-        //            Session.Add("oder", order);
+        //            Session.Add(Constant.ORDER_SESSION, order);
         //        }
         //    }
         //}

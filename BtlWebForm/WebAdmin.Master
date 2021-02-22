@@ -21,6 +21,7 @@
         </div>
 
         <div class="right-nav">
+            <a href="/">Trang chủ</a>
             <div class="user">
                 <img src="/static/img/icon/avatar.jpg" alt="" class="avatar">
                 <ul class="ul-boss">

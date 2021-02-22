@@ -13,9 +13,14 @@ namespace BtlWebForm.Router
         {
             routes.MapPageRoute("home-common", "", "~/Views/Common/home.aspx");
             routes.MapPageRoute("page-login", "login", "~/Views/Common/login.aspx");
-            routes.MapPageRoute("action", "action", "~/Views/Common/action.aspx");
+            routes.MapPageRoute("page-register", "register", "~/Views/Common/register.aspx");
+            routes.MapPageRoute("logout", "logout", "~/Views/Common/logout.aspx");
             routes.MapPageRoute("search", "search", "~/Views/Common/search.aspx");
+            routes.MapPageRoute("checkout", "checkout", "~/Views/Common/checkout.aspx");
+            routes.MapPageRoute("cart", "cart", "~/Views/Common/cart.aspx");
             routes.MapPageRoute("access-denied", "access-denied", "~/Views/Common/access-denied.aspx");
+            routes.MapPageRoute("category", "{category}", "~/Views/Common/category.aspx");
+            routes.MapPageRoute("detail", "{category}/{slug}", "~/Views/Common/detail.aspx");
         }
 
         public static void AddConfigRouteAjax(RouteCollection routes)

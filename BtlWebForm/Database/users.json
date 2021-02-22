@@ -1,16 +1,1 @@
-﻿[
-  {
-    "ID": 1,
-    "Username": "admin",
-    "Password": "admin",
-    "Fullname": "Nguyễn Hữu Vũ",
-    "Role": 1
-  },
-  {
-    "ID": 2,
-    "Username": "user",
-    "Password": "user",
-    "Fullname": "Nguyễn Văn Lập",
-    "Role": 0
-  }
-]
+[{"ID":1,"Username":"admin","Password":"admin","Fullname":"Nguyễn Hữu Vũ","Role":1,"Address":"Nghõ 1 nghách 2","PhoneNumber":"0945364296"},{"ID":2,"Username":"user","Password":"user","Fullname":"Nguyễn Văn La","Role":0,"Address":"Ninh Bình","PhoneNumber":"098523654"},{"ID":3,"Username":"user2","Password":"1234","Fullname":"Nguyễn Công Minh","Role":0,"Address":"Hà nội","PhoneNumber":"0945263258"},{"ID":4,"Username":"usertest88888","Password":"1234","Fullname":"Nguyen Van Test","Role":0,"Address":"Tân Cầu","PhoneNumber":"0945364296"},{"ID":5,"Username":"nguyenhuuvu","Password":"1234","Fullname":"Nguyễn Công Minh","Role":0,"Address":"Ninh Bình","PhoneNumber":"0945263258"},{"ID":6,"Username":"usertest","Password":"1234","Fullname":"Nguyễn Công Minh","Role":0,"Address":"Ninh Bình","PhoneNumber":"0945263258"},{"ID":7,"Username":"usertest","Password":"1234","Fullname":"Lê Văn Minh","Role":0,"Address":"Ninh Bình","PhoneNumber":"0945364296"},{"ID":8,"Username":"usertest8","Password":"123456","Fullname":"Nguyễn Công Minh","Role":0,"Address":"Ninh Bình","PhoneNumber":"0945263258"},{"ID":9,"Username":"","Password":"","Fullname":"","Role":0,"Address":"","PhoneNumber":""}]

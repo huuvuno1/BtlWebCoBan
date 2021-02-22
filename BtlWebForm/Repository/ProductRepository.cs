@@ -73,5 +73,37 @@ namespace BtlWebForm.Repository
 
             return result;
         }
+
+
+        /* 
+             các loại tham số của category: san-pham, san-pham-khuyen-mai, may-tinh, phu-kien
+        */
+        public List<ProductEntity> FindProductCategory(string category)
+        {
+            
+            if ("san-pham".Equals(category))
+                return FindAllProducts();
+
+            List<ProductEntity> products = new List<ProductEntity>();
+
+            
+            foreach (ProductEntity product in FindAllProducts())
+            {
+                if ((product.Sale > 0 && "san-pham-khuyen-mai".Equals(category)) || product.Category.Equals(category))
+                    products.Add(product);
+            }
+            
+            return products;
+        }
+
+        public ProductEntity FindProductBySlug(string slug)
+        {
+            foreach (ProductEntity product in FindAllProducts())
+            {
+                if (product.Url.Equals(slug))
+                    return product;
+            }
+            return null;
+        }
     }
 }

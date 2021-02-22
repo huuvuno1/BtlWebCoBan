@@ -85,5 +85,14 @@ namespace BtlWebForm.Views.Ajax
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl INFO;
+
+        /// <summary>
+        /// btn_server control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_server;
     }
 }

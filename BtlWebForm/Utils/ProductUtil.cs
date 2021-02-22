@@ -29,7 +29,7 @@ namespace BtlWebForm.Utils
                                 <div class='view-details' onclick='btnShowForm(1, " + product.ID + @")' title='Xem nhanh'>
                                     <img src = '/static/img/icon/kinhlup.png' alt='' class='icon'>
                                 </div>
-                                <div class='add-to-cart' onclick='showNameProClick(this),showFormCartSession(" + product.ID + @", 2);' title='Thêm vào giỏ hàng'>
+                                <div class='add-to-cart' onclick='showNameProClick(this);showFormCartSession(" + product.ID + @", 2);' title='Thêm vào giỏ hàng'>
                                     <img src = '/static/img/icon/cart.png' alt='' class='icon'>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@ namespace BtlWebForm.Utils
                                 <div class='view-info-name text-2-line'>"
                                     + product.Name + @"
                                 </div>
-                                <span class='click-remove' onclick='removeProduct(this)' num='"+ product.ID + @"'>
+                                <span class='click-remove' onclick='removeProduct(this);changeNumberOrderThenRemove()' num='" + product.ID + @"'>
                                     〤 Xóa
                                 </span>
                             </div>

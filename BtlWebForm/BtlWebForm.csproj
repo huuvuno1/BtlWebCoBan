@@ -50,6 +50,11 @@
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
@@ -95,6 +100,8 @@
     <Content Include="static\img\icon\click-right-gray.png" />
     <Content Include="static\img\icon\click-right.png" />
     <Content Include="static\img\icon\down.gif" />
+    <Content Include="static\img\icon\fb.png" />
+    <Content Include="static\img\icon\gg.png" />
     <Content Include="static\img\icon\images.png" />
     <Content Include="static\img\icon\java-developer-roadmap.png" />
     <Content Include="static\img\icon\kinhlup.png" />
@@ -102,11 +109,15 @@
     <Content Include="static\img\icon\loading.gif" />
     <Content Include="static\img\icon\logo.png" />
     <Content Include="static\img\icon\user.png" />
+    <Content Include="static\img\product\10034218-5.jpg" />
     <Content Include="static\img\product\apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" />
     <Content Include="static\img\product\huawei-mediapad-m3-115-400x460.png" />
+    <Content Include="static\img\product\macbook.jfif" />
+    <Content Include="static\img\product\maxresdefault.jpg" />
     <Content Include="static\img\product\thiet-bi-deo-thuc-te-ao-sm-r323.jpg" />
     <Content Include="static\img\product\vr3.jpg" />
     <Content Include="static\js\admin_vu.js" />
+    <Content Include="static\js\checkout.js" />
     <Content Include="static\js\vu.js" />
     <Content Include="Views\Admin\home.aspx" />
     <Content Include="Views\Ajax\Cart.aspx" />
@@ -114,7 +125,12 @@
     <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
     <Content Include="Views\Ajax\RowProducts.aspx" />
     <Content Include="Views\Common\access-denied.aspx" />
-    <Content Include="Views\Common\action.aspx" />
+    <Content Include="Views\Common\cart.aspx" />
+    <Content Include="Views\Common\category.aspx" />
+    <Content Include="Views\Common\checkout.aspx" />
+    <Content Include="Views\Common\detail.aspx" />
+    <Content Include="Views\Common\logout.aspx" />
+    <Content Include="Views\Common\register.aspx" />
     <Content Include="Views\Common\search.aspx" />
     <Content Include="Views\Common\phanloai.aspx" />
     <Content Include="Views\Common\home.aspx" />
@@ -129,7 +145,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\CartRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Utils\FileIO.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -180,12 +196,47 @@
     <Compile Include="Views\Common\access-denied.aspx.designer.cs">
       <DependentUpon>access-denied.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Common\action.aspx.cs">
-      <DependentUpon>action.aspx</DependentUpon>
+    <Compile Include="Views\Common\cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Common\action.aspx.designer.cs">
-      <DependentUpon>action.aspx</DependentUpon>
+    <Compile Include="Views\Common\cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Common\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Common\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Common\detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Common\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Common\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\search.aspx.cs">
       <DependentUpon>search.aspx</DependentUpon>

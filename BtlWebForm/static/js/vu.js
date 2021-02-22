@@ -197,9 +197,15 @@ function checkInput(x)
 }
 
 // viết tạm
-function addToCart()
+function addToCart(id)
 {
-    btnShowForm(2);
+    var quantity = document.getElementById('_quantity_').value;
+    changeProductSS(id, "add", quantity);
+    // showNameProClick(this);
+    changeProductSS(id, "add", quantity);
+    btnShowForm(2, 1);
+    getProductToSession();
+    tongTienGioHang();
 }
 
 function removeProduct(x)
@@ -274,11 +280,19 @@ function getProductToSession() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var dom = document.getElementById("data_session");
-            load.style.display = "none";
-            dom.innerHTML = this.responseText;
+            load.style.display = "none"; // ẩn ảnh gif xoay
+            var htmlResponse = this.responseText.split('|');
+            if (htmlResponse != '') {
+                dom.innerHTML = htmlResponse[1];
+                changeNumberOrder(htmlResponse[0]);
+            } else {
+                dom.innerHTML = "Bạn chưa chọn sản phẩm nào";
+            }
+            
             // lat xu li thong bao da them vao gio hang
         }
     };
+    
     xhttp.open("GET", "/api/cart", false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
@@ -294,6 +308,18 @@ function showFormCartSession(ID, typeForm) {
     addProductSS(ID);  
     getProductToSession();
     tongTienGioHang();
+
+    
+}
+
+// thay đổi số lượng ở icon giỏ hàng
+function changeNumberOrderThenRemove() {
+    var x = document.getElementById('number_oder');
+    x.textContent = parseInt(x.innerHTML) - 1;
+}
+function changeNumberOrder(value) {
+    var x = document.getElementById('number_oder');
+    x.textContent = value;
 }
 
 // gom ham tang so luong
@@ -336,4 +362,8 @@ function showCart() {
     document.getElementById("title_cart").innerHTML = "<b>Giỏ hàng của bạn</b>";
     getProductToSession();
     tongTienGioHang();
+}
+
+function checkout() {
+    window.location = "/checkout";
 }

@@ -42,6 +42,9 @@ namespace BtlWebForm.Views.Ajax
                 NAME.InnerHtml = product.Name;
                 TRADEMARK.InnerHtml = product.Trademark;
                 INFO.InnerText = product.Info;
+
+                string html = @"<button id=" + "'btn-add-to-cart' onclick='addToCart(" + product.ID +  @")'>Cho vào Thêm vào giỏ hàng</button>";
+                btn_server.InnerHtml = html;
                 if (product.Quantity <= 0)
                 {
                     QUANTITY_X.InnerText = "Hết hàng";

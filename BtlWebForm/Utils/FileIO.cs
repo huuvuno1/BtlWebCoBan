@@ -16,16 +16,25 @@ namespace BtlWebForm.Repository
                 f.Close();
                 return value;
             }
-            catch
+            catch (IOException e)
             {
                 // not found file or file empty
                 return null;
             }
         }
 
-        public static void WriteFileJson(string file)
+        public bool WriteFileJson(string file, string value)
         {
-
+            try
+            {
+                System.IO.File.WriteAllText(Server.MapPath(file), value);
+                return true;
+            }
+            catch (IOException e)
+            {
+                return false;
+            }
+            
         }
     }
 }
