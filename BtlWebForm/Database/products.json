@@ -10,12 +10,12 @@
     ],
     "Info": "Màn Hình : 15.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 10,
-    "Slug": "laptop-macbook-12-MNYK2SA",
+    "Slug": "kinh-thuc-te-ao-VR3",
     "Category": "phu-kien"
   },
   {
     "ID": 2,
-    "Name": "LapApple Macbook 13 MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)",
+    "Name": "LapApple Macbook 12 MNYK2SA/A Core M 1.2GHz/8GB/256GB (2017)",
     "Trademark": "Apple",
     "Price": 34000000,
     "Sale": 8,
@@ -44,7 +44,7 @@
     ],
     "Info": "Màn Hình : 19.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 0,
-    "Slug": "laptop-macbook-12-MNYK2SA",
+    "Slug": "laptop-dell-core-M-1,2GHZ",
     "Category": "may-tinh"
   }
 ]

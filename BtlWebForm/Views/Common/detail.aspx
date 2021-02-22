@@ -63,11 +63,10 @@
                             <div class="muahang">
                                 <div class="quantity cha">
                                     <span class="con minus" onclick="minusQuantity(this)">–</span>
-                                    <input type="text" value="1" onchange="checkInput(this)">
+                                    <input type="text" value="1" onchange="checkInput(this)" id="_quantity_">
                                     <span class="con add" onclick="addQuantity(this)">+</span>
                                 </div>
-                                <div class="btn-add-to-cart">
-                                    <button id="btn-add-to-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                                <div class="btn-add-to-cart" id="btn_server" runat="server">
                                 </div>
                             </div>
 

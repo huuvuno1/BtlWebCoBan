@@ -37,7 +37,7 @@ namespace BtlWebForm.Views.Ajax
                     sale_pro.Value = product.Sale.ToString();
                     
                     info_pro.Value = product.Info;
-                    url_pro.Value = product.Url;
+                    url_pro.Value = product.Category + "/" + product.Slug;
                 }
                 
             }

@@ -100,7 +100,7 @@ namespace BtlWebForm.Repository
         {
             foreach (ProductEntity product in FindAllProducts())
             {
-                if (product.Url.Equals(slug))
+                if (product.Slug.Equals(slug))
                     return product;
             }
             return null;

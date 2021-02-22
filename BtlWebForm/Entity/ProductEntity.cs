@@ -21,7 +21,7 @@ namespace BtlWebForm.Entity
         public List<string> ListImage { get; set; }
         public string Info { get; set; }
         public int Quantity { get; set; }
-        public string Url { get; set; }
+        public string Slug { get; set; }
         public string Category { get; set; }
         
     }

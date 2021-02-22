@@ -20,7 +20,8 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("cart", "cart", "~/Views/Common/cart.aspx");
             routes.MapPageRoute("access-denied", "access-denied", "~/Views/Common/access-denied.aspx");
             routes.MapPageRoute("category", "{category}", "~/Views/Common/category.aspx");
-            routes.MapPageRoute("detail", "{category}/{slug}", "~/Views/Common/detail.aspx");
+            routes.MapPageRoute("detail", "may-tinh/{slug}", "~/Views/Common/detail.aspx");
+            routes.MapPageRoute("details", "phu-kien/{slug}", "~/Views/Common/detail.aspx");
         }
 
         public static void AddConfigRouteAjax(RouteCollection routes)

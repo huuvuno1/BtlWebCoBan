@@ -22,7 +22,7 @@ namespace BtlWebForm.Utils
                                     - " + product.Sale + @"%
                               </span>";
 
-                    html += @"<a href = '" + product.Url + @"' title='" + product.Name + @"' class='title_name_product'>
+                    html += @"<a href = '/" + product.Category + "/" + product.Slug + @"' title='" + product.Name + @"' class='title_name_product'>
                                     <img src = '" + product.ListImage[0] + @"' alt='' class='img-thumnail'>
                             </a>
                             <div class='show-option-selection'>
@@ -42,7 +42,7 @@ namespace BtlWebForm.Utils
                             </span>
 
                             <h4 class='product-name'>
-                                <a href = '" + product.Url + @"' class='text-2-line'>
+                                <a href = '/" + product.Category + "/" + product.Slug + @"' class='text-2-line'>
                                     " + product.Name + @"
                                 </a>
                             </h4>

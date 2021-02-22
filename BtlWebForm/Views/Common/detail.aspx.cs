@@ -14,17 +14,17 @@ namespace BtlWebForm.Views.Common
         ProductRepository productRepository = new ProductRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string category = (string)RouteData.Values["category"];
+            string category = Request.Url.AbsolutePath;
             string slug = (string)RouteData.Values["slug"];
             ProductEntity product = productRepository.FindProductBySlug(slug);
             if (product != null)
             {
                 url_page.Attributes.Add("href", category);
-                if ("may-tinh".Equals(category))
+                if (category.Contains("may-tinh"))
                     name_page.InnerText = "Máy tính";
                 else
                     name_page.InnerText = "Phụ kiện";
-                slug_.Attributes.Add("href", category + product.Url);
+                slug_.Attributes.Add("href", "/" + category + "/" + product.Slug);
                 name_product.InnerText = product.Name;
 
                 bigImg.Attributes.Add("src", product.ListImage[0]);
@@ -44,17 +44,24 @@ namespace BtlWebForm.Views.Common
                 list_anh.InnerHtml = html_img;
 
                 name_pro.InnerText = product.Name;
-                name_pro.Attributes.Add("href", product.Url);
+                name_pro.Attributes.Add("href", "/" + product.Category + "/" + product.Slug);
 
                 price_new.InnerText = String.Format("{0:0,0}", product.Price * (100 - product.Sale) / 100) + @"₫";
                 price_old.InnerText = String.Format("{0:0,0}", product.Price) + @"₫";
 
-                _status.InnerText = product.Quantity > 0 ? "Còn hàng" : "Hết hàng";
+                 if (product.Quantity <= 0)
+                 {
+                        _status.InnerText = "Hết hàng";
+                        _status.Attributes.Add("style", "background: red !important");
+                 }
 
                 descript.InnerText = product.Info;
+
+                string html = @"<button id=" + "'btn-add-to-cart' onclick='addToCart(" + product.ID + @")'>Thêm vào giỏ hàng</button>";
+                btn_server.InnerHtml = html;
             }
             else
-                Response.Redirect(" / ");
+                Response.Redirect("/");
         }
     }
 }
