@@ -4,12 +4,19 @@
     <div class="form-add-product frame">
         <a href="javascript:;" class="btn-close" onclick="btnClose(1)">x</a>
         <p class="title-p" id="type_form" runat="server"></p>
-        <form action="">
+        <form action="/api/addproduct" method="post" enctype="multipart/form-data">
         <table id="table-add">
             <tr>
                 <td width="120px">Tên sản phẩm</td>
                 <td width="600px">
                     <input type="text" id="name_pro" runat="server" class="input-add">
+
+                </td>
+            </tr>
+            <tr>
+                <td width="120px">Thương hiệu</td>
+                <td width="600px">
+                    <input type="text" id="thuong_hieu" runat="server" class="input-add">
 
                 </td>
             </tr>
@@ -27,13 +34,10 @@
                     <button onclick="addFileImage()" type="button"
                         style="background-color: chartreuse; cursor: pointer; margin-bottom: 3px;">Thêm ảnh
                         nữa</button><br>
-                    <input type="file" class="add-img" class="input-add">
+                    <input type="file" class="add-img" class="input-add" name="file0">
 
                     <div id="list_img_product" runat="server">
-                        <p>
-                            <img src="/static/img/product/thiet-bi-deo-thuc-te-ao-sm-r323.jpg" />
-                            <button type="button" onclick="delImg(this)">Xóa ảnh</button><br />
-                        </p>
+                        
                         
                     </div>
                     
@@ -55,7 +59,7 @@
                 <td></td>
                 <td style="text-align: right;">
                     <button type="reset">Reset</button>
-                    <button id="save" type="button" onclick="addProduct()">Lưu</button>
+                    <button id="save" type="submit" onclick="addProduct()">Lưu</button>
                 </td>
             </tr>
         </table>

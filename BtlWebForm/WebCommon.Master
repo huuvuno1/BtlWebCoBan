@@ -49,10 +49,18 @@
                 <a href="/login" id="LINK1" runat="server"><span id="fullname" runat="server">Đăng nhập</span></a>
                 <a href="/logout" ><i><span id="logout" runat="server"></span></i></a>
             </div>
-            <div class="cart">
+            <div class="cart" id="_cart1">
                 <span class="icon-cart" onclick="showCart()" id="number_oder" runat="server">0</span> 
                 <img class="icon-cart" src="/static/img/icon/bag.png" alt="" onclick="showCart()">
             </div>
+
+            <div class="cart" id="_cart2">
+                <a href="/cart">
+                    <span class="icon-cart" onclick="showCart()" id="Span1" runat="server">0</span> 
+                    <img class="icon-cart" src="/static/img/icon/bag.png" alt="" onclick="showCart()">
+                </a>
+            </div>
+
         </div>
     </header>
     <div class="margin" style="margin-top: 94px; width: 100%; display: block; height: 1px;">
@@ -113,7 +121,7 @@
     <div class="footer-contact">
         <div class="container">
             <div class="logo">
-                <img src="img/icon/logo.png" alt="">
+                <img src="/static/img/icon/logo.png" alt="">
             </div>
             <div class="note">
                 <p>

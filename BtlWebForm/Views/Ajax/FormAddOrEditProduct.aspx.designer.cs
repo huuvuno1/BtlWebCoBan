@@ -33,6 +33,15 @@ namespace BtlWebForm.Views.Ajax
         protected global::System.Web.UI.HtmlControls.HtmlInputText name_pro;
 
         /// <summary>
+        /// thuong_hieu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText thuong_hieu;
+
+        /// <summary>
         /// price_pro control.
         /// </summary>
         /// <remarks>

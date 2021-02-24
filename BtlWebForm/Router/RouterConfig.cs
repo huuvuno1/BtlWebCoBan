@@ -22,6 +22,7 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("category", "{category}", "~/Views/Common/category.aspx");
             routes.MapPageRoute("detail", "may-tinh/{slug}", "~/Views/Common/detail.aspx");
             routes.MapPageRoute("details", "phu-kien/{slug}", "~/Views/Common/detail.aspx");
+            routes.MapPageRoute("addproduct", "api/addproduct", "~/Views/Common/addproduct.aspx");
         }
 
         public static void AddConfigRouteAjax(RouteCollection routes)

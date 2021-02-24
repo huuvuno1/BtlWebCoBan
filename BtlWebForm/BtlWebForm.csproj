@@ -140,6 +140,7 @@
     <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
     <Content Include="Views\Ajax\RowProducts.aspx" />
     <Content Include="Views\Common\access-denied.aspx" />
+    <Content Include="Views\Common\addproduct.aspx" />
     <Content Include="Views\Common\cart.aspx" />
     <Content Include="Views\Common\category.aspx" />
     <Content Include="Views\Common\checkout.aspx" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="Views\Common\access-denied.aspx.designer.cs">
       <DependentUpon>access-denied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\addproduct.aspx.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Common\addproduct.aspx.designer.cs">
+      <DependentUpon>addproduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\cart.aspx.cs">
       <DependentUpon>cart.aspx</DependentUpon>
@@ -315,6 +323,7 @@
     <Content Include="Database\Order.json" />
     <None Include="packages.config" />
     <Content Include="Database\users.json" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

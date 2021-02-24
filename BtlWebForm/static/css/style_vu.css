@@ -1831,6 +1831,7 @@ thead {
 .form_category .product {
     padding: 0;
     width: 16.6666667%;
+    min-width: 166.66px;
 }
 
 .form_category .product-thumnail {
@@ -1851,4 +1852,22 @@ thead {
 
 .fullwidth {
     width: 100%;
+}
+
+/* ------------- */
+#_cart1 {
+    display: block;
+}
+
+#_cart2{
+    display: none;
+}
+
+.product-thumnail img {
+    max-height: 120px;
+}
+
+/* sau phai chinh lai*/
+#CommonBody_ListProduct .img-thumnail{
+    max-height: 180px;
 }

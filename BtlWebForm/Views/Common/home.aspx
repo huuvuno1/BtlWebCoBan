@@ -27,17 +27,17 @@
             <div class="banner_bot flex">
                 <div class="width33">
                     <a href="">
-                        <img src="/static/img/banner/banner_bot_slide_img_1.jpg" alt="">
+                        <img class="img" src="/static/img/banner/banner_bot_slide_img_1.jpg" alt="">
                     </a>
                 </div>
                 <div class="width33">
                     <a href="">
-                        <img src="/static/img/banner/banner_bot_slide_img_2.jpg" alt="">
+                        <img class="img" src="/static/img/banner/banner_bot_slide_img_2.jpg" alt="">
                     </a>
                 </div>
                 <div class="width33">
                     <a href="">
-                        <img src="/static/img/banner/banner_bot_slide_img_3.jpg" alt="">
+                        <img class="img" src="/static/img/banner/banner_bot_slide_img_3.jpg" alt="">
                     </a>
                 </div>
 

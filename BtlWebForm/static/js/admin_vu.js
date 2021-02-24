@@ -1,10 +1,12 @@
 ﻿window.onload = function () {
     getListProduct();
 }
+var h = 1;
 function addFileImage()
 {
     var inp = document.createElement("input");
     inp.setAttribute("type", "file");
+    inp.setAttribute("name", "file" + h);
     document.getElementById("image_sss").appendChild(document.createElement("br"));
     document.getElementById("image_sss").appendChild(inp);
 }

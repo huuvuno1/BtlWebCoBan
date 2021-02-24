@@ -76,6 +76,14 @@ namespace BtlWebForm.Repository
             return result;
         }
 
+        public void SaveProduct(ProductEntity product)
+        {
+            List<ProductEntity> products = FindAllProducts();
+            if (products == null)
+                products = new List<ProductEntity>();
+            products.Add(product);
+            fileIO.WriteFileJson(Constant.DATA_PRODUCTS, JsonConvert.SerializeObject(products));
+        }
 
         /* 
              các loại tham số của category: san-pham, san-pham-khuyen-mai, may-tinh, phu-kien
