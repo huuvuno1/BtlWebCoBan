@@ -21,9 +21,24 @@ namespace BtlWebForm.Repository
         public UserEntity FindUserByUsername(string username)
         {
             List<UserEntity> users = FindAllUser();
+            if (users == null)
+                return null;
             foreach (UserEntity user in users)
             {
                 if (user.Username.Equals(username))
+                    return user;
+            }
+            return null;
+        }
+
+        public UserEntity FindUserByID(int ID)
+        {
+            List<UserEntity> users = FindAllUser();
+            if (users == null)
+                return null;
+            foreach (UserEntity user in users)
+            {
+                if (user.ID == ID)
                     return user;
             }
             return null;

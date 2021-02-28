@@ -66,7 +66,9 @@ namespace BtlWebForm.Views.Common
                 }
 
                 ProductEntity product = new ProductEntity();
-                product.ID = productRepository.FindAllProducts().Count + 1;
+
+                // id được tự động tăng trong hàm save rồi
+
                 product.Name = name_pro;
                 product.Price = Int32.Parse(price_pro);
                 product.Quantity = Int32.Parse(quantity_pro);

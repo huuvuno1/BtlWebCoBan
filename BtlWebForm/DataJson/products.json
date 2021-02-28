@@ -119,5 +119,29 @@
     "Quantity": 5,
     "Slug": "Laptop-Lenovo-ThinkPad-X1-Carbon-8-i5-10210U-16GB-512GB-14”WQHD-Win-10-Pro-No-00724582-1-đanh-gia-",
     "Category": "may-tinh"
+  },
+  {
+    "ID": 11,
+    "Name": "Combo Loa Bluetooth Karaoke i.value FG206-01 Nhựa đen + Mic không dây",
+    "Trademark": " i.value",
+    "Price": 1971000.0,
+    "Sale": 0.0,
+    "ListImage": [ "/static/img/product/f2_28_2021_11_54_06_AMMo-ta-san-pham-combo-loa-bluetooth-karaoke-i-value-fg206-01-1(1).jpg", "/static/img/product/f2_28_2021_11_54_06_AMMo-ta-san-pham-combo-loa-bluetooth-karaoke-i-value-fg206-01-2.jpg", "/static/img/product/f2_28_2021_11_54_06_AMMo-ta-san-pham-combo-loa-bluetooth-karaoke-i-value-fg206-01-3.jpg", "/static/img/product/f2_28_2021_11_54_06_AMMo-ta-san-pham-combo-loa-bluetooth-karaoke-i-value-fg206-01-4.jpg", "/static/img/product/f2_28_2021_11_54_06_AMMo-ta-san-pham-combo-loa-bluetooth-karaoke-i-value-fg206-01-5.jpg", "/static/img/product/f2_28_2021_11_54_06_AMMo-ta-san-pham-combo-loa-bluetooth-karaoke-i-value-fg206-01-6.jpg" ],
+    "Info": "Cách kết nối\tBluetooth\r\nChất liệu\tNhựa\r\nCổng sạc\tAC 100-240V\r\nCông suất\t30W\r\nDãy Tần số\t180Hz - 20KHz",
+    "Quantity": 20,
+    "Slug": "Combo-Loa-Bluetooth-Karaoke-i-value-FG206-01-Nhua-đen--Mic-khong-day",
+    "Category": "may-tinh"
+  },
+  {
+    "ID": 12,
+    "Name": "Combo Loa Bluetooth Karaoke i.value F12-65N Nhựa đen + Mic không dây",
+    "Trademark": "i.value",
+    "Price": 2511000.0,
+    "Sale": 0.0,
+    "ListImage": [ "/static/img/product/f2_28_2021_12_43_41_PMMo-ta-san-pham-combo-loa-bluetooth-karaoke-i-value-fg206-01-6.jpg", "/static/img/product/f2_28_2021_12_43_41_PMMo-ta-san-pham-loa-bluetooth-i-value-f1265n-1.jpg", "/static/img/product/f2_28_2021_12_43_41_PMMo-ta-san-pham-loa-bluetooth-i-value-f1265n-3.jpg", "/static/img/product/f2_28_2021_12_43_41_PMMo-ta-san-pham-loa-bluetooth-i-value-f1265n-5.jpg", "/static/img/product/f2_28_2021_12_43_41_PMMo-ta-san-pham-loa-bluetooth-i-value-f1265n-6.jpg" ],
+    "Info": "Cách kết nối\tĐang cặp nhật\r\nChất liệu\tNhựa ABS\r\nCông suất\t45W\r\nKết nối\tBluetooth, Thẻ nhớ SD, Aux\r\nLoại Loa\tLoa Karaoke",
+    "Quantity": 5,
+    "Slug": "Combo-Loa-Bluetooth-Karaoke-i-value-F12-65N-Nhua-đen-Mic-khong-day",
+    "Category": "may-tinh"
   }
 ]

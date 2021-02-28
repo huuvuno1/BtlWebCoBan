@@ -80,7 +80,14 @@ namespace BtlWebForm.Repository
         {
             List<ProductEntity> products = FindAllProducts();
             if (products == null)
+            {
+                product.ID = 1;
                 products = new List<ProductEntity>();
+            }    
+            else
+            {
+                product.ID = products[products.Count - 1].ID + 1;
+            }    
             products.Add(product);
             fileIO.WriteFileJson(Constant.DATA_PRODUCTS, JsonConvert.SerializeObject(products));
         }

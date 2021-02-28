@@ -13,10 +13,11 @@ function gen() {
     kq = kq.replace(/[ìỉĩịí]/g, 'i');
     kq = kq.replace(/[ỏòõọóôốồỗộốơớỡợở]/g, 'o');
     kq = kq.replace(/[ủụũúùưứừựữ]/g, 'u');
-    kq = kq.replace(/ỳýỵỹỷ/g, 'y')
+    kq = kq.replace(/[ỳýỵỹỷ]/g, 'y')
     kq = kq.replace(/[|\/()*~ .]/g, '-');
-    kq = kq.replace(/--/g, '-');
-    kq = kq.replace(/--/g, '-'); // vẫn chưa hết trường hợp -- nhưng tạm ổn
+    kq = kq.replace(/[+]/g, '-');
+    kq = kq.replace("---", '-');
+    kq = kq.replace("--", '-');
     document.getElementById('url_pro').value = kq;
 }
 
@@ -164,6 +165,8 @@ function saveProduct() {
     textarea.setAttribute('name', 'html');
     let html = "";
     let paragraph = document.getElementsByClassName('paragraph');
+
+    let stt_anh = 0;
     for (let i = 0; i < paragraph.length; i++) {
         let title = paragraph[i].getElementsByClassName('paragraph_title')[0].value;
         let content = paragraph[i].getElementsByClassName('paragraph_content')[0].value;
@@ -173,8 +176,10 @@ function saveProduct() {
         html += "<p>" + content + "</p>";
 
         // file name sẽ được replace trên server
-        if (filename != '')
-            html += "<p><img class='img' src='filename" + i + "' ></p>";
+        if (filename != '') {
+            html += "<p><img class='img' src='filename" + stt_anh + "' ></p>";
+            stt_anh++;
+        }
         // vẫn có trường hợp file rỗng, nếu rỗng thì ko nối html hiển thị ảnh
     }
 

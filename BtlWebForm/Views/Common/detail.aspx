@@ -126,4 +126,29 @@
             </div>        
         </div>
     </div>
+
+
+    <div class="page_detail">
+        <div class="container">
+            <div class="comment">
+                <h3>Hỏi đáp về Macbook</h3>
+                <div class="relative">
+                    <textarea placeholder="Viết câu hỏi của bạn" name="" id="comment" cols="30" rows="3"></textarea>
+
+                    <!-- <span class="red" style="display:block; margin: 40px 0;">Đăng nhập để bình luận <a href="/login">Đăng nhập ngay</a></span> -->
+                    <button type="button" onclick="sendCommentLevel1(1)">Gửi bình luận</button>
+                    <!-- <button type="button" onclick="login()">Bạn phải đăng nhập trước</button> -->
+                </div>
+
+
+                <div id="list_comment" runat="server">
+
+                    <!-- comment dau tien -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/comment.js"></script>
 </asp:Content>

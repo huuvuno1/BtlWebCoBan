@@ -1,5 +1,6 @@
 ﻿using BtlWebForm.Entity;
 using BtlWebForm.Repository;
+using BtlWebForm.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,12 @@ namespace BtlWebForm.Views.Common
     {
         ProductRepository productRepository = new ProductRepository();
         PostRepository postRepository = new PostRepository();
+        CommentRepository commentRepository = new CommentRepository();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string category = Request.Url.AbsolutePath;
+          
+            string url = Request.Url.AbsolutePath;
 
             // đọc slug từ router
             string slug = (string)RouteData.Values["slug"];
@@ -26,13 +29,19 @@ namespace BtlWebForm.Views.Common
             // nếu không tìm thấy thì sẽ cho về trang home
             if (product != null)
             {
-                url_page.Attributes.Add("href", category);
-                if (category.Contains("may-tinh"))
+                if (url.Contains("may-tinh"))
+                {
+                    url_page.Attributes.Add("href", "/may-tinh");
                     name_page.InnerText = "Máy tính";
+                    slug_.Attributes.Add("href", "/may-tinh/" + product.Slug);
+                }
                 else
+                {
+                    url_page.Attributes.Add("href", "/phu-kien");
                     name_page.InnerText = "Phụ kiện";
+                    slug_.Attributes.Add("href", "/phu-kien/" + product.Slug);
+                }
 
-                slug_.Attributes.Add("href", "/" + category + "/" + product.Slug);
                 name_product.InnerText = product.Name;
 
                 bigImg.Attributes.Add("src", product.ListImage[0]);
@@ -71,6 +80,7 @@ namespace BtlWebForm.Views.Common
 
                 // xử lí lại chỗ miêu tả cấu hình
                 product.Info = product.Info.Replace("\n", "<br><hr>");
+                product.Info = product.Info.Replace("\t", ": ");
                 info_detail.InnerHtml = product.Info;
 
                 string html = @"<button id=" + "'btn-add-to-cart' onclick='addToCart(" + product.ID + @")'>Thêm vào giỏ hàng</button>";
@@ -88,6 +98,12 @@ namespace BtlWebForm.Views.Common
                     int z = 0;
                 }
                 post_details.InnerHtml = post.Content;
+
+
+                // đọc list comment ra
+                List<CommentEntity> comments = commentRepository.FindCommentsByIDProduct(product.ID);
+                string htmlComment = CommentUtils.HTMLComments(comments);
+                list_comment.InnerHtml = htmlComment;
             }
             else
                 Response.Redirect("/");

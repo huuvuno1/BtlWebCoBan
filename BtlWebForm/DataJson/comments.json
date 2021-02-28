@@ -1,0 +1,30 @@
+[
+  
+  {
+    "IDProduct": 12,
+    "ListComment": [
+      {
+        "IDUser": 2,
+        "Content": "Sản phẩm này hỗ trợ trả góp không",
+        "TimeComment": "2021-02-22T23:19:04.2052471+07:00",
+        "ListReply": [
+          {
+            "IDUser": 1,
+            "Content": "Có bạn nhé",
+            "TimeComment": "2021-02-22T23:19:04.2052471+07:00"
+          },
+          {
+            "IDUser": 2,
+            "Content": "Cảm ơn shop",
+            "TimeComment": "2021-02-26T23:19:04.2052471+07:00"
+          },
+          {
+            "IDUser": 1,
+            "Content": "Không có gì",
+            "TimeComment": "2021-02-28T00:13:04.2052471+07:00"
+          }
+        ]
+      }
+    ]
+  }
+]

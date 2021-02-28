@@ -23,7 +23,6 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("category", "{category}", "~/Views/Common/category.aspx");
             routes.MapPageRoute("detail", "may-tinh/{slug}", "~/Views/Common/detail.aspx");
             routes.MapPageRoute("details", "phu-kien/{slug}", "~/Views/Common/detail.aspx");
-            
         }
 
         public static void AddConfigRouteAjax(RouteCollection routes)
@@ -37,7 +36,7 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("api-get-product-session", "api/cart", "~/Views/Ajax/Cart.aspx");
             routes.MapPageRoute("api-add-product-session", "api/cart/{ID}", "~/Views/Ajax/Cart.aspx");
             routes.MapPageRoute("api-add-quantity-product-session", "api/cart/{ID}/{Type}/{Quantity}", "~/Views/Ajax/Cart.aspx");
-            
+            routes.MapPageRoute("api-comment", "api/comment", "~/Views/Ajax/Comment.aspx");
         }
     }
 }
