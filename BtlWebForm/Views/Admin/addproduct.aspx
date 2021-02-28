@@ -61,7 +61,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Mô tả ngắn</td>
+                            <td>Thông số kỹ thuật / Mô tả ngắn</td>
                             <td><textarea id="info_pro" runat="server" class="input-add" rows="5"></textarea></td>
                         </tr>
                         <tr>

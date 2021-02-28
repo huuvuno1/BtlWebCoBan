@@ -49,7 +49,7 @@ function btnShowForm(form, ID) {
 
 function showImage(img) {
     var urlImage = img.getAttribute('src');
-    document.getElementById('CommonBody_bigImg').setAttribute('src', urlImage);
+    document.getElementById('bigImg').setAttribute('src', urlImage);
 }
 
 

@@ -1,7 +1,18 @@
 [
+  
   {
     "IDProduct": 8,
     "Content": "<h3>DOan van 1</h3><p>noi dung doan 1</p><p><img src='filename0' ></p>",
     "ListImage": [ "/static/img/product/1.jpg" ]
+  },
+  {
+    "IDProduct": 9,
+    "Content": "<h3>Đánh giá chi tiết Asus TUF Gaming FX506LI-HN039T/i5-10300H</h3><p>Hướng đến trải nghiệm chơi game và độ bền, Asus TUF FX506LI HN039T thuộc thế hệ TUF Gaming F15 từ Asus với cấu hình kết hợp của Intel và NVIDIA cùng màn hình 144Hz siêu mượt sẽ mang đến sản phẩm laptop chơi game mạnh mẽ trong một thiết kế nhỏ gọn, độ bền chuẩn quân đội.</p><p><img class='img' src='filename0' ></p>",
+    "ListImage": [ "/static/img/product/f2_28_2021_10_16_17_AM637314557324882066_HP-15S-12.jpg" ]
+  },
+  {
+    "IDProduct": 10,
+    "Content": "<h3>Đánh giá chi tiết Lenovo ThinkPad X1 Carbon 8 i5 10210U</h3><p>Thuộc dòng laptop doanh nhân cao cấp của Lenovo, ThinkPad X1 Carbon Gen 8 sở hữu khả năng di động tuyệt vời, màn hình 2K siêu sắc nét và thời lượng pin lên tới gần 20 giờ, tất nhiên laptop không thể thiếu được những tính năng bảo mật tiên tiến.\r\n\r\n</p><p><img class='img' src='filename0' ></p><h3>Sử dụng suốt cả ngày lẫn đêm</h3><p>Dù bạn có đắm chìm trong công việc mà quên đi thời gian thì Lenovo ThinkPad X1 Carbon Gen 8 vẫn luôn đồng hành cùng bạn với thời lượng pin lên tới 19,5 giờ. Laptop luôn sẵn sàng năng lượng để bên bạn chinh phục mọi thử thách. Không chỉ pin tốt, ThinkPad X1 Carbon còn hỗ trợ chuẩn sạc nhanh Rapid Charge, sạc đầy 80% pin chỉ sau 1 giờ, nhanh chóng nạp đầy năng lượng.\r\n\r\n</p><p><img class='img' src='filename1' ></p><h3>Cấu hình mạnh mẽ hàng đầu</h3><p>Lenovo ThinkPad X1 Carbon Gen 8 trang bị bộ vi xử lý Intel Core i5 10210U, 16GB RAM và 512GB SSD. Với bộ vi xử lý thế hệ thứ 10, ThinkPad X1 Carbon 8 cho tốc độ mượt mà ở mọi tác vụ. Dung lượng RAM lên tới 16GB cho bạn không gian làm việc lớn hơn, thoải mải mở nhiều ứng dụng cùng lúc. Trong khi đó 512GB SSD PCIe không chỉ bảo vệ an toàn dữ liệu của bạn với độ bền cao mà còn mang đến khả năng khởi động, mở ứng dụng siêu tốc</p><p><img class='img' src='filename2' ></p>",
+    "ListImage": [ "/static/img/product/f2_28_2021_11_12_41_AMlenovo-laptop-thinkpad-x1-carbon-gen-8-1.jpg", "/static/img/product/f2_28_2021_11_12_41_AM637430244237272994_HASP-ThinkPad-X1-Carbon-Gen8-38.jpg", "/static/img/product/f2_28_2021_11_12_41_AM637430244243835767_HASP-ThinkPad-X1-Carbon-Gen8-47.jpg" ]
   }
 ]

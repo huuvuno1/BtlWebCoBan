@@ -5,6 +5,7 @@ cần chỉnh lại search không phân biệt hoa thường
 
 viết bài đánh giá sản phẩm
 -> 80 %
+-> chưa validate
 
 bình luận sản phẩm
 -> tạm xog front-end

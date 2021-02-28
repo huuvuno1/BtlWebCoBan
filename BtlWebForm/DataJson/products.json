@@ -95,5 +95,29 @@
     "Quantity": 15,
     "Slug": "Laptop-MSI-Modern-14-B11MO-004VN-i5-1135G7-8GB-512GB-SSD-Intel-Iris-Xe-Graphics-Win1",
     "Category": "may-tinh"
+  },
+  {
+    "ID": 9,
+    "Name": "Laptop Asus TUF FX506LI HN039T i5 10300H/8GB/512GB SSD/Win10",
+    "Trademark": "Asus ",
+    "Price": 1.5E+07,
+    "Sale": 0.0,
+    "ListImage": [ "/static/img/product/f2_28_2021_10_16_17_AM637314557321452132_HP-15S-5.jpg", "/static/img/product/f2_28_2021_10_16_17_AM637314557322492117_HP-15S-7.jpg", "/static/img/product/f2_28_2021_10_16_17_AM637314557324882066_HP-15S-12.jpg", "/static/img/product/f2_28_2021_10_16_17_AM637431246325803484_dell-inspiron-3501-3.jpg", "/static/img/product/f2_28_2021_10_16_17_AMdell-inspiron-3501-2.jpg" ],
+    "Info": "CPU\tIntel Core i5-10300H\r\nRAM\t8 GB, DDR4, 2933 MHz\r\nMàn hình\t15.6\", 1920 x 1080 Pixel, IPS, 144 Hz, 250 nits, LED Backlit\r\nĐồ họa\tNVIDIA GeForce GTX 1650Ti 4 GB & Intel HD Graphics 630\r\nỔ cứng\tSSD 512 GB\r\nHệ điều hành\tWindows 10\r\nTrọng lượng (kg)\t2.3\r\nKích thước (mm)\t359 x 256 x 24.7\r\nXuất xứ\tTrung Quốc\r\nNăm ra mắt\t2020",
+    "Quantity": 6,
+    "Slug": "Laptop-Asus-TUF-FX506LI-HN039T-i5-10300H-8GB-512GB-SSD-Win10",
+    "Category": "may-tinh"
+  },
+  {
+    "ID": 10,
+    "Name": "Laptop Lenovo ThinkPad X1 Carbon 8 i5 10210U/16GB/512GB/14”WQHD/Win 10 Pro (No.00724582) 1 đánh giá |",
+    "Trademark": "Lenovo ",
+    "Price": 4.3E+07,
+    "Sale": 1.0,
+    "ListImage": [ "/static/img/product/f2_28_2021_11_12_41_AM637430244237272994_HASP-ThinkPad-X1-Carbon-Gen8-38.jpg", "/static/img/product/f2_28_2021_11_12_41_AM637430244239460313_HASP-ThinkPad-X1-Carbon-Gen8-41.jpg", "/static/img/product/f2_28_2021_11_12_41_AM637430244243366453_HASP-ThinkPad-X1-Carbon-Gen8-45.jpg", "/static/img/product/f2_28_2021_11_12_41_AM637430244243835767_HASP-ThinkPad-X1-Carbon-Gen8-47.jpg" ],
+    "Info": "CPU\tIntel Core i5-10210U\r\nRAM\t16 GB, LPDDR3, 2133 MHz\r\nMàn hình\t14.0\", 2560 x 1440 Pixel, WVA, 60 Hz, 300 nits, WVA Anti-glare LED Backlit Narrow Border\r\nĐồ họa\tIntel UHD Graphics\r\nỔ cứng\tĐang cập nhật\r\nHệ điều hành\tWindows 10\r\nTrọng lượng (kg)\t1.1\r\nKích thước (mm)\t323 x 216 x 14.9\r\nXuất xứ\tTrung Quốc\r\nNăm ra mắt\t2020",
+    "Quantity": 5,
+    "Slug": "Laptop-Lenovo-ThinkPad-X1-Carbon-8-i5-10210U-16GB-512GB-14”WQHD-Win-10-Pro-No-00724582-1-đanh-gia-",
+    "Category": "may-tinh"
   }
 ]

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/static/css/style_vu.css">
     <link rel="stylesheet" href="/static/css/style_vu_reposive.css">
     <meta name="keywords" content="vu" />
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

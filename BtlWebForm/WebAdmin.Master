@@ -10,6 +10,11 @@
     <title>Admin</title>
     <link rel="stylesheet" href="/static/css/style_vu.css">
     <link rel="stylesheet" href="/static/css/style_vu_reposive.css">
+    <style>
+    body{
+            overflow-y: hidden;
+        }
+        </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

@@ -32,7 +32,7 @@ namespace BtlWebForm.Views.Common
                 string info_pro = Request.Form.Get("ctl00$AdminBody$info_pro");
                 string url_pro = Request.Form.Get("ctl00$AdminBody$url_pro");
                 string trademark = Request.Form.Get("ctl00$AdminBody$thuong_hieu");
-                string category = Request.Form.Get("ctl00$AdminBody$category_pro");
+                string category = Request.Form.Get("category_pro");
                 string htmlPost = Request.Unvalidated.Form.Get("html");
 
 

@@ -69,7 +69,9 @@ namespace BtlWebForm.Views.Common
                         _status.Attributes.Add("style", "background: red !important");
                  }
 
-                info_detail.InnerText = product.Info;
+                // xử lí lại chỗ miêu tả cấu hình
+                product.Info = product.Info.Replace("\n", "<br><hr>");
+                info_detail.InnerHtml = product.Info;
 
                 string html = @"<button id=" + "'btn-add-to-cart' onclick='addToCart(" + product.ID + @")'>Thêm vào giỏ hàng</button>";
                 btn_server.InnerHtml = html;
@@ -79,6 +81,7 @@ namespace BtlWebForm.Views.Common
                 if (post == null)
                     return;
 
+                // gán link ảnh vào trong các thẻ img,  "src='filename'" -> "src='link-image'"
                 for (i = 0; i < post.ListImage.Count; i++)
                 {
                     post.Content = post.Content.Replace("src='filename" + i + "'", "src='" + post.ListImage[i] + "'");
