@@ -5,10 +5,10 @@ using System.Web;
 
 namespace BtlWebForm.Entity
 {
-    public class CommentEntity
+    public class CommentLevel1Entity
     {
-        public int IDProduct { get; set; }
-        public SimpleComment Comment { get; set; }
+        public int IDCommentMain { get; set; }
+        public SimpleComment CommentMain { get; set; }
         public List<SimpleComment> ListReply { get; set; }
     }
 }

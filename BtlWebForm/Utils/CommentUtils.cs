@@ -17,14 +17,16 @@ namespace BtlWebForm.Utils
             return (timeSpan.Days == 0) ? "Hôm nay" : timeSpan.Days + " ngày trước"; ;
         }
 
-        public static string HTMLComments(List<CommentEntity> comments)
+        public static string HTMLComments(CommentOfAPost comments)
         {
+            if (comments == null)
+                return "";
             UserRepository userRepository = new UserRepository();
             string HTML = "";
 
-            foreach (CommentEntity comment in comments)
+            foreach (CommentLevel1Entity comment in comments.ListComment)
             {
-                UserEntity userLv1 = userRepository.FindUserByID(comment.Comment.IDUser);
+                UserEntity userLv1 = userRepository.FindUserByID(comment.CommentMain.IDUser);
 
 
                 // xử lý avt, trong avt chứa tên viết tắt, lấy các chữ cái đầu của fullname
@@ -36,7 +38,7 @@ namespace BtlWebForm.Utils
                     acronym += word[0];
                 }
 
-                string html = @"<div class='detail_comment flex'>
+                string html = @"<div class='detail_comment flex'  id='" + comment.IDCommentMain + @"'>
 
                                     <!-- avatar -->
                                     <div class='avatar_comment'>"
@@ -49,12 +51,12 @@ namespace BtlWebForm.Utils
                                             <h4>" + userLv1.Fullname + @"</h4>";
                                             if (userLv1.Role == Constant.ROLE_ADMIN)
                                                 html += @"<span class='role'>Quản trị viên</span>";
-                                        html +=  @"<span class='time'>" + GetDay(comment.Comment.TimeComment) + @"</span>
+                                        html +=  @"<span class='time'>" + GetDay(comment.CommentMain.TimeComment) + @"</span>
                                         </div>
 
                                         <!-- comment cua user -->
                                         <span class='content_comment'>"
-                                            + comment.Comment.Content +
+                                            + comment.CommentMain.Content +
                                         @"</span>
 
                                         <!-- btn them comment lv2 -->

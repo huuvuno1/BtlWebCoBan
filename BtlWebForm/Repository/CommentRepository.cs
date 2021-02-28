@@ -10,55 +10,105 @@ namespace BtlWebForm.Repository
     public class CommentRepository
     {
         FileIO file = new FileIO();
-        public List<CommentEntity> FindAllComments()
+        public List<CommentOfAPost> FindAllComments()
         {
-            string commentJson = file.ReadFileJson(Constant.DATA_COMMENT);
-            return JsonConvert.DeserializeObject<List<CommentEntity>>(commentJson);
+            string jsonData = file.ReadFileJson(Constant.DATA_COMMENT);
+            return JsonConvert.DeserializeObject<List<CommentOfAPost>>(jsonData);
         }
 
-        public List<CommentEntity> FindCommentsByIDProduct(int IDProduct)
+        public CommentOfAPost FindListCommentsOfProduct(int IDProduct)
         {
-            List<CommentEntity> comments = FindAllComments();
+            List<CommentOfAPost> comments = FindAllComments();
             if (comments == null)
                 return null;
-            List<CommentEntity> results = new List<CommentEntity>();
-            foreach (CommentEntity comment in comments)
+            foreach (CommentOfAPost comment in comments)
             {
                 if (comment.IDProduct == IDProduct)
-                    results.Add(comment);
+                    return comment;
             }
-            if (results.Count == 0)
-                return null;
-            return results;
+            return null;
         }
 
-        public void SaveCommentLevel1(CommentEntity comment)
+        public void SaveCommentLevel1(ref CommentLevel1Entity commentLevel1, int IDProduct)
         {
-            List<CommentEntity> comments = FindAllComments();
-            if (comments == null)
-                comments = new List<CommentEntity>();
-            comments.Add(comment);
-            file.WriteFileJson(Constant.DATA_COMMENT, JsonConvert.SerializeObject(comments));
-        }
+            List<CommentOfAPost> listCommentOfAllProduct = FindAllComments();
+            
 
-        public void SaveCommentLevel2(SimpleComment simpleComment, int IDProduct)
-        {
-            List<CommentEntity> comments = FindAllComments();
-
-            // nếu ko có comment cấp 1 thì làm j có comment cấp 2 =))
-            if (comments == null)
-                return;
-
-            foreach (CommentEntity comment in comments)
+            // nếu file rỗng thì tạo comment cho bài viết luôn
+            if (listCommentOfAllProduct == null)
             {
-                if (comment.IDProduct == IDProduct)
+                listCommentOfAllProduct = new List<CommentOfAPost>();
+                CommentOfAPost commentOfAPost = new CommentOfAPost();
+                commentOfAPost.IDProduct = IDProduct;
+
+                // tạo id cho comment đầu tiên của bài viết
+                commentLevel1.IDCommentMain = 1;
+                commentOfAPost.ListComment = new List<CommentLevel1Entity>();
+                commentOfAPost.ListComment.Add(commentLevel1);
+                listCommentOfAllProduct.Add(commentOfAPost);
+                file.WriteFileJson(Constant.DATA_COMMENT, JsonConvert.SerializeObject(listCommentOfAllProduct));
+                return;
+            }
+            else
+            {
+                // file json đã có giá trị, đi kiểm tra xem post đã có cmt chưa
+                foreach (CommentOfAPost commentOfAPost in listCommentOfAllProduct)
                 {
-                    if (comment.ListReply == null)
-                        comment.ListReply = new List<SimpleComment>();
-                    comment.ListReply.Add(simpleComment);
-                    return;
+                    // nếu mà có rồi thì thêm vào thôi
+                    if (commentOfAPost.IDProduct == IDProduct)
+                    {
+                        commentLevel1.IDCommentMain = commentOfAPost.ListComment[commentOfAPost.ListComment.Count - 1].IDCommentMain + 1;
+                        commentOfAPost.ListComment.Add(commentLevel1);
+                        listCommentOfAllProduct.Add(commentOfAPost);
+                        file.WriteFileJson(Constant.DATA_COMMENT, JsonConvert.SerializeObject(listCommentOfAllProduct));
+                        return;
+                    }
                 }
-            }    
+
+                // nếu mà post chưa có bình luận
+                commentLevel1.IDCommentMain = 1;
+                CommentOfAPost comment = new CommentOfAPost();
+                comment.IDProduct = IDProduct;
+                comment.ListComment = new List<CommentLevel1Entity>();
+                comment.ListComment.Add(commentLevel1);
+                listCommentOfAllProduct.Add(comment);
+                file.WriteFileJson(Constant.DATA_COMMENT, JsonConvert.SerializeObject(listCommentOfAllProduct));
+                return;
+            }
+            
+        }
+
+        public void SaveCommentLevel2(SimpleComment commentReply, int IDProduct, int IDCommentMain)
+        {
+            List<CommentOfAPost> listCommentOfAllProduct = FindAllComments();
+            if (listCommentOfAllProduct == null)
+            {
+                // vì không có comment thì sao có reply
+                return;
+            }
+            foreach (CommentOfAPost commentOfAPost in listCommentOfAllProduct)
+            {
+                if (commentOfAPost.IDProduct == IDProduct)
+                {
+                    if (commentOfAPost.ListComment == null)
+                        return; // vì ko có comment thì sao có reply
+                    
+                    // tìm ID của comment
+                    foreach (CommentLevel1Entity commentLevel1 in commentOfAPost.ListComment)
+                    {
+                        if (commentLevel1.IDCommentMain == IDCommentMain)
+                        {
+                            if (commentLevel1.ListReply == null)
+                                commentLevel1.ListReply = new List<SimpleComment>();
+                            commentLevel1.ListReply.Add(commentReply);
+                            file.WriteFileJson(Constant.DATA_COMMENT, JsonConvert.SerializeObject(listCommentOfAllProduct));
+                            return;
+                        }
+                    }
+                    
+                }
+            }
         }
     }
+
 }

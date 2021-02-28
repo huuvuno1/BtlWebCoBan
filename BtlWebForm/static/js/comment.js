@@ -3,19 +3,22 @@ function sendCommentLevel1(idProduct)
     let comment = document.getElementById('comment').value;
     if (comment == '')
         return;
-    
+
+    let child = document.createElement("div");
     var html
     //reset input
     document.getElementById('comment').value = '';
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
+            // response tra ve dang "fullname|role|idcomment"
             var response = this.responseText;
             if (response == '') {
-                alert('Có lỗi xảy ra khi xử lý bình luận');
+                alert('Đăng nhập trước nhé =))');
             }
             else {
-                html = htmlCommentLv1(response.split('|')[0], comment, response.split('|')[1], "Hôm nay"); 
+                html = htmlCommentLv1(response.split('|')[0], comment, response.split('|')[1], "Hôm nay");
+                child.setAttribute("id", response.split('|')[2]);
             }
             
         }
@@ -23,8 +26,7 @@ function sendCommentLevel1(idProduct)
     xhttp.open("POST", "/api/comment", false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("idProduct=" + idProduct + "&comment=" + comment + "&level=1");
-    
-    let child = document.createElement("div");
+
 
     child.setAttribute("class", "detail_comment flex");
     let listComment = document.getElementById('list_comment');
@@ -68,39 +70,48 @@ function sendCommentLevel2(_this, idProduct)
     if (comment == '')
         return;
 
-    var reponse;
+    var idCmt = _this.parentNode.parentNode.parentNode.getAttribute("id");
+
+    
+    let html;
     //reset input
-    document.getElementById('comment').value = '';
+    _this.parentNode.getElementsByClassName('commentlv2')[0].value = "";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            response = this.responseText;
-            if (reponse == '')
-                alert('Có lỗi xảy ra khi xử lý bình luận');
-            return;
+            var response = this.responseText;
+            if (response == '') 
+            {
+                alert('Đăng nhập thì mới được rep');
+                return;
+            }
+            else
+            {
+                html = htmlCommentLv2(response.split('|')[0], comment, response.split('|')[1], "Hôm nay");
+            }
         }
     }
     xhttp.open("POST", "/api/comment", false);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("idProduct=" + idProduct + "&comment=" + comment + "&level=2");
+    xhttp.send("idProduct=" + idProduct + "&comment=" + comment + "&level=2&idCmt=" + idCmt);
 
     
     let child = document.createElement("div");
 
     child.setAttribute("class", "reply");
     let listComment = _this.parentNode.parentNode;
-    let html = htmlCommentLv2(reponse.split('|')[0], comment, reponse.split('|')[1], "Hôm nay");
+    
     child.innerHTML = html;
     listComment.appendChild(child);
 }
 
 function htmlCommentLv2(fullname, comment, role, time)
 {
-    let rolename = role == "admin" ? "Quản trị viên" : "";
+    let rolename = role == "admin" ? "<span class='role'>Quản trị viên</span>" : '';
     let html  = "   <div class='user_comment'>"; 
         html += "       <div class='flex'>"
-        html += "           <h4>" + fullname +"</h4> <span class='role'>" + rolename + "</span>";
-        html += "           <span class='time'>1 ngay truoc</span>";
+        html += "           <h4>" + fullname +"</h4> ";
+        html += "           <span class='time'>Hôm nay</span>";
         html += "       </div>";
         html += "       <span class='content_comment'>";
         html +=               comment;
@@ -120,8 +131,10 @@ function addCommentLevel2(x)
     x.innerHTML = "Thôi";
     let formComment = document.createElement('div');
     formComment.setAttribute('class', 'relative');
+    let idxx = document.getElementById('btn_send_lv1').getAttribute('idxx');
+    idxx = parseInt(idxx);
     let html = "   <textarea placeholder='Viết câu hỏi của bạn' name='' class='commentlv2' cols='30' rows='3'></textarea>";
-        html += "   <button type='button' onclick='sendCommentLevel2(this, 1)'>Gửi bình luận</button>";
+    html += "   <button type='button' onclick='sendCommentLevel2(this," + idxx + ")'>Gửi bình luận</button>";
     formComment.innerHTML = html;
     x.parentNode.appendChild(formComment);
 }

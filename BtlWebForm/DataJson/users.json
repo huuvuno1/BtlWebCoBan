@@ -11,8 +11,8 @@
   },
   {
     "ID": 2,
-    "Username": "user",
-    "Password": "user",
+    "Username": "user1",
+    "Password": "user1",
     "Fullname": "Nguyễn Văn La",
     "Role": 0,
     "Address": "Ninh Bình",

@@ -157,8 +157,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\CommentEntity.cs" />
+    <Compile Include="Entity\CommentLevel1Entity.cs" />
     <Compile Include="Entity\OrderEntity.cs" />
+    <Compile Include="Entity\CommentOfAPost.cs" />
     <Compile Include="Entity\PostEntity.cs" />
     <Compile Include="Entity\ProductEntity.cs" />
     <Compile Include="Entity\SimpleComment.cs" />

@@ -89,21 +89,29 @@ namespace BtlWebForm.Views.Common
                 // load bài viết chi tiết
                 PostEntity post = postRepository.FindPostByIDProduct(product.ID);
                 if (post == null)
-                    return;
-
-                // gán link ảnh vào trong các thẻ img,  "src='filename'" -> "src='link-image'"
-                for (i = 0; i < post.ListImage.Count; i++)
-                {
-                    post.Content = post.Content.Replace("src='filename" + i + "'", "src='" + post.ListImage[i] + "'");
-                    int z = 0;
+                    post_details.InnerText = "Chưa có bài đánh giá sản phẩm này";
+                else
+                {                 // gán link ảnh vào trong các thẻ img,  "src='filename'" -> "src='link-image'"
+                    for (i = 0; i < post.ListImage.Count; i++)
+                    {
+                        post.Content = post.Content.Replace("src='filename" + i + "'", "src='" + post.ListImage[i] + "'");
+                    }
+                    post_details.InnerHtml = post.Content;
                 }
-                post_details.InnerHtml = post.Content;
 
 
                 // đọc list comment ra
-                List<CommentEntity> comments = commentRepository.FindCommentsByIDProduct(product.ID);
-                string htmlComment = CommentUtils.HTMLComments(comments);
+                CommentOfAPost commentInPost = commentRepository.FindListCommentsOfProduct(product.ID);
+                string htmlComment = CommentUtils.HTMLComments(commentInPost);
+                //List<CommentLevel2Entity> comments = commentRepository.FindCommentsByIDProduct(product.ID);
+                //string htmlComment = CommentUtils.HTMLComments(comments);
                 list_comment.InnerHtml = htmlComment;
+
+
+                // add btn send cmt
+                //onclick = "sendCommentLevel1(1)"
+                btn_send_lv1.Attributes.Add("onclick", "sendCommentLevel1(" + product.ID + ")");
+                btn_send_lv1.Attributes.Add("idxx", product.ID.ToString());
             }
             else
                 Response.Redirect("/");

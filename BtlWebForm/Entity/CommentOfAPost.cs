@@ -5,8 +5,11 @@ using System.Web;
 
 namespace BtlWebForm.Entity
 {
-    public class ParentComment
+    public class CommentOfAPost
     {
         // class này dể fix lại những j làm xót :((
+
+        public int IDProduct { get; set; }
+        public List<CommentLevel1Entity> ListComment { get; set; }
     }
 }

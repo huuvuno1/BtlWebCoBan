@@ -1,12 +1,6 @@
 ﻿using BtlWebForm.Entity;
 using BtlWebForm.Repository;
-using BtlWebForm.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace BtlWebForm.Views.Ajax
 {
@@ -40,22 +34,26 @@ namespace BtlWebForm.Views.Ajax
             simpleComment.TimeComment = DateTime.Now;
             simpleComment.IDUser = user.ID;
 
+            string role = user.Role == Constant.ROLE_ADMIN ? "admin" : "user";
             // nếu là comment level1 thì thêm mới thôi
             if (Constant.LEVEL_COMMENT_1.Equals(levelComment))
             {
-                CommentEntity comment = new CommentEntity();
-                comment.IDProduct = Int32.Parse(IDProduct);
-                comment.Comment = simpleComment;
-                commentRepository.SaveCommentLevel1(comment);
+                CommentLevel1Entity commentMain = new CommentLevel1Entity();
+                commentMain.CommentMain = simpleComment;
+                commentRepository.SaveCommentLevel1(ref commentMain, Int32.Parse(IDProduct));
+
+                Response.Write(user.Fullname + "|" + role + "|" + commentMain.IDCommentMain);
             }
             else if (Constant.LEVEL_COMMENT_2.Equals(levelComment))
             {
-                commentRepository.SaveCommentLevel2(simpleComment, Int32.Parse(IDProduct));
+                int idCmt = Int32.Parse(Request.Form.Get("idCmt"));
+                
+                commentRepository.SaveCommentLevel2(simpleComment, Int32.Parse(IDProduct), idCmt);
+                Response.Write(user.Fullname + "|" + role);
+               // commentRepository.SaveCommentLevel2(simpleComment, Int32.Parse(IDProduct));
             }
 
-            string role = user.Role == Constant.ROLE_ADMIN ? "admin" : "user";
-            // trả về fullname
-            Response.Write(user.Fullname + "|" + role);
+            
         }
     }
 }
