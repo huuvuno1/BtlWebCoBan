@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebCommon.Master" AutoEventWireup="true" CodeBehind="detail.aspx.cs" Inherits="BtlWebForm.Views.Common.detail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
     <section class="vitritrang">
@@ -89,22 +92,6 @@
                     </div>
                 </div>
 
-                <div class="bottom_detail">
-                    <div class="nav_detail flex">
-                        <div style="border-bottom: 2px solid orange;">THÔNG TIN SẢN PHẨM</div>
-                        <div>ĐÁNH GIÁ</div>
-                        <div>BÌNH LUẬN</div>
-                    </div>
-                    <div class="description" id="descript" runat="server">
-                        Màn Hình : 13.3 inchs QHD IPS
-                        CPU : Intel Core i7-8550U
-                        RAM : 8 GB DDR4 2133 MHz
-                        VGA : Intel HD Graphics 620
-                        HĐH : Windows 10
-                        Nặng : 1.3 Kg...
-                    </div>
-                </div>
-
             </div>
             <div class="right_detail">
                 <h3>Địa chỉ show room</h3>
@@ -122,6 +109,21 @@
                     Trụ sở: Tầng 4 - Tòa nhà Hanoi Group - 442 Đội Cấn - Quận Ba Đình - TP Hà Nội
                 </p>
             </div>
+        </div>
+    </div>
+
+    <div class="page_detail">
+        <div class="container flex">
+            <div class="post_detail" id="post_details" runat="server">
+                <!-- content post -->
+            </div>
+
+            <div class="info_product">
+                <h3>Thông số kỹ thuật</h3>
+                <p id="info_detail" runat="server">
+                    
+                </p>
+            </div>        
         </div>
     </div>
 </asp:Content>

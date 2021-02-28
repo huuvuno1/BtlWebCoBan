@@ -14,7 +14,9 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="/static/img/icon/logo.png" alt="">
+                <a href="/">
+                    <img src="/static/img/icon/logo.png" alt="">
+                </a>
             </div>
             <div class="category">
                 <h3 onclick="showMenu()">Danh mục sản phẩm
@@ -46,7 +48,7 @@
             </div>
             <div class="account">
                 <a href="/login" id="LINK" runat="server"><img src="/static/img/icon/user.png" alt=""></a>
-                <a href="/login" id="LINK1" runat="server"><span id="fullname" runat="server">Đăng nhập</span></a>
+                <a href="/login" id="LINK1" runat="server" title="Vào page admin"><span id="full_name" runat="server">Đăng nhập</span></a>
                 <a href="/logout" ><i><span id="logout" runat="server"></span></i></a>
             </div>
             <div class="cart" id="_cart1">

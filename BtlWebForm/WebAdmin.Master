@@ -27,13 +27,16 @@
                 <ul class="ul-boss">
                     <li id="name_admin" runat="server"></li>
                     <li>
-                        <ul class="option-x">
-                            <a href="">
+                        <ul class="option-x" style="display: none;">
+                            <a href="/admin">
                                 <li>Profile</li>
                             </a>
-                            <a href="">
-                                <li>Đăng xuất</li>
+                            <a href="/logout">
+                                <li>
+                                    Đăng xuất
+                                </li>
                             </a>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -41,12 +44,23 @@
         </div>
     </section>
 
-    <asp:ContentPlaceHolder ID="AdminBody" runat="server">
+    <div class="main-container">
+        <div class="left-admin-container">
+            <ul class="menu-admin">
+                <li class='__select' onclick="loadForm(1)" style="font-weight: bold;">Quản lý sản phẩm</li>
+                <li class='__select' onclick="loadForm(2)">Quản lý người dùng</li>
+                <li class='__select' onclick="loadForm(3)">Quản lý đơn hàng</li>
+            </ul>
+        </div>
 
-    </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="AdminBody" runat="server">
 
+        </asp:ContentPlaceHolder>
+
+    </div>
     
     <script src="/static/js/admin_vu.js"></script>
     <script src="/static/js/vu.js"></script>
+    <script src="/static/js/cart.js"></script>
 </body>
 </html>

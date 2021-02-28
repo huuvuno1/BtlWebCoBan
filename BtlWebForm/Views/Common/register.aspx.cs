@@ -23,45 +23,64 @@ namespace BtlWebForm.Views.Common
                 Response.Redirect("/");
             else
             {
-                // kiểm tra xem có phải gủi dữ liệu lên để đăng ký ko
-                if (Request.Form.Get("username") != null)
+                // kiểm tra xem post hay get,
+                // get thì cho vào page đăng ký
+                // post thì đọc thông tin ra để đăng ký
+                if (Request.Form.Get("ctl00$CommonBody$username") != null)
                     Register();
             }
         }
 
         private void Register()
         {
-            string username = Request.Form.Get("username");
-            string password = Request.Form.Get("password");
-            string fullname = Request.Form.Get("fullname");
-            string phonenumber = Request.Form.Get("phonenumber");
+            string _username = Request.Form.Get("ctl00$CommonBody$username");
+            string _password = Request.Form.Get("ctl00$CommonBody$password");
+            string _repassword = Request.Form.Get("ctl00$CommonBody$repassword");
+            string _fullname = Request.Form.Get("ctl00$CommonBody$fullname");
+            string _phonenumber = Request.Form.Get("ctl00$CommonBody$phonenumber");
+            bool saveError = false;
 
-            // validate sau
-            if ( "".Equals(fullname) || "".Equals(password) || "".Equals(phonenumber) || "".Equals(username))
+            // đã validate bằng js nhưng vẫn kiểm tra lại
+            if ("".Equals(fullname) || "".Equals(password) || "".Equals(phonenumber) || "".Equals(username))
             {
                 fullname_warn.InnerText = username_warn.InnerText = password_warn.InnerText =
                 phonenumber_warn.InnerText = "* Trường này không được để trống !";
             }
             else
-                if (username != null && userRepository.FindUserByUsername(username) == null)
+                // tìm kiểm xem username này đã tồn tại chưa
+                if (userRepository.FindUserByUsername(_username) == null)
                 {
                     UserEntity user = new UserEntity();
                     user.ID = userRepository.FindAllUser().Count + 1; // id mới bằng số lượng id cũ + 1
-                    user.Username = username;
-                    user.Password = password; // phạm vi bài đơn giản nên không mã hóa password
-                    user.Fullname = fullname;
-                    user.PhoneNumber = phonenumber;
-                    user.Role = Constant.ROLE_USER;
+                    user.Username = _username;
+                    user.Password = _password; // phạm vi bài đơn giản nên không mã hóa password
+                    user.Fullname = _fullname;
+                    user.PhoneNumber = _phonenumber;
+                    user.Role = Constant.ROLE_USER; // mặc định sẽ là role user
 
-                
+
                     // tam save mai lam
                     if (userRepository.SaveUser(user))
                     {
                         Response.Redirect("/login?msg=register-success");
-                    }
-
-                
+                    }                 
+                    else // lỗi ghi file không thành công (lỗi dự đoán có thể
+                        //xảy ra nếu nhiều ng cùng đăng ký, file user.json đang mở -> conflict - dư đoán)
+                    {
+                        saveError = true;
+                        fullname_warn.InnerText = "* Lỗi xảy ra khi ko thể save user vào file json";
+                    }    
                 }
+
+            // nếu đến đây chưa bị redirect thì đã có lỗi
+            // báo lỗi username đã tồn tại, nhưng vẫn trả lại form dữ liệu như cũ
+                
+            username.Value = _username;
+            fullname.Value = _fullname;
+            phonenumber.Value = _phonenumber;
+            if (!saveError)
+                username_warn.InnerText = "* Username nãy đã tồn tại, vui lòng sử dụng tên khác";
+                
         }
     }
 }

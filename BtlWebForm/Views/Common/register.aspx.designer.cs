@@ -24,6 +24,15 @@ namespace BtlWebForm.Views.Common
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl fullname_warn;
 
         /// <summary>
+        /// fullname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fullname;
+
+        /// <summary>
         /// username_warn control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace BtlWebForm.Views.Common
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl username_warn;
+
+        /// <summary>
+        /// username control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText username;
 
         /// <summary>
         /// phonenumber_warn control.
@@ -42,6 +60,15 @@ namespace BtlWebForm.Views.Common
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl phonenumber_warn;
 
         /// <summary>
+        /// phonenumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText phonenumber;
+
+        /// <summary>
         /// password_warn control.
         /// </summary>
         /// <remarks>
@@ -49,5 +76,32 @@ namespace BtlWebForm.Views.Common
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl password_warn;
+
+        /// <summary>
+        /// password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
+
+        /// <summary>
+        /// repassword_warn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl repassword_warn;
+
+        /// <summary>
+        /// repassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword repassword;
     }
 }

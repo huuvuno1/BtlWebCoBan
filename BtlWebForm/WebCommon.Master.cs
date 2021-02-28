@@ -10,7 +10,7 @@ namespace BtlWebForm
             UserEntity user = (UserEntity)Session.Contents[Constant.USER_SESSION];
             if (user != null)
             {
-                fullname.InnerText = user.Fullname;
+                full_name.InnerText = user.Fullname;
                 logout.InnerText = "Logout";
                 string link = "/";
                 if (user.Role == Constant.ROLE_ADMIN)

@@ -6,18 +6,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
     <div class="form-login">
         <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
-        <form action="/login" method="post">
+        <form action="/login" method="post" id="__form">
+            <span class="validate">Tên tài khoản và mật khẩu phải có ít nhất 5 chữ số</span>
             <p>
-               
-                
                  <% if ("false".Equals(Request.QueryString.Get("msg"))) { %>
-                            <span id="msg" runat="server" style="color: red">Tài khoản hoặc mật khẩu sai</span>
+                            <span id="msg" runat="server" class="validate">Tài khoản hoặc mật khẩu sai</span>
                          <%  } %>
-                <input type="text" placeholder="Tên đăng nhập" name="username">
+                <input oninput="changeTypeButtonLogin()" type="text" placeholder="Tên đăng nhập" name="username" id="username">
             </p>
-            <p><input type="password" placeholder="Mật khẩu" name="password"></p>
+            <p><input oninput="changeTypeButtonLogin()" type="password" placeholder="Mật khẩu" name="password" id="password"></p>
             <p><a href="#"><span>Quên mật khẩu</span></a></p>
-            <p><input type="submit" value="Đăng nhập" class="btn"></p>
+            <p><input type="button" value="Đăng nhập" id="btn-login" class="btn" onclick="validateLogin()"></p>
             <p><span style="display:inline">Chưa có tài khoản đăng ký </span><a href="/register" id="a_register">tại đây</a></p>
         </form>
         <div class="login-3rd">

@@ -114,12 +114,21 @@ namespace BtlWebForm.Views.Common
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_server;
 
         /// <summary>
-        /// descript control.
+        /// post_details control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl descript;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl post_details;
+
+        /// <summary>
+        /// info_detail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl info_detail;
     }
 }

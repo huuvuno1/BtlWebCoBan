@@ -12,11 +12,18 @@ namespace BtlWebForm.Views.Common
     public partial class detail : System.Web.UI.Page
     {
         ProductRepository productRepository = new ProductRepository();
+        PostRepository postRepository = new PostRepository();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string category = Request.Url.AbsolutePath;
+
+            // đọc slug từ router
             string slug = (string)RouteData.Values["slug"];
             ProductEntity product = productRepository.FindProductBySlug(slug);
+
+            // nếu tìm thấy sp thì sẽ hiển thị thông tin sản phẩm
+            // nếu không tìm thấy thì sẽ cho về trang home
             if (product != null)
             {
                 url_page.Attributes.Add("href", category);
@@ -24,26 +31,33 @@ namespace BtlWebForm.Views.Common
                     name_page.InnerText = "Máy tính";
                 else
                     name_page.InnerText = "Phụ kiện";
+
                 slug_.Attributes.Add("href", "/" + category + "/" + product.Slug);
                 name_product.InnerText = product.Name;
 
                 bigImg.Attributes.Add("src", product.ListImage[0]);
 
+
+                // load list image
                 string html_img = @"<div class='chuyen' onclick='backImg()' style='display: none;'>
                                           <img src='/static/img/icon/click-left.png' >
                                     </div>";
-
+                
+                int i = 0;
                 foreach (string img in product.ListImage)
                 {
-                    int i = 0;
-                    html_img += @"<img src='" + img +@"' class='small-img' onclick='showImage(this)' num='" + i + @"'>";
+                    i++; // tạo biến đếm để hiển thì 3 ảnh trong list ảnh, tạm thời để none, sau đấy dùng js để thao tác
+                    html_img += @"<img src='" + img +@"' class='small-img "+ (i > 3 ? "none" : "") + @"' onclick='showImage(this)' num='" + i + @"'>";
                 }
                 html_img += @"<div class='chuyen' onclick='nextImg()'>
                                     <img src='/static/img/icon/click-right.png' >
                               </div>";
+
+
                 list_anh.InnerHtml = html_img;
 
                 name_pro.InnerText = product.Name;
+                // url sản phẩm sẽ có dạng: /category-name/slug
                 name_pro.Attributes.Add("href", "/" + product.Category + "/" + product.Slug);
 
                 price_new.InnerText = String.Format("{0:0,0}", product.Price * (100 - product.Sale) / 100) + @"₫";
@@ -55,10 +69,22 @@ namespace BtlWebForm.Views.Common
                         _status.Attributes.Add("style", "background: red !important");
                  }
 
-                descript.InnerText = product.Info;
+                info_detail.InnerText = product.Info;
 
                 string html = @"<button id=" + "'btn-add-to-cart' onclick='addToCart(" + product.ID + @")'>Thêm vào giỏ hàng</button>";
                 btn_server.InnerHtml = html;
+
+                // load bài viết chi tiết
+                PostEntity post = postRepository.FindPostByIDProduct(product.ID);
+                if (post == null)
+                    return;
+
+                for (i = 0; i < post.ListImage.Count; i++)
+                {
+                    post.Content = post.Content.Replace("src='filename" + i + "'", "src='" + post.ListImage[i] + "'");
+                    int z = 0;
+                }
+                post_details.InnerHtml = post.Content;
             }
             else
                 Response.Redirect("/");

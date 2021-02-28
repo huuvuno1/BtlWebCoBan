@@ -19,7 +19,7 @@ namespace BtlWebForm.Views.Common
             else
             {
                 // check xem post hay get, username có dữ liệu là post, get thì cho vào trang đăng nhập
-                // post thì xem thông tin để đăng ký
+                // post thì tiến hành lấy thông tin để đăng ký
                 string username = Request.Form.Get("username");
                 if (username != null)
                     CheckLogin();

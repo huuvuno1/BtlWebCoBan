@@ -1,17 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/WebAdmin.Master" CodeBehind="home.aspx.cs" Inherits="BtlWebForm.Views.Admin.home" %>
 <asp:Content ContentPlaceHolderID="AdminBody" runat="server">
         
-    <div class="main-container">
-        <div class="left-admin-container">
-            <ul class="menu-admin">
-                <li class='__select' onclick="loadForm(1)" style="font-weight: bold;">Quản lý sản phẩm</li>
-                <li class='__select' onclick="loadForm(2)">Quản lý người dùng</li>
-                <li class='__select' onclick="loadForm(3)">Quản lý đơn hàng</li>
-            </ul>
-        </div>
+   
 
         <div class="right-admin-container">
-            <button type="button" id="btnAdd" onclick="showFormAdd()">Thêm sản phẩm</button>
+            <a href="admin/add-product">Thêm sản phẩm</a>
 
 
             <h3>Danh sách sản phẩm</h3>
@@ -76,7 +69,5 @@
                 </tbody>
             </table>
         </div>
-    <div class="show-form" id="response">
-
-    </div>
+ 
 </asp:Content>

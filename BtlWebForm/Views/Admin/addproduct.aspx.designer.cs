@@ -7,83 +7,83 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BtlWebForm
+namespace BtlWebForm.Views.Common
 {
 
 
-    public partial class WebCommon
+    public partial class addproduct
     {
 
         /// <summary>
-        /// head control.
+        /// name_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText name_pro;
 
         /// <summary>
-        /// LINK control.
+        /// thuong_hieu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor LINK;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText thuong_hieu;
 
         /// <summary>
-        /// LINK1 control.
+        /// price_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor LINK1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText price_pro;
 
         /// <summary>
-        /// full_name control.
+        /// quantity_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl full_name;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText quantity_pro;
 
         /// <summary>
-        /// logout control.
+        /// image_sss control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logout;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell image_sss;
 
         /// <summary>
-        /// number_oder control.
+        /// sale_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl number_oder;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText sale_pro;
 
         /// <summary>
-        /// Span1 control.
+        /// info_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span1;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea info_pro;
 
         /// <summary>
-        /// CommonBody control.
+        /// url_pro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder CommonBody;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText url_pro;
     }
 }

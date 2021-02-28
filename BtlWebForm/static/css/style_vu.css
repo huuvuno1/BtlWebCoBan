@@ -16,7 +16,6 @@ html, body {
 }
 
 /* phần header */
-
 header {
     height: 94px;
     background-color: #2775d2;
@@ -1021,9 +1020,12 @@ header .cart span {
 .ul-boss:hover #name-admin {
     font-weight: bold;
 }
-
-.ul-boss:hover .option-x {
-    display: block;
+.ul-boss{
+    position: relative;
+    z-index: 1000000;
+}
+#name_admin{
+    cursor: pointer;
 }
 
 .user ul {
@@ -1040,6 +1042,7 @@ header .cart span {
 
 .option-x {
     background-color: #f8f8f8;
+    margin-top: 14px;
     display: none;
 }
 
@@ -1124,6 +1127,7 @@ header .cart span {
 
 .left-admin-container {
     width: 15%;
+    min-width: 212px;
     border-right: 1px solid rgb(140, 150, 150);
     height: 800px;
     background-color: #f8f8f8;
@@ -1275,7 +1279,6 @@ thead {
 
 .form-login {
     width: 400px;
-    height: 460px;
     margin: 40px auto;
 }
 
@@ -1650,6 +1653,7 @@ thead {
 
 .right_detail {
     width: 25%;
+    background-color: white;
 }
 
 .left_detail .product-price {
@@ -1672,9 +1676,13 @@ thead {
     border-radius: 0;
 }
 
+.none{
+    display: none;
+}
+
 .left_detail #big-img {
     width: 348px;
-    height: 400px;
+    height: 270px;
 }
 
 .left_detail .left-frame {
@@ -1871,3 +1879,126 @@ thead {
 #CommonBody_ListProduct .img-thumnail{
     max-height: 180px;
 }
+
+/* validate */
+.validate {
+    color: red !important;
+    padding-left: 7px;
+    display: none;
+}
+
+
+/* post*/
+.post {
+}
+
+.post_title, .paragraph_content {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#post {
+    padding: 0 0 0 62px;
+    margin-bottom: 80px;
+}
+
+.paragraph_title {
+    padding: 0 20px;
+    height: 35px;
+    font-size: 20px;
+    width: 90%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.btn_form {
+    margin-bottom: 80px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+    .btn_form button {
+        height: 30px;
+        background: rgb(67, 67, 247);
+        color: white;
+        width: 100px;
+        cursor: pointer;
+    }
+
+.paragraph_content {
+    padding: 20px;
+    font-size: 17px;
+    width: 90%;
+    margin-left: 20px;
+}
+
+
+.container-checkout form {
+    margin: 0 !important;
+}
+
+.right-admin-container {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.paragraph {
+    padding-bottom: 30px;
+    margin: 50px 50px 50px 0;
+    border: 2px solid gray;
+}
+
+#btn-add-para {
+    height: 30px;
+}
+
+
+
+/* bai viet */
+.page_detail .container {
+    height: 100% !important;
+    background-color: #f8f8f8;
+}
+
+.page_detail {
+    background-color: #f8f8f8;
+}
+
+.post_detail {
+    width: 60%;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #dee2e6;
+    margin-top: 20px;
+}
+
+    .post_detail h3, .info_product h3 {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .post_detail > p {
+        font-size: 16px;
+        text-align: justify;
+        line-height: 24px;
+        color: #495057;
+    }
+
+.info_product {
+    background-color: white;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #dee2e6;
+    width: 40%;
+    margin-left: 20px;
+}
+
+    .info_product p {
+        font-size: 16px;
+        text-align: justify;
+        line-height: 25px;
+        color: #495057;
+    }

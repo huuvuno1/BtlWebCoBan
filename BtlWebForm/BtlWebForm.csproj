@@ -121,6 +121,7 @@
     <Content Include="static\img\icon\loading.gif" />
     <Content Include="static\img\icon\logo.png" />
     <Content Include="static\img\icon\user.png" />
+    <Content Include="static\img\product\1.jpg" />
     <Content Include="static\img\product\10034218-5.jpg" />
     <Content Include="static\img\product\apple-macbook-12-mnyk2sa-a-450x300-450x300.jpg" />
     <Content Include="static\img\product\huawei-mediapad-m3-115-400x460.png" />
@@ -140,7 +141,7 @@
     <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
     <Content Include="Views\Ajax\RowProducts.aspx" />
     <Content Include="Views\Common\access-denied.aspx" />
-    <Content Include="Views\Common\addproduct.aspx" />
+    <Content Include="Views\Admin\addproduct.aspx" />
     <Content Include="Views\Common\cart.aspx" />
     <Content Include="Views\Common\category.aspx" />
     <Content Include="Views\Common\checkout.aspx" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\OrderEntity.cs" />
+    <Compile Include="Entity\PostEntity.cs" />
     <Compile Include="Entity\ProductEntity.cs" />
     <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="Global.asax.cs">
@@ -162,6 +164,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\OrderRepository.cs" />
+    <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Utils\FileIO.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -226,11 +229,11 @@
     <Compile Include="Views\Common\access-denied.aspx.designer.cs">
       <DependentUpon>access-denied.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Common\addproduct.aspx.cs">
+    <Compile Include="Views\Admin\addproduct.aspx.cs">
       <DependentUpon>addproduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Common\addproduct.aspx.designer.cs">
+    <Compile Include="Views\Admin\addproduct.aspx.designer.cs">
       <DependentUpon>addproduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\cart.aspx.cs">
@@ -319,10 +322,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\products.json" />
-    <Content Include="Database\Order.json" />
+    <Content Include="DataJson\products.json" />
+    <Content Include="DataJson\Order.json" />
+    <Content Include="DataJson\posts.json" />
     <None Include="packages.config" />
-    <Content Include="Database\users.json" />
+    <Content Include="DataJson\users.json" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

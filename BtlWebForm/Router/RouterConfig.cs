@@ -7,6 +7,7 @@ namespace BtlWebForm.Router
         public static void AddConfigRouteAdmin(RouteCollection routes)
         {
             routes.MapPageRoute("home-admin", "admin", "~/Views/Admin/home.aspx");
+            routes.MapPageRoute("addproduct", "admin/add-product", "~/Views/Admin/addproduct.aspx");
         }
 
         public static void AddConfigRouteCommon(RouteCollection routes)
@@ -22,7 +23,7 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("category", "{category}", "~/Views/Common/category.aspx");
             routes.MapPageRoute("detail", "may-tinh/{slug}", "~/Views/Common/detail.aspx");
             routes.MapPageRoute("details", "phu-kien/{slug}", "~/Views/Common/detail.aspx");
-            routes.MapPageRoute("addproduct", "api/addproduct", "~/Views/Common/addproduct.aspx");
+            
         }
 
         public static void AddConfigRouteAjax(RouteCollection routes)

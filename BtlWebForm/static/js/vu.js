@@ -49,7 +49,7 @@ function btnShowForm(form, ID) {
 
 function showImage(img) {
     var urlImage = img.getAttribute('src');
-    document.getElementById('bigImg').setAttribute('src', urlImage);
+    document.getElementById('CommonBody_bigImg').setAttribute('src', urlImage);
 }
 
 
@@ -369,3 +369,89 @@ function checkout() {
 }
 
 // alert page cart
+
+
+// validate form
+// form login
+function validateLogin() {
+    let username = document.getElementById('username');
+    let password = document.getElementById('password');
+
+    if (username.value.length < 5 || password.value.length < 5) {
+        document.getElementsByClassName("validate")[0].style.display = 'block';
+    }
+    else
+        document.getElementById('__form').submit();
+};
+
+function changeTypeButtonLogin() {
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let btn = document.getElementById('btn-login');
+    if (username.length >= 5 && password.length >= 5)
+        btn.setAttribute('type', 'submit');
+    else
+        btn.setAttribute('type', 'button')
+}
+
+
+// form register
+function validateRegister() {
+    let fullname = document.getElementById('fullname').value;
+    let username = document.getElementById('username').value;
+    let phonenumber = document.getElementById('phonenumber').value;
+    let password = document.getElementById('password').value;
+    let repassword = document.getElementById('repassword').value;
+
+    let username_warn = document.getElementById('CommonBody_username_warn');
+    let fullname_warn = document.getElementById('CommonBody_fullname_warn')
+    let phonenumber_warn = document.getElementById('CommonBody_phonenumber_warn');
+    let password_warn = document.getElementById('CommonBody_password_warn');
+    let repassword_warn = document.getElementById('CommonBody_repassword_warn');
+    var correct = true;
+
+    if (fullname.length <= 4) {
+        correct = false;
+        fullname_warn.textContent = "* Nhập tên đầy đủ";
+    }
+    else
+        fullname_warn.textContent = "";
+
+    if (username.length < 5 || username.includes(' ')) {
+        correct = false;
+        username_warn.textContent = "* Tên đăng nhập chứa ít nhất 5 ký tự, không có dấu cách";
+    }
+    else
+        username_warn.textContent = "";
+
+    /*
+        regex: ^0: Bắt đầu từ số 0
+               $: Kết thúc 
+               [abc] khớp với 1 trong các ký tự
+               \d: Tương đương với [0-9] -> khớp với số từ 0-> 9
+               {8} lặp lại 8 lần với ký tự đứng trước nó
+    */
+    if (phonenumber.match(/^0[23789]\d{8}$/g) == null) {
+        correct = false;
+        phonenumber_warn.textContent = "* Không chứa ký tự, sử dụng 1 trong các đầu số 02, 03, 07, 08, 09, có độ dài là 10 chữ số";
+    }
+    else
+        phonenumber_warn.textContent = "";
+
+    if (password.length < 5) {
+        correct = false;
+        password_warn.textContent = "* Mật khẩu có ít nhất 5 ký tự";
+    }
+    else
+        password_warn.textContent = "";
+
+    if (repassword != password) {
+        repassword_warn.textContent = "* Mật khẩu không khớp";
+        correct = false;
+    }
+    else
+        repassword_warn.textContent = "";
+
+    if (correct)
+        document.getElementById('__form').submit();
+};
