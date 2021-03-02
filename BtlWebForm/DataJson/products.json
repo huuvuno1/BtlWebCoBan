@@ -54,7 +54,7 @@
     "Trademark": "Asus",
     "Price": 2.199E+07,
     "Sale": 0.0,
-    "ListImage": [ "/static/img/product/637423302740793136_CHSP-ASUS-TUF-FX506-(14).jpg", "/static/img/product/637423302738762513_CHSP-ASUS-TUF-FX506-(12).jpg", "/static/img/product/637423302732511934_CHSP-ASUS-TUF-FX506-(1).jpg", "/static/img/product/637423302737199615_CHSP-ASUS-TUF-FX506-(8).jpg", "/static/img/product/637423302738136808_CHSP-ASUS-TUF-FX506-(11).jpg" ],
+    "ListImage": [ "/static/img/product/maxresdefault.jpg", "/static/img/product/vr3.jpg", "/static/img/product/thiet-bi-deo-thuc-te-ao-sm-r323.jpg", "/static/img/product/huawei-mediapad-m3-115-400x460.png" ],
     "Info": "15.6\", 1920 x 1080 Pixel, IPS, 144 Hz, 250 nits, LED Backlit\r\n\r\nIntel Core i5-10300H\r\n\r\n8 GB, DDR4, 2933 MHz\r\n\r\nSSD 512 GB\r\n\r\nNVIDIA GeForce GTX1650Ti 4Gb",
     "Quantity": 15,
     "Slug": "Laptop-Asus-TUF-FX506LI-HN039T-i5-10300H",
@@ -66,7 +66,7 @@
     "Trademark": "Msi",
     "Price": 5E+07,
     "Sale": 2.0,
-    "ListImage": [ "/static/img/product/Screenshot_20210202_150944_LI.jpg" ],
+    "ListImage": [ "/static/img/product/10034218-5.jpg" ],
     "Info": "ok",
     "Quantity": 15,
     "Slug": "Laptop-MSI-Modern-14-B11MO-004VN-i5-1135G7-8GB-512GB-SSD-Intel-Iris-Xe-Graphics-Win10",
@@ -78,7 +78,7 @@
     "Trademark": "HP",
     "Price": 1.199E+07,
     "Sale": 0.0,
-    "ListImage": [ "/static/img/product/f2_27_2021_11_38_22_PM637314557320572140_HP-15S-1.jpg", "/static/img/product/f2_27_2021_11_38_22_PM637314557321452132_HP-15S-5.jpg", "/static/img/product/f2_27_2021_11_38_22_PM637314557322492117_HP-15S-7.jpg", "/static/img/product/f2_27_2021_11_38_22_PM637314557324882066_HP-15S-12.jpg" ],
+    "ListImage": [ "/static/img/product/f2_28_2021_10_16_17_AM637314557321452132_HP-15S-5.jpg", "/static/img/product/f2_28_2021_10_16_17_AM637314557322492117_HP-15S-7.jpg", "/static/img/product/f2_28_2021_10_16_17_AM637314557324882066_HP-15S-12.jpg", "/static/img/product/f2_28_2021_10_16_17_AM637431246325803484_dell-inspiron-3501-3.jpg", "/static/img/product/f2_28_2021_10_16_17_AMdell-inspiron-3501-2.jpg" ],
     "Info": "CPU\tIntel Core i3-1005G1\r\nRAM\t4 GB, DDR4, 2666 MHz\r\nMàn hình\t15.6\", 1366 x 768 Pixel, SVA, 60 Hz, 220 nits, Micro-edge WLED-backlit\r\nĐồ họa\tIntel UHD Graphics\r\nỔ cứng\tSSD 512 GB\r\nHệ điều hành\tWindows 10\r\nTrọng lượng (kg)\t1.65\r\nKích thước (mm)\t358.8 x 242.2 x 17.9\r\nXuất xứ\tTrung Quốc\r\nNăm ra mắt\t2020",
     "Quantity": 12,
     "Slug": "Laptop-HP-15s-fq1109TU-i3-1005G1-4GB-512GB-SSD-WIN10",
@@ -90,7 +90,7 @@
     "Trademark": "Msi",
     "Price": 1.5E+07,
     "Sale": 0.0,
-    "ListImage": [ "/static/img/product/f2_27_2021_11_42_26_PM637314557324882066_HP-15S-12.jpg", "/static/img/product/f2_27_2021_11_42_26_PM637431246325803484_dell-inspiron-3501-3.jpg", "/static/img/product/f2_27_2021_11_42_26_PM637431246325803484_dell-inspiron-3501-4.jpg", "/static/img/product/f2_27_2021_11_42_26_PMdell-inspiron-3501-2.jpg" ],
+    "ListImage": [ "/static/img/product/maxresdefault.jpg", "/static/img/product/vr3.jpg", "/static/img/product/thiet-bi-deo-thuc-te-ao-sm-r323.jpg", "/static/img/product/huawei-mediapad-m3-115-400x460.png" ],
     "Info": "vip\r\nngon\r\nrer",
     "Quantity": 15,
     "Slug": "Laptop-MSI-Modern-14-B11MO-004VN-i5-1135G7-8GB-512GB-SSD-Intel-Iris-Xe-Graphics-Win1",
@@ -130,7 +130,7 @@
     "Info": "Cách kết nối\tBluetooth\r\nChất liệu\tNhựa\r\nCổng sạc\tAC 100-240V\r\nCông suất\t30W\r\nDãy Tần số\t180Hz - 20KHz",
     "Quantity": 20,
     "Slug": "Combo-Loa-Bluetooth-Karaoke-i-value-FG206-01-Nhua-đen--Mic-khong-day",
-    "Category": "may-tinh"
+    "Category": "phu-kien"
   },
   {
     "ID": 12,
@@ -142,6 +142,6 @@
     "Info": "Cách kết nối\tĐang cặp nhật\r\nChất liệu\tNhựa ABS\r\nCông suất\t45W\r\nKết nối\tBluetooth, Thẻ nhớ SD, Aux\r\nLoại Loa\tLoa Karaoke",
     "Quantity": 5,
     "Slug": "Combo-Loa-Bluetooth-Karaoke-i-value-F12-65N-Nhua-đen-Mic-khong-day",
-    "Category": "may-tinh"
+    "Category": "phu-kien"
   }
 ]

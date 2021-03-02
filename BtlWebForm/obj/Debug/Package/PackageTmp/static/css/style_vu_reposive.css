@@ -1,0 +1,476 @@
+@media screen and (max-width: 1100px) {
+    .banner_cate {
+        display: none;
+    }
+
+    .form_category .product {
+        width: 25%;
+    }
+
+
+    #_cart1 {
+        display: none;
+    }
+
+    #_cart2 {
+        display: block;
+    }
+    .logo img {
+        height: 60px;
+    }
+
+    /* edit */
+    .left_detail {
+        width: 100%;
+    }
+
+    .right_detail {
+        display: none;
+    }
+
+    .left_detail #big-img {
+        width: 213px;
+        height: 248px;
+    }
+
+    .muahang input {
+        width: 26px;
+    }
+
+    .left_detail #btn-add-to-cart {
+        width: 165px;
+        height: 50px;
+    }
+
+    .flex-layout {
+         padding: 0;
+         
+    }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+    .left_detail #big-img {
+        width: 100%;
+    }
+    .left_detail #btn-add-to-cart {
+        width: 100%;
+    }
+    .left_detail .left-frame {
+        width: 100%;
+    }
+
+    .bottom_detail {
+        margin: 30px 0;
+    }
+    .muahang input {
+        width: 48px;
+    }
+    .left_detail #btn-add-to-cart {
+        height: 36px;
+    }
+    .logo img {
+        margin-top: 12px !important;
+    } 
+    .nav_list {
+        display: none;
+    }
+
+    .left_detail .right-frame {
+        width: 100% !important;
+    }
+
+    .margintop {
+        margin-top: 25px;
+    }
+
+    .banner {
+        margin-bottom: 25px;
+    }
+
+    .form_category .product {
+        width: 50%;
+    }
+
+    .banner_top {
+        display: none;
+    }
+
+    .flex-layout {
+        display: block !important;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    /* reposive cho trang danh muc */
+    .left-container .product {
+        padding: 10px !important;
+        width: 219px !important;
+    }
+
+    .left-container .product-thumnail {
+        height: 120px;
+    }
+
+    .left-container .khungduoi {
+        height: 160px !important;
+    }
+
+    .left-container .text-2-line {
+        height: 80px;
+    }
+
+    .left-container .khungduoi {
+        height: 160px;
+    }
+
+    .left-container .view-details {
+        width: 40px;
+    }
+
+    .left-container .add-to-cart {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 1260px) and (min-width: 1100px) {
+    /* body{
+        background-color: red;
+    } */
+
+    .left_detail #btn-add-to-cart {
+        width: 173px !important;
+        height: 50px;
+    }
+
+    .left-frame {
+        width: 40%;
+    }
+
+    .left_detail #big-img {
+        width: 245px;
+    }
+
+    .left_detail #btn-add-to-cart {
+        width: 205px;
+    }
+
+    /* header */
+    header .category {
+        width: 25%;
+    }
+
+
+    /* end header */
+    .container {
+        width: 1000px;
+    }
+
+    .product {
+        padding: 15px;
+        width: 250px;
+    }
+
+    .product-thumnail {
+        height: 150px;
+    }
+
+    .text-2-line {
+        height: 36px;
+    }
+
+    .khungduoi {
+        height: 136px;
+    }
+
+    .view-details {
+        width: 50px;
+    }
+
+    .add-to-cart {
+        width: 50px;
+    }
+
+    .show-option-selection {
+        height: 30px;
+        line-height: 35px;
+    }
+
+    .view-details:hover {
+        background-color: #a59e9e !important;
+        line-height: 28px !important;
+    }
+
+    .add-to-cart:hover {
+        background-color: #a59e9e !important;
+        line-height: 28px !important;
+    }
+
+    /* reposive cho trang */
+    .left-container .product {
+        padding: 10px !important;
+        width: 240px !important;
+    }
+
+    .left-container .product-thumnail {
+        height: 120px;
+    }
+
+    .left-container .khungduoi {
+        height: 160px !important;
+    }
+
+    .left-container .text-2-line {
+        height: 80px;
+    }
+
+    .left-container .khungduoi {
+        height: 160px;
+    }
+
+    .left-container .view-details {
+        width: 40px;
+    }
+
+    .left-container .add-to-cart {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+    /* body{
+        background-color: green;
+    } */
+
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        width: 40%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    #btn-search {
+        width: 35%;
+    }
+
+    .container {
+        width: 675px;
+    }
+
+    .product {
+        padding: 15px;
+        width: 225px;
+    }
+
+    .product-thumnail {
+        height: 120px;
+    }
+
+    .text-2-line {
+        height: 80px;
+    }
+
+    .khungduoi {
+        height: 160px;
+    }
+
+    .view-details {
+        width: 40px;
+    }
+
+    .add-to-cart {
+        width: 40px;
+    }
+
+    .show-option-selection, .show-form {
+        display: none !important;
+    }
+
+    .right-title-container {
+        background-color: #f8f8f8;
+    }
+
+    .footer-contact {
+        height: auto;
+    }
+
+        .footer-contact .container {
+            display: block;
+            height: auto;
+        }
+
+        .footer-contact p {
+            margin: 0;
+        }
+}
+
+@media screen and (max-width: 768px) and (min-width: 450px) {
+    /* body{
+        
+    } */
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        display: none;
+    }
+
+    header .search {
+        width: 70%;
+    }
+
+    #btn-search {
+        width: 35%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    .logo img {
+        margin-top: 30px;
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .product {
+        padding: 10px;
+        width: 200px;
+    }
+
+    .product-thumnail {
+        height: 100px;
+    }
+
+    .text-2-line {
+        -webkit-line-clamp: 5;
+        height: 90px;
+    }
+
+    .khungduoi {
+        height: 200px;
+    }
+
+    .view-details {
+        width: 30px;
+    }
+
+    .add-to-cart {
+        width: 30px;
+    }
+
+    .show-option-selection, .show-form {
+        display: none !important;
+    }
+
+    .right-container {
+        display: none;
+    }
+
+    .left-container {
+        width: 400px !important;
+        padding-right: 0 !important;
+    }
+
+    .footer-contact {
+        height: auto;
+    }
+
+        .footer-contact .container {
+            display: block;
+            height: auto;
+        }
+
+        .footer-contact p {
+            margin: 0;
+        }
+}
+
+@media screen and (max-width: 450px) {
+    /* body{
+        background-color: lightcoral;
+    } */
+    header .account {
+        display: none;
+    }
+
+    header .category {
+        display: none;
+    }
+
+    header .search {
+        width: 70%;
+    }
+
+    #btn-search {
+        width: 35%;
+    }
+
+    #timkiem {
+        width: 55%;
+    }
+
+    .logo img {
+        margin-top: 30px;
+    }
+
+    .container {
+        width: 350px;
+    }
+
+    .product {
+        padding: 10px;
+        width: 175px;
+    }
+
+    .product-thumnail {
+        height: 100px;
+    }
+
+    .text-2-line {
+        -webkit-line-clamp: 5;
+        height: 115px;
+    }
+
+    .khungduoi {
+        height: 200px;
+    }
+
+    .product-name {
+        margin: 10px 0;
+    }
+
+    .view-details {
+        width: 30px;
+    }
+
+    .add-to-cart {
+        width: 30px;
+    }
+
+    .show-option-selection, .show-form {
+        display: none !important;
+    }
+
+    .footer-contact {
+        height: auto;
+    }
+
+        .footer-contact .container {
+            display: block;
+            height: auto;
+        }
+
+        .footer-contact p {
+            margin: 0;
+        }
+}

@@ -110,7 +110,7 @@ function htmlCommentLv2(fullname, comment, role, time)
     let rolename = role == "admin" ? "<span class='role'>Quản trị viên</span>" : '';
     let html  = "   <div class='user_comment'>"; 
         html += "       <div class='flex'>"
-        html += "           <h4>" + fullname +"</h4> ";
+        html += "           <h4>" + fullname +"</h4> " + rolename;
         html += "           <span class='time'>Hôm nay</span>";
         html += "       </div>";
         html += "       <span class='content_comment'>";

@@ -96,7 +96,7 @@ namespace BtlWebForm.Utils
                             </div>
                         </div>
                         <div class='view-product-total-money'>
-                            <span class=red line37'>" + String.Format("{0:0,0}", price * Quantity) + @"₫</span>
+                            <span class='red line37'>" + String.Format("{0:0,0}", price * Quantity) + @"₫</span>
                         </div>
                     </div>";
             return html;

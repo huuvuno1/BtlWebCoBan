@@ -123,35 +123,5 @@ namespace BtlWebForm.Views.Ajax
             return ids;
         }
 
-        //private void SaveProductToSession(int ID, HttpSessionState session)
-        //{
-        //    OrderEntity order = (OrderEntity)Session.Contents[Constant.ORDER_SESSION];
-        //    if (order == null)
-        //    {
-        //        order = new OrderEntity(1, ID, 1);
-        //        Session.Add(Constant.ORDER_SESSION, order);
-        //    }    
-        //    else
-        //    {
-        //        bool isExist = false;
-        //        for (int i = 0; i < order.ListProduct.Count; i++)
-        //        {
-        //            if (ID == order.ListProduct[i].ID)
-        //            {
-        //                order.ListProduct[i].Quantity++;
-        //                isExist = true;
-        //            }
-        //        }
-        //        if (isExist)
-        //            Session.Add(Constant.ORDER_SESSION, order);
-        //        else
-        //        {
-        //            ProductEntity product = new ProductEntity(ID, 1);
-        //            order.ListProduct.Add(product);
-        //            Session.Add(Constant.ORDER_SESSION, order);
-        //        }
-        //    }
-        //}
-
     }
 }

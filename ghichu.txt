@@ -15,3 +15,7 @@ quản lý các trạng thái đơn hàng
 
 quản lý user, set quyền
 -> mới show user
+
+list bug mới
+ - ajax gọi giỏ hàng lỗi giao diện
+ - add comment level 2 lỗi chưa hiển thị role

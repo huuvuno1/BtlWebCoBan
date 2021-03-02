@@ -342,7 +342,6 @@
     <Content Include="DataJson\comments.json" />
     <None Include="packages.config" />
     <Content Include="DataJson\users.json" />
-    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -352,7 +351,9 @@
     <Content Include="WebCommon.Master" />
     <Content Include="WebAdmin.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

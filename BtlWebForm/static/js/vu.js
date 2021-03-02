@@ -403,11 +403,11 @@ function validateRegister() {
     let password = document.getElementById('password').value;
     let repassword = document.getElementById('repassword').value;
 
-    let username_warn = document.getElementById('CommonBody_username_warn');
-    let fullname_warn = document.getElementById('CommonBody_fullname_warn')
-    let phonenumber_warn = document.getElementById('CommonBody_phonenumber_warn');
-    let password_warn = document.getElementById('CommonBody_password_warn');
-    let repassword_warn = document.getElementById('CommonBody_repassword_warn');
+    let username_warn = document.getElementById('username_warn');
+    let fullname_warn = document.getElementById('fullname_warn')
+    let phonenumber_warn = document.getElementById('phonenumber_warn');
+    let password_warn = document.getElementById('password_warn');
+    let repassword_warn = document.getElementById('repassword_warn');
     var correct = true;
 
     if (fullname.length <= 4) {
