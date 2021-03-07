@@ -31,10 +31,10 @@
             <div class="check-out">
                 <span>Tổng số thành tiền: </span>
                 <span class="red" id="tong-tien">
-                    0đ
+                    <b id="tong" runat="server">0đ</b>
                 </span>
                 <br style="margin: 15px;">
-                <button id="btn-add-to-cart">Tiến hành thanh toán</button>
+                <button id="btn-add-to-cart" type="button" onclick="checkout();">Tiến hành thanh toán</button>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 [
-  
+
   {
     "ID": 1,
     "Name": "Kính thực tế ảo VR3",
@@ -10,7 +10,8 @@
     "Info": "Màn Hình : 15.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 10,
     "Slug": "kinh-thuc-te-ao-VR3",
-    "Category": "phu-kien"
+    "Category": "phu-kien",
+    "TimeAdd": "2021-02-20T22:52:20.3687784+07:00"
   },
   {
     "ID": 2,
@@ -22,7 +23,8 @@
     "Info": "Màn Hình : 19.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 3,
     "Slug": "laptop-macbook-12-MNYK2SA",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-02-21T22:52:20.3687784+07:00"
   },
   {
     "ID": 3,
@@ -34,7 +36,8 @@
     "Info": "Màn Hình : 19.3 inchs QHD IPS CPU : Intel Core i7-8550U RAM : 8 GB DDR4 2133 MHz VGA : Intel HD Graphics 620 HĐH : Windows 10 Nặng : 1.3 Kg",
     "Quantity": 0,
     "Slug": "laptop-dell-core-M-1,2GHZ",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-02-22T22:52:20.3687784+07:00"
   },
   {
     "ID": 4,
@@ -46,7 +49,8 @@
     "Info": "ok",
     "Quantity": 5,
     "Slug": "test",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-02-22T22:52:20.3687784+07:00"
   },
   {
     "ID": 5,
@@ -58,7 +62,8 @@
     "Info": "15.6\", 1920 x 1080 Pixel, IPS, 144 Hz, 250 nits, LED Backlit\r\n\r\nIntel Core i5-10300H\r\n\r\n8 GB, DDR4, 2933 MHz\r\n\r\nSSD 512 GB\r\n\r\nNVIDIA GeForce GTX1650Ti 4Gb",
     "Quantity": 15,
     "Slug": "Laptop-Asus-TUF-FX506LI-HN039T-i5-10300H",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-03-05T22:52:20.3687784+07:00"
   },
   {
     "ID": 6,
@@ -70,7 +75,8 @@
     "Info": "ok",
     "Quantity": 15,
     "Slug": "Laptop-MSI-Modern-14-B11MO-004VN-i5-1135G7-8GB-512GB-SSD-Intel-Iris-Xe-Graphics-Win10",
-    "Category": "phu-kien"
+    "Category": "phu-kien",
+    "TimeAdd": "2021-03-08T23:06:20.3687784+07:00"
   },
   {
     "ID": 7,
@@ -82,7 +88,8 @@
     "Info": "CPU\tIntel Core i3-1005G1\r\nRAM\t4 GB, DDR4, 2666 MHz\r\nMàn hình\t15.6\", 1366 x 768 Pixel, SVA, 60 Hz, 220 nits, Micro-edge WLED-backlit\r\nĐồ họa\tIntel UHD Graphics\r\nỔ cứng\tSSD 512 GB\r\nHệ điều hành\tWindows 10\r\nTrọng lượng (kg)\t1.65\r\nKích thước (mm)\t358.8 x 242.2 x 17.9\r\nXuất xứ\tTrung Quốc\r\nNăm ra mắt\t2020",
     "Quantity": 12,
     "Slug": "Laptop-HP-15s-fq1109TU-i3-1005G1-4GB-512GB-SSD-WIN10",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-02-22T22:52:20.3687784+07:00"
   },
   {
     "ID": 8,
@@ -94,7 +101,8 @@
     "Info": "vip\r\nngon\r\nrer",
     "Quantity": 15,
     "Slug": "Laptop-MSI-Modern-14-B11MO-004VN-i5-1135G7-8GB-512GB-SSD-Intel-Iris-Xe-Graphics-Win1",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-02-22T22:52:20.3687784+07:00"
   },
   {
     "ID": 9,
@@ -106,11 +114,12 @@
     "Info": "CPU\tIntel Core i5-10300H\r\nRAM\t8 GB, DDR4, 2933 MHz\r\nMàn hình\t15.6\", 1920 x 1080 Pixel, IPS, 144 Hz, 250 nits, LED Backlit\r\nĐồ họa\tNVIDIA GeForce GTX 1650Ti 4 GB & Intel HD Graphics 630\r\nỔ cứng\tSSD 512 GB\r\nHệ điều hành\tWindows 10\r\nTrọng lượng (kg)\t2.3\r\nKích thước (mm)\t359 x 256 x 24.7\r\nXuất xứ\tTrung Quốc\r\nNăm ra mắt\t2020",
     "Quantity": 6,
     "Slug": "Laptop-Asus-TUF-FX506LI-HN039T-i5-10300H-8GB-512GB-SSD-Win10",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-02-22T22:52:20.3687784+07:00"
   },
   {
     "ID": 10,
-    "Name": "Laptop Lenovo ThinkPad X1 Carbon 8 i5 10210U/16GB/512GB/14”WQHD/Win 10 Pro (No.00724582) 1 đánh giá |",
+    "Name": "Laptop Lenovo ThinkPad X1 Carbon 8 i5 10210U/16GB/512GB/14”WQHD/Win 10 Pro (No.00724582) 1 đánh giá",
     "Trademark": "Lenovo ",
     "Price": 4.3E+07,
     "Sale": 1.0,
@@ -118,7 +127,8 @@
     "Info": "CPU\tIntel Core i5-10210U\r\nRAM\t16 GB, LPDDR3, 2133 MHz\r\nMàn hình\t14.0\", 2560 x 1440 Pixel, WVA, 60 Hz, 300 nits, WVA Anti-glare LED Backlit Narrow Border\r\nĐồ họa\tIntel UHD Graphics\r\nỔ cứng\tĐang cập nhật\r\nHệ điều hành\tWindows 10\r\nTrọng lượng (kg)\t1.1\r\nKích thước (mm)\t323 x 216 x 14.9\r\nXuất xứ\tTrung Quốc\r\nNăm ra mắt\t2020",
     "Quantity": 5,
     "Slug": "Laptop-Lenovo-ThinkPad-X1-Carbon-8-i5-10210U-16GB-512GB-14”WQHD-Win-10-Pro-No-00724582-1-đanh-gia-",
-    "Category": "may-tinh"
+    "Category": "may-tinh",
+    "TimeAdd": "2021-03-01T22:52:20.3687784+07:00"
   },
   {
     "ID": 11,
@@ -130,7 +140,8 @@
     "Info": "Cách kết nối\tBluetooth\r\nChất liệu\tNhựa\r\nCổng sạc\tAC 100-240V\r\nCông suất\t30W\r\nDãy Tần số\t180Hz - 20KHz",
     "Quantity": 20,
     "Slug": "Combo-Loa-Bluetooth-Karaoke-i-value-FG206-01-Nhua-đen--Mic-khong-day",
-    "Category": "phu-kien"
+    "Category": "phu-kien",
+    "TimeAdd": "2021-02-22T22:52:20.3687784+07:00"
   },
   {
     "ID": 12,
@@ -142,6 +153,7 @@
     "Info": "Cách kết nối\tĐang cặp nhật\r\nChất liệu\tNhựa ABS\r\nCông suất\t45W\r\nKết nối\tBluetooth, Thẻ nhớ SD, Aux\r\nLoại Loa\tLoa Karaoke",
     "Quantity": 5,
     "Slug": "Combo-Loa-Bluetooth-Karaoke-i-value-F12-65N-Nhua-đen-Mic-khong-day",
-    "Category": "phu-kien"
+    "Category": "phu-kien",
+    "TimeAdd": "2021-02-22T22:41:20.3687784+07:00"
   }
 ]

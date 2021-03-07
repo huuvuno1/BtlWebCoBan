@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebCommon.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="BtlWebForm.Views.Common.home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Trang chủ</title>
+    <style>
+        .edit_tit{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
     <div class="container">
@@ -47,7 +53,7 @@
         <!-- Danh muc may tinh -->
         <div class="nav flex space_">
             <div class="nav_title">
-                Máy tính
+                <a href="/may-tinh" class="edit_tit">Máy tính</a>
             </div>
             <div class="nav_list flex">
                 <ul class="__ul flex">
@@ -79,7 +85,7 @@
         <!-- start phu-kien -->
         <div class="nav flex space_ margintop" style="background-color: #dd2b2b;">
             <div class="nav_title">
-                Phụ kiện
+                <a href="/phu-kien" class="edit_tit">Phụ kiện</a>
             </div>
             <div class="nav_list flex">
                 <ul class="__ul flex">

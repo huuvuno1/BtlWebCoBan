@@ -62,6 +62,7 @@ namespace BtlWebForm.Views.Ajax
                 {
                     GIA_MOI.InnerText = String.Format("{0:0,0}", product.Price) + @"₫";
                 }
+                LINK_PRODUCT.Attributes.Add("href", "/" + product.Category + "/" + product.Slug);
             }
             
         }

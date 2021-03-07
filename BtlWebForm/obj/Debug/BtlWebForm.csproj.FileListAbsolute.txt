@@ -3,7 +3,6 @@ C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\BtlWebForm.dll
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\BtlWebForm.pdb
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\obj\Debug\BtlWebForm.csprojAssemblyReference.cache
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\obj\Debug\BtlWebForm.csproj.CoreCompileInputs.cache
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\obj\Debug\BtlWebForm.csproj.CopyComplete
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\obj\Debug\BtlWebForm.dll
@@ -71,3 +70,4 @@ C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\roslyn\vbc.exe.config
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\roslyn\vbc.rsp
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\roslyn\VBCSCompiler.exe
 C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\s2huu\source\repos\BtlWebForm\BtlWebForm\obj\Debug\BtlWebForm.csprojAssemblyReference.cache

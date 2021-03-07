@@ -15,6 +15,12 @@ namespace BtlWebForm.Views.Ajax
         ProductRepository productRepository = new ProductRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
+            UserEntity userss = (UserEntity)Session.Contents[Constant.USER_SESSION];
+            if (userss == null || userss.Role != Constant.ROLE_ADMIN)
+            {
+                Response.Redirect("/login");
+            }
+
             List<OrderEntity> orders = orderRepository.FindAllOrder();
             if (orders == null || orders.Count == 0)
                 return;
@@ -26,17 +32,17 @@ namespace BtlWebForm.Views.Ajax
                 htmlOrder += @"<tr>
                                         <td>" + order.IDOrder + @"</td>
                                     <td>" + order.IDUser + @"</td>
-                                    <td>
-                                        <ul>";
+                                    <td style='text-align: left;'>
+                                        <ol>";
                 foreach (ProductEntity product in order.ListProduct)
                 {
                     ProductEntity detail = productRepository.FindProductByID(product.ID);
                     float x = product.Quantity * detail.Price;
                     sum1 += x;
                     sum2 += x * (100 - detail.Sale) / 100;
-                    htmlOrder += @"<li><a target='_blank' style='color: #2775d2;' href ='/" + detail.Category + "/" + detail.Slug + "'>" + detail.Name + " (</a><span style='color: red; font-weight: bold;'> x" + product.Quantity + @"</span>)</li>";
+                    htmlOrder += @"<li><a target='_blank' style='color: #2775d2; text-decoration: none;' href ='/" + detail.Category + "/" + detail.Slug + "'>" + detail.Name + " (</a><span style='color: red; font-weight: bold;'> x" + product.Quantity + @"</span>)</li>";
                 }
-                htmlOrder += @"</ul>
+                htmlOrder += @"</ol>
                                     </td>
                                     <td style='color: red'>" + String.Format("{0:0,0}", sum1) + @"₫</td>
                                     <td style='color: red'>" + String.Format("{0:0,0}", sum1-sum2) + @"₫</td>

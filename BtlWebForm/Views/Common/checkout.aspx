@@ -13,7 +13,7 @@
 </head>
 <body style="overflow-y:hidden;">
     <div class="container-checkout">
-        <form action="/checkout" method="post" class="form-login flex">
+        <form action="/checkout" method="post" class="form-login flex" id="form_checkout">
         <div class="left-container-checkout">
             <h1>Shop laptop & phụ kiện</h1>
             <div class="ship">
@@ -25,12 +25,29 @@
                             <a href="/login"><span>Đăng nhập</span></a>
                         </div>
                     </div>
-                    <p><input type="text" placeholder="Họ tên" name="fullname" id="_fullname" runat="server"></p>
-                    <p><input type="text" placeholder="Tên đăng nhập (dùng để theo dõi đơn hàng của bạn)" name="username" id="_username" runat="server"></p>
-                    <p><input type="password" placeholder="Mật khẩu" name="password" id="_password" runat="server"></p>
-                    <p><input type="text" placeholder="Số điện thoại" name="phonenumber" id="_phonenumber" runat="server"></p>
-                    <p><input type="text" placeholder="Địa chỉ" name="address" id="_address" runat="server"></p>
-                    <p><textarea placeholder="Ghi chú cho đơn hàng này" name="_note"></textarea></p>
+                    <p>
+                        <strong class="red"></strong>
+                        <input type="text" placeholder="Họ tên" name="fullname" id="_fullname" runat="server">
+                    </p>
+                    <p>
+                        <strong class="red"></strong>
+                        <input type="text" placeholder="Tên đăng nhập (dùng để theo dõi đơn hàng của bạn)" name="username" id="_username" runat="server">
+                    </p>
+                    <p>
+                        <strong class="red"></strong>
+                        <input type="password" placeholder="Mật khẩu" name="password" id="_password" runat="server">
+                    </p>
+                    <p>
+                        <strong class="red"></strong>
+                        <input type="text" placeholder="Số điện thoại" name="phonenumber" id="_phonenumber" runat="server">
+                    </p>
+                    <p>
+                        <strong class="red"></strong>
+                        <input type="text" placeholder="Địa chỉ" name="address" id="_address" runat="server">
+                    </p>
+                    <p>
+                        <textarea placeholder="Ghi chú cho đơn hàng này" name="_note"></textarea>
+                    </p>
                 </div>
                 <div class="transport_pay">
                     <div class="transport">
@@ -48,16 +65,16 @@
                         <div class="COD">
                             <p>
                                 <label for="cod">
-                                    <input type="radio" id="cod" name="_pay" value="cod">
+                                    <input type="radio" id="cod" name="_pay" value="cod" checked>
                                     Thanh toán khi giao hàng (COD)
                                 </label>
                             </p>
-                            <p>
+                           <!-- <p>
                                 <label for="pay_online">
                                     <input type="radio" id="pay_online" name="_pay" value="pay_online">
                                     Thanh toán online
                                 </label>
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>
@@ -86,7 +103,7 @@
                 </div>
                 <div class="_right">
                     <h4 id="_total" runat="server"></h4>
-                    <input value="ĐẶT HÀNG" type="submit" id="btnOrder">
+                    <input value="ĐẶT HÀNG" type="button" id="btnOrder">
                 </div>
             </div>
         </div>

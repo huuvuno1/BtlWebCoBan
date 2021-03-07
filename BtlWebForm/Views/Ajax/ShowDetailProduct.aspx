@@ -36,7 +36,7 @@
                     <div class="text-2-line" id="INFO" runat="server">
                         
                     </div>
-                    <a href="#">Xem chi tiết</a>
+                    <a href="#" id="LINK_PRODUCT" runat="server">Xem chi tiết</a>
                 </div>
 
                 <div class="muahang" >

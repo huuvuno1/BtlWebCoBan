@@ -18,6 +18,7 @@ function gen() {
     kq = kq.replace(/[+]/g, '-');
     kq = kq.replace("---", '-');
     kq = kq.replace("--", '-');
+    kq = kq.substring(0, 60);
     document.getElementById('url_pro').value = kq;
 }
 

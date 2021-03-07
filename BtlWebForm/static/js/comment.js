@@ -103,6 +103,9 @@ function sendCommentLevel2(_this, idProduct)
     
     child.innerHTML = html;
     listComment.appendChild(child);
+
+    // custom
+    var _this_button_send = _this.parentNode.parentNode.getElementsByClassName('btn_reply')[0];
 }
 
 function htmlCommentLv2(fullname, comment, role, time)

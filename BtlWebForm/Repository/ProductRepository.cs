@@ -122,5 +122,38 @@ namespace BtlWebForm.Repository
             }
             return null;
         }
+
+        // filters nhận vào nếu có nhiều tham số thì cách nhau bằng dấu ','
+        public List<ProductEntity> FindProductsByFilter(string category, string filters)
+        {
+            List<ProductEntity> products = FindProductCategory(category);
+            if (filters == null)
+                return products;
+            else
+            {
+                float rate1 = 10000000;
+                float rate2 = 15000000;
+                float rate3 = 20000000;
+                float rate4 = 25000000;
+
+                List<ProductEntity> result = new List<ProductEntity>();
+                foreach (ProductEntity product in products)
+                {
+                    float price = product.Price * (100 - product.Sale) / 100;
+                    if (filters.Contains(Constant.FILTER1) && price < rate1)
+                        result.Add(product);
+                    if (filters.Contains(Constant.FILTER2) && price <= rate2 && price >= rate1)
+                        result.Add(product);
+                    if (filters.Contains(Constant.FILTER3) && price <= rate3 && price >= rate2)
+                        result.Add(product);
+                    if (filters.Contains(Constant.FILTER4) && price <= rate4 && price >= rate3)
+                        result.Add(product);
+                    if (filters.Contains(Constant.FILTER5) && price > rate4)
+                        result.Add(product);
+                }
+                return result;
+            }
+        }
+
     }
 }

@@ -16,10 +16,10 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressSSLPort>53861</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -131,6 +131,7 @@
     <Content Include="static\img\product\vr3.jpg" />
     <Content Include="static\js\admin_vu.js" />
     <Content Include="static\js\cart.js" />
+    <Content Include="static\js\category.js" />
     <Content Include="static\js\checkout.js" />
     <Content Include="static\js\comment.js" />
     <Content Include="static\js\vu.js" />
@@ -151,7 +152,6 @@
     <Content Include="Views\Common\logout.aspx" />
     <Content Include="Views\Common\register.aspx" />
     <Content Include="Views\Common\search.aspx" />
-    <Content Include="Views\Common\phanloai.aspx" />
     <Content Include="Views\Common\home.aspx" />
     <Content Include="Views\Common\login.aspx" />
     <Content Include="Web.config" />
@@ -299,13 +299,6 @@
     <Compile Include="Views\Common\search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Common\phanloai.aspx.cs">
-      <DependentUpon>phanloai.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Common\phanloai.aspx.designer.cs">
-      <DependentUpon>phanloai.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\Common\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -369,7 +362,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53861</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53861/</IISUrl>
+          <IISUrl>http://localhost:51668</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

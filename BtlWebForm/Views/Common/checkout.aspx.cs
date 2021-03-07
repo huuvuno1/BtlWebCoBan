@@ -18,8 +18,8 @@ namespace BtlWebForm.Views.Common
         {
             // Chưa mua hàng thì không được vào trang này
             OrderEntity orderCurrent = (OrderEntity)Session.Contents[Constant.ORDER_SESSION];
-            if (orderCurrent == null)
-                Response.Redirect("/cart");
+            if (orderCurrent == null || orderCurrent.ListProduct.Count == 0)
+                Response.Redirect("/cart?msg=cart-null");
 
             string username = Request.Form.Get("_username");
             UserEntity user = (UserEntity)Session.Contents[Constant.USER_SESSION];
@@ -38,6 +38,10 @@ namespace BtlWebForm.Views.Common
                 // nếu chưa đăng nhập thì chỉ lấy thông tin username, password
                 if (user == null)
                 {
+                    if ("".Equals(fullname) || "".Equals(address) || "".Equals(phonenumber))
+                    {
+                        Response.Redirect("/checkout?msg=invalid");
+                    }
                     password = Request.Form.Get("_password");
                     user = new UserEntity(userRepository.FindAllUser().Count + 1, username, password, fullname, 0, address, phonenumber);
                     userRepository.SaveUser(user);

@@ -23,6 +23,8 @@ namespace BtlWebForm.Entity
         public int Quantity { get; set; }
         public string Slug { get; set; }
         public string Category { get; set; }
+
+        public DateTime TimeAdd { get; set; }
         
     }
 }

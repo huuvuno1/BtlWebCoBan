@@ -33,6 +33,15 @@ namespace BtlWebForm.Views.Common
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl name_page;
 
         /// <summary>
+        /// quantity_result control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl quantity_result;
+
+        /// <summary>
         /// data_server control.
         /// </summary>
         /// <remarks>

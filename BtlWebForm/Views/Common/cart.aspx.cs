@@ -25,12 +25,16 @@ namespace BtlWebForm.Views.Common
             else
             {
                 string HTML = "";
+                float sumMoney = 0;
                 for (int i = 0; i < order.ListProduct.Count; i++)
                 {
                     ProductEntity product = productRepository.FindProductByID(order.ListProduct[i].ID);
                     HTML += ProductUtil.MatchHtmlWithProductSession(product, order.ListProduct[i].Quantity);
+
+                    sumMoney += product.Price * order.ListProduct[i].Quantity * (100 - product.Sale) / 100;
                 }
                 data_render.InnerHtml = HTML;
+                tong.InnerText = String.Format("{0:0,0}", sumMoney);
             }    
         }
     }
