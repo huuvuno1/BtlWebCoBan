@@ -74,8 +74,9 @@ namespace BtlWebForm.Views.Common
                 // Nếu đăng nhập rồi thì đưa các thông tin cơ bản cho người dùng có thể sửa lại
                 if (user != null)
                 {
+                    _username.Value = user.Username;
                     _username.Style.Add("display", "none");
-                    _password.Style.Add("display", "none");
+                    //_password.Style.Add("display", "none");
                     _fullname.Value = user.Fullname;
                     _phonenumber.Value = user.PhoneNumber;
                 }

@@ -32,14 +32,18 @@
                         <strong class="red"></strong>
                         <input type="text" placeholder="Họ tên" name="fullname" id="_fullname" runat="server">
                     </p>
+                   
                     <p>
                         <strong class="red"></strong>
                         <input type="text" placeholder="Tên đăng nhập (dùng để theo dõi đơn hàng của bạn)" name="username" id="_username" runat="server">
                     </p>
+                     <%if (Session.Contents[Constant.USER_SESSION] == null)
+                        { %>
                     <p>
                         <strong class="red"></strong>
                         <input type="password" placeholder="Mật khẩu" name="password" id="_password" runat="server">
                     </p>
+                    <%} %>
                     <p>
                         <strong class="red"></strong>
                         <input type="text" placeholder="Số điện thoại" name="phonenumber" id="_phonenumber" runat="server">
