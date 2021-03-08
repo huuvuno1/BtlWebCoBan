@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebCommon.Master" AutoEventWireup="true" CodeBehind="category.aspx.cs" Inherits="BtlWebForm.Views.Common.category" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title id="__title" runat="server"></title>
     <style>
         .cursor{
             cursor: pointer;
@@ -51,12 +52,16 @@
                             </ul>
                         </div>
                     </div>
-
+                     <!-- edit -->
+                    <div id="__filter" onclick="btn_close_filter()">
+                        <img src="/static/img/icon/filter.png" alt=""> Lọc
+                    </div>
                     <div class="products clear" id="data_server" runat="server">
 
                     </div>
                 </div>
-                <div class="right-container">
+                <div class="right-container" id="category_i">
+                    <span class="close" onclick="btn_close_filter()">x</span>
                     <div class="right-title">
                         <h3>Tìm theo</h3>
                     </div>

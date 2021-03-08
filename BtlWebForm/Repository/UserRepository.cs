@@ -48,10 +48,10 @@ namespace BtlWebForm.Repository
         {
             // đọc list user ra
             List<UserEntity> users = FindAllUser();
-            if (user == null)
+            if (users == null)
                 users = new List<UserEntity>();
-            else
-                users.Add(user);
+
+            users.Add(user);
 
             if (SaveListUsers(users))
                 return true;

@@ -90,8 +90,8 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="static\css\reposive.css" />
     <Content Include="static\css\style_vu.css" />
-    <Content Include="static\css\style_vu_reposive.css" />
     <Content Include="static\img\banner\banner_bot_slide_img_1.jpg" />
     <Content Include="static\img\banner\banner_bot_slide_img_2.jpg" />
     <Content Include="static\img\banner\banner_bot_slide_img_3.jpg" />
@@ -112,7 +112,9 @@
     <Content Include="static\img\icon\click-right-gray.png" />
     <Content Include="static\img\icon\click-right.png" />
     <Content Include="static\img\icon\down.gif" />
+    <Content Include="static\img\icon\fa-bars.png" />
     <Content Include="static\img\icon\fb.png" />
+    <Content Include="static\img\icon\filter.png" />
     <Content Include="static\img\icon\gg.png" />
     <Content Include="static\img\icon\images.png" />
     <Content Include="static\img\icon\java-developer-roadmap.png" />

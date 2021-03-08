@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt hàng - Thanh toán</title>
     <link rel="stylesheet" href="/static/css/style_vu.css">
-    <link rel="stylesheet" href="/static/css/style_vu_reposive.css">
+    <link rel="stylesheet" href="/static/css/reposive.css">
 </head>
 <body style="overflow-y:hidden;">
     <div class="container-checkout">

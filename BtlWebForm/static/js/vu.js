@@ -148,16 +148,16 @@ function minusQuantity(x)
     input.value = num;
 }
 
-function sumOfMoney(x)
+function sumOfMoney(_this)
 {
-    checkInput(x);
-    var parent = x.parentNode.parentNode.parentNode;
+    checkInput(_this);
+    var parent = _this.parentNode.parentNode.parentNode;
     var unitPrice = parent.children[1].children[0].innerHTML;
     unitPrice = unitPrice.replaceAll(',', '');
     unitPrice = unitPrice.replaceAll('₫', '');
     unitPrice = parseInt(unitPrice);
 
-    var total = unitPrice * x.value;
+    var total = unitPrice * _this.value;
     parent.children[3].children[0].textContent = formatMoney(total);
     tongTienGioHang();
 }
@@ -455,3 +455,11 @@ function validateRegister() {
     if (correct)
         document.getElementById('__form').submit();
 };
+
+function btn_close_category() {
+    let option = document.querySelector(".__overlay");
+    if (option.style.display == 'block')
+        option.style.display = 'none';
+    else
+        option.style.display = 'block';
+}

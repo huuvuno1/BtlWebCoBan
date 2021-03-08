@@ -98,7 +98,7 @@ namespace BtlWebForm.Repository
         public List<ProductEntity> FindProductCategory(string category)
         {
             
-            if ("san-pham".Equals(category))
+            if ("san-pham".Equals(category) || "san-pham-moi".Equals(category))
                 return FindAllProducts();
 
             List<ProductEntity> products = new List<ProductEntity>();

@@ -69,13 +69,31 @@ namespace BtlWebForm
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl number_oder;
 
         /// <summary>
-        /// Span1 control.
+        /// number_oder2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl number_oder2;
+
+        /// <summary>
+        /// __fullname_m control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor @__fullname_m;
+
+        /// <summary>
+        /// number_oder_m control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl number_oder_m;
 
         /// <summary>
         /// CommonBody control.

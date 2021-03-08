@@ -70,3 +70,13 @@ function sort(_this) {
         sort += 'gia-giam-dan';
     location.href = (location.href.split(temp)[0] + sort);
 }
+
+
+function btn_close_filter() {
+    let category = document.getElementById('category_i');
+    if (category.style.marginLeft == '0px')
+        category.style.marginLeft = '-500px';
+    else
+        category.style.marginLeft = '0';
+}
+

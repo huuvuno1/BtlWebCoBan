@@ -113,7 +113,7 @@
     </div>
 
     <div class="page_detail">
-        <div class="container flex">
+        <div class="container flex" id="__container">
             <div class="post_detail" id="post_details" runat="server">
 
                 <!-- content post -->

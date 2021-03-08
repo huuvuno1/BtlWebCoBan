@@ -19,7 +19,7 @@ namespace BtlWebForm.Views.Common
 
             // xử lí trường hợp run tại page này hoặc cố tình vào page /Views/Common/...
             if (Request.Url.AbsolutePath.Contains("Views/Common"))
-                Response.Redirect("/may-tinh");
+                Response.Redirect("/san-pham");
 
             string category = (string)RouteData.Values["category"];
 
@@ -27,19 +27,19 @@ namespace BtlWebForm.Views.Common
             switch (category)
             {
                 case "may-tinh":
-                    name_page.InnerText = "Máy tính";
+                    name_page.InnerText = __title.InnerText = "Máy tính";
                     break;
                 case "phu-kien":
-                    name_page.InnerText = "Phụ kiện";
+                    name_page.InnerText = __title.InnerText = "Phụ kiện";
                     break;
                 case "san-pham":
-                    name_page.InnerText = "Tất cả sản phẩm";
+                    name_page.InnerText = __title.InnerText = "Tất cả sản phẩm";
                     break;
-                case "san-pham-moi-nhat":
-                    name_page.InnerText = "Sản phẩm mới nhất";
+                case "san-pham-moi":
+                    name_page.InnerText = __title.InnerText = "Sản phẩm mới";
                     break;
                 case "san-pham-khuyen-mai":
-                    name_page.InnerText = "Sản phẩm khuyến mãi";
+                    name_page.InnerText = __title.InnerText = "Sản phẩm khuyến mãi";
                     break;
                 default:
                     Response.Redirect("/san-pham");
@@ -53,8 +53,15 @@ namespace BtlWebForm.Views.Common
 
             List<ProductEntity> result = productRepository.FindProductsByFilter(category, filter);
 
+
             // sort
             string sort = Request.QueryString.Get("sort");
+
+            // trường hợp category 'san-pham-moi'
+            // gán luôn sort là tìm sản phẩm mới nhất, đỡ phải xử lý
+            if (sort == null && "san-pham-moi".Equals(category))
+                sort = Constant.SORT_LATEST;
+
             if (sort != null && !"".Equals(sort))
             {
                 if (Constant.SORT_LATEST.Equals(sort))

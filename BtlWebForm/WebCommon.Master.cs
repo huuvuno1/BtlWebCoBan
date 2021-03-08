@@ -18,10 +18,18 @@ namespace BtlWebForm
 
                 LINK.Attributes.Add("href", link);
                 LINK1.Attributes.Add("href", link);
+
+                // mobile
+                __fullname_m.Attributes.Add("href", link);
+                __fullname_m.InnerText = user.Fullname;
             }
             OrderEntity orderCurent = (OrderEntity)Session.Contents[Constant.ORDER_SESSION];
             if (orderCurent != null)
+            {
                 number_oder.InnerText = orderCurent.ListProduct.Count.ToString();
+                number_oder2.InnerText = orderCurent.ListProduct.Count.ToString();
+                number_oder_m.InnerText = orderCurent.ListProduct.Count.ToString();
+            }
         }
     }
 }
