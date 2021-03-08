@@ -70,6 +70,9 @@ namespace BtlWebForm.Views.Common
                 // id được tự động tăng trong hàm save rồi
 
                 product.Name = name_pro;
+                price_pro = price_pro.Replace(".", "");
+                price_pro = price_pro.Replace(",", "");
+
                 product.Price = Int32.Parse(price_pro);
                 product.Quantity = Int32.Parse(quantity_pro);
                 product.Sale = Int32.Parse(sale_pro);

@@ -135,7 +135,10 @@
             <div class="comment">
                 <h3>Hỏi đáp về Macbook</h3>
                 <div class="relative">
+                    <%if (Session.Contents[Constant.USER_SESSION] == null)
+                        { %>
                     <span class="red" ><a href="/login" class="login__cmt">Đăng nhập để bình luận</a></span>
+                    <%}%>
                     <textarea placeholder="Viết câu hỏi của bạn" name="" id="comment" cols="30" rows="3"></textarea>
 
                     
