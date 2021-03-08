@@ -2103,3 +2103,75 @@ body {
     padding: 0 5px;
     margin-right: 3px;
 }
+
+/* footer */
+
+footer {
+    width: 100%;
+}
+
+.footer__top {
+    margin-top: 20px;
+    background-color: #2775d2;
+}
+
+    .footer__top .container {
+        justify-content: space-between;
+    }
+
+.footer__top_logo {
+    width: 200px;
+}
+
+.footer__top_descr {
+    width: 58%;
+}
+
+.footer__top_contact {
+    width: 300px;
+}
+
+.footer__top p {
+    color: white;
+    font-size: 14px;
+}
+
+    .footer__top p a {
+        color: #ffc000;
+        font-size: 14px;
+    }
+
+.footer__bottom {
+    padding: 30px 0;
+    background-color: #302f34;
+}
+
+.footer__bottom_col1 {
+    width: 25%;
+    text-align: center;
+    color: white;
+}
+
+    .footer__bottom_col1 h3 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .footer__bottom_col1 p a {
+        color: #8f8e93;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+.footer__author {
+    background-color: #201f24;
+    text-align: center;
+    min-height: 60px;
+    line-height: 60px;
+}
+
+    .footer__author b {
+        margin: 0;
+        padding: 0;
+        color: white;
+    }

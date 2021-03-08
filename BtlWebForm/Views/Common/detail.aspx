@@ -134,9 +134,10 @@
             <div class="comment">
                 <h3>Hỏi đáp về Macbook</h3>
                 <div class="relative">
+                    <span class="red" ><a href="/login" class="login__cmt">Đăng nhập để bình luận</a></span>
                     <textarea placeholder="Viết câu hỏi của bạn" name="" id="comment" cols="30" rows="3"></textarea>
 
-                    <!-- <span class="red" style="display:block; margin: 40px 0;">Đăng nhập để bình luận <a href="/login">Đăng nhập ngay</a></span> -->
+                    
                     <button id="btn_send_lv1" runat="server" type="button">Gửi bình luận</button>
                     <!-- <button type="button" onclick="login()">Bạn phải đăng nhập trước</button> -->
                 </div>

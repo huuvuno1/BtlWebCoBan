@@ -197,7 +197,66 @@
        </div>
     </div>
     
-    
+    <footer>
+        <div class="footer__top ">
+            <div class="container flex">
+                <div class="footer__top_logo">
+                    <img src="/static/img/icon/logo.png" alt="">
+                </div>
+
+                <div class="footer__top_descr">
+                    <p>Báo cáo Thương mại điện tử cho phép bạn phân tích hoạt động mua hàng trên trang web hoặc ứng dụng của mình. Bạn có thể xem thông tin về sản phẩm và giao dịch, giá trị đặt hàng trung bình, tỷ lệ chuyển đổi thương mại điện tử, thời gian
+                        mua hàng.</p>
+                </div>
+
+                <div class="footer__top_contact">
+                    <p><a href="tel:0902068068"><b>0945364296</b></a> : Tư vấn bán hàng</p>
+                    <p><a href="tel:0902068068"><b>0902068068</b></a> : Khiếu nại, bảo hành</p>
+                    <p>Thời gian làm việc: 8h - 22h</p>
+                    <p>Góp ý: <a href="mailto:nguyenhuuvuno1@gmail.com">nguyenhuuvuno1@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container flex">
+                <div class="footer__bottom_col1">
+                    <h3>THÔNG TIN</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+                <div class="footer__bottom_col1">
+                    <h3>HƯỚNG DẪN</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+                <div class="footer__bottom_col1">
+                    <h3>LIÊN HỆ</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+                <div class="footer__bottom_col1">
+                    <h3>LIÊN KẾT</h3>
+                    <p><a href="/">Trang chủ</a></p>
+                    <p><a href="/san-pham">Sản phẩm</a></p>
+                    <p><a href="/">Blog</a></p>
+                    <p><a href="/">Giới thiệu</a></p>
+                    <p><a href="/">Liên hệ</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__author">
+            <b>@2021 Bài Tập Lớn Lập Trình Web Cơ Bản</b>
+        </div>
+    </footer>
     <script type="text/javascript" src="/static/js/vu.js"></script>
 </body>
 </html>

@@ -3,10 +3,13 @@
 .container-checkout {
     height: 100%;
 }
-
-#btn-search {
-    color: white;
+.login__cmt{
+    color: #2775d2;
 }
+    
+    #btn-search {
+        color: white;
+    }
 
 .close {
     position: absolute;
@@ -301,7 +304,7 @@
     .__search input {
         height: 20px;
         padding: 10px 35px 10px 10px;
-        width: 90%;
+        width: 86%;
         outline: none;
         border: 1px solid #ebebeb;
     }
@@ -456,14 +459,67 @@
     }
 
     .comment textarea {
-        width: 100%;
-        padding-right: 109px;
+        margin-top: 12px;
+        border: 1px solid black;
+    }
+    .relative button{
+        position: static;
     }
 
     .role {
         min-width: 82px;
         height: 21px;
     }
+
+    /* footer */
+    .footer__top_logo {
+        display: none;
+    }
+
+    .footer__top .container {
+        flex-direction: column;
+    }
+
+    .footer__top_descr,
+    .footer__top_contact {
+        width: 100%;
+    }
+
+        .footer__top_descr p,
+        .footer__top_contact p {
+            margin: 0 20px;
+            line-height: 25px;
+        }
+
+
+        /*edit*/
+    #CountResult{
+        margin: 10px;
+    }
+    .form-login {
+        width: 100%;
+    }
+        .form-login input{
+            width: 315px;
+        }
+    .btn {
+        width: 364px !important;
+    }
+
+    .login-3rd h3{
+        width: auto;
+    }
+    .product{
+        padding: 0;
+    }
+    .info_product p, .info_product h3, .post_detail h3, .post_detail p{
+        margin: 14px;
+    }
+
+    .check-out #btn-add-to-cart{
+        width: 226px;
+    }
+
 }
 
 @media only screen and (max-width: 1150px) {

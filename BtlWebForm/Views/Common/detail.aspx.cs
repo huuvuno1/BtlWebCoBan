@@ -79,7 +79,7 @@ namespace BtlWebForm.Views.Common
                  }
 
                 // xử lí lại chỗ miêu tả cấu hình
-                product.Info = product.Info.Replace("\n", "<br><hr>");
+                product.Info = product.Info.Replace("\n", "<br>");
                 product.Info = product.Info.Replace("\t", ": ");
                 info_detail.InnerHtml = product.Info;
 
