@@ -20,10 +20,13 @@
                 <div class="info_customer">
                     <div class="title">
                         <span class="__ti">Thông tin nhận hàng</span>
+                        <%if (Session.Contents[Constant.USER_SESSION] == null)
+                            { %>
                         <div class="_login">
                             <img src="/static/img/icon/user.png" alt="">
                             <a href="/login"><span>Đăng nhập</span></a>
                         </div>
+                        <%} %>
                     </div>
                     <p>
                         <strong class="red"></strong>
