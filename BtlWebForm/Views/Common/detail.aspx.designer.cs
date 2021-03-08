@@ -15,6 +15,15 @@ namespace BtlWebForm.Views.Common
     {
 
         /// <summary>
+        /// __title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl @__title;
+
+        /// <summary>
         /// url_page control.
         /// </summary>
         /// <remarks>

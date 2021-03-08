@@ -46,7 +46,7 @@ namespace BtlWebForm.Views.Common
 
                 bigImg.Attributes.Add("src", product.ListImage[0]);
 
-
+                __title.InnerText = product.Name;
                 // load list image
                 string html_img = @"<div class='chuyen' onclick='backImg()' style='display: none;'>
                                           <img src='/static/img/icon/click-left.png' >

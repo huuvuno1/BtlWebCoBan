@@ -137,6 +137,7 @@
     <Content Include="static\js\checkout.js" />
     <Content Include="static\js\comment.js" />
     <Content Include="static\js\vu.js" />
+    <Content Include="Views\Admin\DeleteProduct.aspx" />
     <Content Include="Views\Admin\home.aspx" />
     <Content Include="Views\Ajax\Cart.aspx" />
     <Content Include="Views\Ajax\Comment.aspx" />
@@ -182,6 +183,13 @@
     <Compile Include="Router\RouterConfig.cs" />
     <Compile Include="Utils\Constant.cs" />
     <Compile Include="Utils\ProductUtil.cs" />
+    <Compile Include="Views\Admin\DeleteProduct.aspx.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\DeleteProduct.aspx.designer.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

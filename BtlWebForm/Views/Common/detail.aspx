@@ -3,6 +3,7 @@
     <style>
         
     </style>
+    <title id="__title" runat="server"></title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
     <section class="vitritrang">

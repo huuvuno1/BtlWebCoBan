@@ -37,6 +37,8 @@ namespace BtlWebForm.Views.Ajax
                 foreach (ProductEntity product in order.ListProduct)
                 {
                     ProductEntity detail = productRepository.FindProductByID(product.ID);
+                    if (detail == null)
+                        continue;
                     float x = product.Quantity * detail.Price;
                     sum1 += x;
                     sum2 += x * (100 - detail.Sale) / 100;
