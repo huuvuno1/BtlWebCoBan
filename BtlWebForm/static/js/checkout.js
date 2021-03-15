@@ -41,7 +41,7 @@ document.getElementById('btnOrder').addEventListener('click', () => {
             strong[i].value = '';
         }
     }
-    alert(flag);
+
     if (flag)
         document.getElementById('form_checkout').submit();
 })
