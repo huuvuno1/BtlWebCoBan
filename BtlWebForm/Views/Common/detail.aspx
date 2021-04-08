@@ -4,6 +4,7 @@
         
     </style>
     <title id="__title" runat="server"></title>
+    <script src="/static/js/additional.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CommonBody" runat="server">
     <section class="vitritrang">
@@ -63,16 +64,19 @@
                                 </ul>
                             </div>
 
-
-                            <div class="muahang">
-                                <div class="quantity cha">
-                                    <span class="con minus" onclick="minusQuantity(this)">–</span>
-                                    <input type="text" value="1" onchange="checkInput(this)" id="_quantity_">
-                                    <span class="con add" onclick="addQuantity(this)">+</span>
+                            <form action="/cart" method="post">
+                                <input name="id_product" id="id_product" runat="server" hidden/>
+                                <div class="muahang">
+                                    <div class="quantity cha">
+                                        <span class="con minus" onclick="minusQuantity(this)">–</span>
+                                        <input type="text" value="1" onchange="checkInput(this)" id="_quantity_" name="quantity">
+                                        <span class="con add" onclick="addQuantity(this)">+</span>
+                                    </div>
+                                    <div class="btn_add_to_cart">
+                                        <button id='btn_add_to_cart'>Thêm vào giỏ hàng</button>
+                                    </div>
                                 </div>
-                                <div class="btn-add-to-cart" id="btn_server" runat="server">
-                                </div>
-                            </div>
+                            </form>
 
                             <div class="sale-info">
                                 <div>

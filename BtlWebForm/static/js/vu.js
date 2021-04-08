@@ -196,24 +196,6 @@ function checkInput(x)
     x.value = num;
 }
 
-// viết tạm
-function addToCart(id)
-{
-    var quantity = document.getElementById('_quantity_').value;
-    changeProductSS(id, "add", quantity);
-
-    // mobile ko show form được như pc
-    if (window.innerWidth < "1000") {
-        window.location.href = "/cart";
-        return;
-    }
-    
-    // showNameProClick(this);
-    //changeProductSS(id, "add", quantity);
-    btnShowForm(2, 1);
-    getProductToSession();
-    tongTienGioHang();
-}
 
 function removeProduct(x)
 { 

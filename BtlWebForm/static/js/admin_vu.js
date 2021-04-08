@@ -13,7 +13,8 @@ function gen() {
     kq = kq.replace(/[ìỉĩịí]/g, 'i');
     kq = kq.replace(/[ỏòõọóôốồỗộốơớỡợở]/g, 'o');
     kq = kq.replace(/[ủụũúùưứừựữ]/g, 'u');
-    kq = kq.replace(/[ỳýỵỹỷ]/g, 'y')
+    kq = kq.replace(/[ỳýỵỹỷ]/g, 'y');
+    kq = kq.replace(/[đ]/g, 'd')
     kq = kq.replace(/[|\/()*~ .]/g, '-');
     kq = kq.replace(/[+]/g, '-');
     kq = kq.replace("---", '-');

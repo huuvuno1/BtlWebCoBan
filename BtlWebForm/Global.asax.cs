@@ -10,10 +10,7 @@ namespace BtlWebForm
         protected void Application_Start(object sender, EventArgs e)
         {
             RouterConfig.AddConfigRouteAdmin(RouteTable.Routes);
-
             RouterConfig.AddConfigRouteCommon(RouteTable.Routes);
-
-            RouterConfig.AddConfigRouteAjax(RouteTable.Routes);
         }
 
         protected void Session_Start(object sender, EventArgs e)

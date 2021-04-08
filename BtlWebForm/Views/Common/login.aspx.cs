@@ -20,8 +20,7 @@ namespace BtlWebForm.Views.Common
             {
                 // check xem post hay get, username có dữ liệu là post, get thì cho vào trang đăng nhập
                 // post thì tiến hành lấy thông tin để đăng ký
-                string username = Request.Form.Get("username");
-                if (username != null)
+                if (Request.RequestType.ToLower().Equals("post"))
                     CheckLogin();
             }    
 
@@ -31,7 +30,7 @@ namespace BtlWebForm.Views.Common
         {
             string username = Request.Form.Get("username");
             string password = Request.Form.Get("password");
-            if (!"".Equals(username) && !"".Equals(password))
+            if (!String.IsNullOrEmpty(username) && !String.IsNullOrEmpty(password))
             {
                 UserEntity user = userRepository.FindUserByUsername(username);
                 if (user != null)

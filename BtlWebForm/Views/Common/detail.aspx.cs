@@ -14,11 +14,12 @@ namespace BtlWebForm.Views.Common
     {
         ProductRepository productRepository = new ProductRepository();
         PostRepository postRepository = new PostRepository();
-        CommentRepository commentRepository = new CommentRepository();
 
+
+        // TRANG NÀY HIỂN THỊ CHI TIẾT CỦA SẢN PHẨM
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            
             string url = Request.Url.AbsolutePath;
 
             // đọc slug từ router
@@ -43,6 +44,8 @@ namespace BtlWebForm.Views.Common
                 }
 
                 name_product.InnerText = product.Name;
+
+                id_product.Value = product.ID.ToString();
 
                 bigImg.Attributes.Add("src", product.ListImage[0]);
 
@@ -83,8 +86,6 @@ namespace BtlWebForm.Views.Common
                 product.Info = product.Info.Replace("\t", ": ");
                 info_detail.InnerHtml = product.Info;
 
-                string html = @"<button id=" + "'btn-add-to-cart' onclick='addToCart(" + product.ID + @")'>Thêm vào giỏ hàng</button>";
-                btn_server.InnerHtml = html;
 
                 // load bài viết chi tiết
                 PostEntity post = postRepository.FindPostByIDProduct(product.ID);
@@ -98,20 +99,6 @@ namespace BtlWebForm.Views.Common
                     }
                     post_details.InnerHtml = post.Content;
                 }
-
-
-                // đọc list comment ra
-                CommentOfAPost commentInPost = commentRepository.FindListCommentsOfProduct(product.ID);
-                string htmlComment = CommentUtils.HTMLComments(commentInPost);
-                //List<CommentLevel2Entity> comments = commentRepository.FindCommentsByIDProduct(product.ID);
-                //string htmlComment = CommentUtils.HTMLComments(comments);
-                list_comment.InnerHtml = htmlComment;
-
-
-                // add btn send cmt
-                //onclick = "sendCommentLevel1(1)"
-                btn_send_lv1.Attributes.Add("onclick", "sendCommentLevel1(" + product.ID + ")");
-                btn_send_lv1.Attributes.Add("idxx", product.ID.ToString());
             }
             else
                 Response.Redirect("/");

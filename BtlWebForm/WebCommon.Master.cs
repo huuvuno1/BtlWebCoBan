@@ -27,7 +27,6 @@ namespace BtlWebForm
             if (orderCurent != null)
             {
                 number_oder.InnerText = orderCurent.ListProduct.Count.ToString();
-                number_oder2.InnerText = orderCurent.ListProduct.Count.ToString();
                 number_oder_m.InnerText = orderCurent.ListProduct.Count.ToString();
             }
         }

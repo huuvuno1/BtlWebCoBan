@@ -114,13 +114,13 @@ namespace BtlWebForm.Views.Common
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl _status;
 
         /// <summary>
-        /// btn_server control.
+        /// id_product control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_server;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText id_product;
 
         /// <summary>
         /// post_details control.

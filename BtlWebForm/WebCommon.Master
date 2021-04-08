@@ -43,7 +43,7 @@
             </div>
             <div class="search">
                 <form action="/search">
-                    <input type="text" name="q" placeholder="Tìm kiếm sản phẩm" id="timkiem">
+                    <input type="text" name="q" placeholder="Tìm kiếm sản phẩm" id="timkiem" required>
                     <input type="submit" value="TÌM KIẾM" id="btn-search">
                 </form>
             </div>
@@ -53,13 +53,8 @@
                 <a href="/logout" ><i><span id="logout" runat="server"></span></i></a>
             </div>
             <div class="cart" id="_cart1">
-                <span class="icon-cart" onclick="showCart()" id="number_oder" runat="server">0</span> 
-                <img class="icon-cart" src="/static/img/icon/bag.png" alt="" onclick="showCart()">
-            </div>
-
-            <div class="cart" id="_cart2">
-                <a href="/cart">
-                    <span class="icon-cart" onclick="showCart()" id="number_oder2" runat="server">0</span> 
+               <a href="/cart">
+                    <span class="icon-cart" onclick="showCart()" id="number_oder" runat="server">0</span> 
                     <img class="icon-cart" src="/static/img/icon/bag.png" alt="">
                 </a>
             </div>
@@ -136,7 +131,7 @@
         </div>
         <div class="__search">
             <form action="/search">
-                <input type="text" name="q" placeholder="Nhập sản phẩm cần tìm">
+                <input type="text" name="q" placeholder="Nhập sản phẩm cần tìm" required>
                 <img onclick="this.parentNode.submit()" src="/static/img/icon/kinhlup.png" alt="">
             </form>
         </div>
@@ -192,7 +187,7 @@
                     19.240.000
                 </span>
                 <br style="margin: 15px;">
-                <button id="btn-add-to-cart" type="button" onclick="checkout();">Tiến hành thanh toán</button>
+                <button id="btn_add_to_cart" type="button" onclick="checkout();">Tiến hành thanh toán</button>
             </div>
        </div>
     </div>

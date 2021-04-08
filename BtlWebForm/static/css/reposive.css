@@ -385,7 +385,7 @@
         margin: 0 auto;
     }
 
-    .left_detail #btn-add-to-cart {
+    .left_detail #btn_add_to_cart {
         width: 205px;
     }
 
@@ -431,7 +431,7 @@
         justify-content: space-between;
     }
 
-    #btn-add-to-cart {
+    #btn_add_to_cart {
         margin: 0 !important;
     }
 
@@ -516,7 +516,7 @@
         margin: 14px;
     }
 
-    .check-out #btn-add-to-cart{
+    .check-out #btn_add_to_cart{
         width: 226px;
     }
 

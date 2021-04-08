@@ -21,22 +21,11 @@ namespace BtlWebForm.Router
             routes.MapPageRoute("cart", "cart", "~/Views/Common/cart.aspx");
             routes.MapPageRoute("access-denied", "access-denied", "~/Views/Common/access-denied.aspx");
             routes.MapPageRoute("category", "{category}", "~/Views/Common/category.aspx");
+            routes.MapPageRoute("user", "api/user", "~/Views/Admin/RowUser.aspx");
+            routes.MapPageRoute("pro", "api/product", "~/Views/Admin/RowProducts.aspx");
             routes.MapPageRoute("detail", "may-tinh/{slug}", "~/Views/Common/detail.aspx");
             routes.MapPageRoute("details", "phu-kien/{slug}", "~/Views/Common/detail.aspx");
         }
 
-        public static void AddConfigRouteAjax(RouteCollection routes)
-        {
-            routes.MapPageRoute("api-product", "api/product/{ID}", "~/Views/Ajax/ShowDetailProduct.aspx");
-            routes.MapPageRoute("api-form-add", "api/form", "~/Views/Ajax/FormAddOrEditProduct.aspx");
-            routes.MapPageRoute("api-form-edit", "api/form/{ID}", "~/Views/Ajax/FormAddOrEditProduct.aspx");
-            routes.MapPageRoute("api-row-product", "api/product", "~/Views/Ajax/RowProducts.aspx");
-            routes.MapPageRoute("api-row-user", "api/user", "~/Views/Ajax/RowUser.aspx");
-            routes.MapPageRoute("api-row-order", "api/order", "~/Views/Ajax/RowOrder.aspx");
-            routes.MapPageRoute("api-get-product-session", "api/cart", "~/Views/Ajax/Cart.aspx");
-            routes.MapPageRoute("api-add-product-session", "api/cart/{ID}", "~/Views/Ajax/Cart.aspx");
-            routes.MapPageRoute("api-add-quantity-product-session", "api/cart/{ID}/{Type}/{Quantity}", "~/Views/Ajax/Cart.aspx");
-            routes.MapPageRoute("api-comment", "api/comment", "~/Views/Ajax/Comment.aspx");
-        }
     }
 }

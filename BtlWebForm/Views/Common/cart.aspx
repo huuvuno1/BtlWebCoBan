@@ -34,7 +34,7 @@
                     <b id="tong" runat="server">0đ</b>
                 </span>
                 <br style="margin: 15px;">
-                <button id="btn-add-to-cart" type="button" onclick="checkout();">Tiến hành thanh toán</button>
+                <button id="btn_add_to_cart" type="button" onclick="checkout();">Tiến hành thanh toán</button>
             </div>
         </div>
     </div>

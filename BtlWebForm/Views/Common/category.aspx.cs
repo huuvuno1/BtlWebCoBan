@@ -12,7 +12,8 @@ namespace BtlWebForm.Views.Common
 {
     public partial class category : System.Web.UI.Page
     {
-        
+        // TRANG NÀY HIỂN THỊ SẢN PHẨM THEO DANH MỤC
+
         ProductRepository productRepository = new ProductRepository();
         protected void Page_Load(object sender, EventArgs e)
         {

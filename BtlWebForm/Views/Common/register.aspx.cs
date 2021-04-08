@@ -26,7 +26,7 @@ namespace BtlWebForm.Views.Common
                 // kiểm tra xem post hay get,
                 // get thì cho vào page đăng ký
                 // post thì đọc thông tin ra để đăng ký
-                if (Request.Form.Get("ctl00$CommonBody$username") != null)
+                if (Request.RequestType.ToLower().Equals("post"))
                     Register();
             }
         }

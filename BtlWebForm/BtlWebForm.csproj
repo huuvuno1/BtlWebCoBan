@@ -131,6 +131,7 @@
     <Content Include="static\img\product\maxresdefault.jpg" />
     <Content Include="static\img\product\thiet-bi-deo-thuc-te-ao-sm-r323.jpg" />
     <Content Include="static\img\product\vr3.jpg" />
+    <Content Include="static\js\additional.js" />
     <Content Include="static\js\admin_vu.js" />
     <Content Include="static\js\cart.js" />
     <Content Include="static\js\category.js" />
@@ -139,18 +140,12 @@
     <Content Include="static\js\vu.js" />
     <Content Include="Views\Admin\DeleteProduct.aspx" />
     <Content Include="Views\Admin\home.aspx" />
-    <Content Include="Views\Ajax\Cart.aspx" />
-    <Content Include="Views\Ajax\Comment.aspx" />
-    <Content Include="Views\Ajax\FormAddOrEditProduct.aspx" />
-    <Content Include="Views\Ajax\RowOrder.aspx" />
-    <Content Include="Views\Ajax\RowUser.aspx" />
-    <Content Include="Views\Ajax\ShowDetailProduct.aspx" />
-    <Content Include="Views\Ajax\RowProducts.aspx" />
+    <Content Include="Views\Admin\RowProducts.aspx" />
+    <Content Include="Views\Admin\RowUser.aspx" />
     <Content Include="Views\Common\access-denied.aspx" />
     <Content Include="Views\Admin\addproduct.aspx" />
     <Content Include="Views\Common\cart.aspx" />
     <Content Include="Views\Common\category.aspx" />
-    <Content Include="Views\Common\checkout.aspx" />
     <Content Include="Views\Common\detail.aspx" />
     <Content Include="Views\Common\logout.aspx" />
     <Content Include="Views\Common\register.aspx" />
@@ -160,21 +155,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\CommentLevel1Entity.cs" />
     <Compile Include="Entity\OrderEntity.cs" />
-    <Compile Include="Entity\CommentOfAPost.cs" />
     <Compile Include="Entity\PostEntity.cs" />
     <Compile Include="Entity\ProductEntity.cs" />
-    <Compile Include="Entity\SimpleComment.cs" />
     <Compile Include="Entity\UserEntity.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\CommentRepository.cs" />
     <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\PostRepository.cs" />
-    <Compile Include="Utils\CommentUtils.cs" />
     <Compile Include="Utils\FileIO.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -197,54 +187,19 @@
     <Compile Include="Views\Admin\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajax\Cart.aspx.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Ajax\Cart.aspx.designer.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ajax\Comment.aspx.cs">
-      <DependentUpon>Comment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Ajax\Comment.aspx.designer.cs">
-      <DependentUpon>Comment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ajax\FormAddOrEditProduct.aspx.cs">
-      <DependentUpon>FormAddOrEditProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Ajax\FormAddOrEditProduct.aspx.designer.cs">
-      <DependentUpon>FormAddOrEditProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ajax\RowOrder.aspx.cs">
-      <DependentUpon>RowOrder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Ajax\RowOrder.aspx.designer.cs">
-      <DependentUpon>RowOrder.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ajax\RowUser.aspx.cs">
-      <DependentUpon>RowUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Ajax\RowUser.aspx.designer.cs">
-      <DependentUpon>RowUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ajax\ShowDetailProduct.aspx.cs">
-      <DependentUpon>ShowDetailProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Ajax\ShowDetailProduct.aspx.designer.cs">
-      <DependentUpon>ShowDetailProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Ajax\RowProducts.aspx.cs">
+    <Compile Include="Views\Admin\RowProducts.aspx.cs">
       <DependentUpon>RowProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Ajax\RowProducts.aspx.designer.cs">
+    <Compile Include="Views\Admin\RowProducts.aspx.designer.cs">
       <DependentUpon>RowProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\RowUser.aspx.cs">
+      <DependentUpon>RowUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\RowUser.aspx.designer.cs">
+      <DependentUpon>RowUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\access-denied.aspx.cs">
       <DependentUpon>access-denied.aspx</DependentUpon>
@@ -273,13 +228,6 @@
     </Compile>
     <Compile Include="Views\Common\category.aspx.designer.cs">
       <DependentUpon>category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Common\checkout.aspx.cs">
-      <DependentUpon>checkout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Common\checkout.aspx.designer.cs">
-      <DependentUpon>checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Common\detail.aspx.cs">
       <DependentUpon>detail.aspx</DependentUpon>
@@ -340,9 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataJson\products.json" />
-    <Content Include="DataJson\orders.json" />
     <Content Include="DataJson\posts.json" />
-    <Content Include="DataJson\comments.json" />
     <None Include="packages.config" />
     <Content Include="DataJson\users.json" />
     <None Include="Web.Debug.config">

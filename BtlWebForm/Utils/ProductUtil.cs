@@ -25,14 +25,6 @@ namespace BtlWebForm.Utils
                     html += @"<a href = '/" + product.Category + "/" + product.Slug + @"' title='" + product.Name + @"' class='title_name_product'>
                                     <img src = '" + product.ListImage[0] + @"' alt='' class='img-thumnail'>
                             </a>
-                            <div class='show-option-selection'>
-                                <div class='view-details' onclick='btnShowForm(1, " + product.ID + @")' title='Xem nhanh'>
-                                    <img src = '/static/img/icon/kinhlup.png' alt='' class='icon'>
-                                </div>
-                                <div class='add-to-cart' onclick='showNameProClick(this);showFormCartSession(" + product.ID + @", 2);' title='Thêm vào giỏ hàng'>
-                                    <img src = '/static/img/icon/cart.png' alt='' class='icon'>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class='product-box khungduoi'>
